@@ -7,3 +7,14 @@ url: "shaardalearningcenter.github.io"
 theme: minima
 plugins:
   - jekyll-feed
+# 👇 Add this to show menu in navbar
+minima:
+  skin: auto
+  social_links: []
+  navigation:
+    - title: "Home"
+      url: "/"
+    - title: "Python Bootcamp"
+      url: "/python-bootcamp/"
+    - title: "About"
+      url: "/about/"
