@@ -64,8 +64,8 @@ Master Python from scratch with hands-on projects and real-world examples.
 
 ---
 
-## ✅ Module 4: Real Apps with External Libraries  
-**Goal:** Real-world automation, mini GUI, and web
+## ✅ Module 4: Real Apps with External Libraries    
+**Goal:** Real-world automation, mini GUI, and web.
 
 | Lesson | Topic |
 |--------|-------------------------------|
