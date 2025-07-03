@@ -16,5 +16,8 @@ minima:
       url: "/"
     - title: "Python Bootcamp"
       url: "/python-bootcamp/"
+    - title: "Golang Bootcamp"
+      url: "/golang-bootcamp/"
     - title: "About"
       url: "/about/"
+    
