@@ -44,7 +44,7 @@ We’ve worked at the highest levels of tech — now we’re here to teach you h
 ## 📢 Join Our Live Bootcamp & Community  
 Learn together. Build together. Grow together.
 
-👉 **[Join Our Telegram Channel Now](https://t.me/yourchannel)**  
+👉 **[Join Our Telegram Channel Now](https://t.me/shaardalearningcenter)**  
 Get instant updates, free resources, and the full bootcamp schedule.
 
 ---
