@@ -11,7 +11,7 @@ title: Welcome
 ---
 
 > ⚡ **Tired of boring tutorials and theory-heavy courses that lead nowhere?**  
-> We were too. That’s why we built **[Your Brand Name]** — a results-driven, no-fluff learning platform built by engineers from Google, Amazon, and Meta to help **you learn the way real developers grow**.
+> We were too. That’s why we built **[Sharda Learning Center]** — a results-driven, no-fluff learning platform built by engineers from Google, Amazon, and Meta to help **you learn the way real developers grow**.
 
 ---
 
