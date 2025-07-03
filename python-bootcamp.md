@@ -79,7 +79,7 @@ Master Python from scratch with hands-on projects and real-world examples.
 
 ---
 
-## 🏆 Bonus (for Premium Course / Lead Magnet)
+## 🏆 Bonus 
 
 - Resume & GitHub Setup  
 - Python Interview Q&A  
