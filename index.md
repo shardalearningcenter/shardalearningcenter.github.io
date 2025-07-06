@@ -63,6 +63,10 @@ This isn't another course. This is a launchpad.
 
 
 👉 Follow my GitHub, YouTube, and Telegram to get started.
-Check out the [YouTube Channel](https://www.youtube.com/@ShardaLearningCenter) and [GitHub Projects](https://shaardalearningcenter.github.io)
-[Linkedin ]([https://shaardalearningcenter.github.io](https://www.linkedin.com/company/sharda-learning/?viewAsMember=true)
+
+Check out the 
+- [Website & blog](https://shaardalearningcenter.github.io]
+- [YouTube Channel](https://www.youtube.com/@ShardaLearningCenter) 
+- [Linkedin ]((https://www.linkedin.com/company/sharda-learning/?viewAsMember=true))
+
 
