@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Time Series Databases Work (Explained Like You're 5)"
-date: 2025-07-12
+date: 2025-07-01
 ---
 # 🕰️ How Time Series Databases Work (Explained Like You're 5)
 
