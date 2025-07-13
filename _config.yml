@@ -4,16 +4,15 @@ description: >-
   Learn to code by building real projects. Fast. Practical. No fluff.
 baseurl: "" 
 url: "shaardalearningcenter.github.io" 
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 # 👇 Add this to show menu in navbar
-
-
-skin: auto
-social_links: []
-navigation:
+minimal-mistakes-jekyll:
+  skin: auto
+  social_links: []
+  navigation:
     - title: "Home"
       url: "/"
     - title: "Courses"
