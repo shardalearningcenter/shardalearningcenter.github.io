@@ -1,3 +1,8 @@
+---
+layout: page
+title: Golang Bootcamp
+permalink: /golang-bootcamp/
+---
 # 🏕️ Golang Bootcamp – 4 Week Intensive Program
 
 **Duration:** 4 Weeks  
