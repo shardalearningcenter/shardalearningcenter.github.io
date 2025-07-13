@@ -4,17 +4,19 @@ description: >-
   Learn to code by building real projects. Fast. Practical. No fluff.
 baseurl: "" 
 url: "shaardalearningcenter.github.io" 
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 # 👇 Add this to show menu in navbar
-minima:
+minimal-mistakes-jekyll:
   skin: auto
   social_links: []
   navigation:
     - title: "Home"
       url: "/"
+    - title: "Courses"
+      url: "/courses/"
     - title: "Python Bootcamp"
       url: "/python-bootcamp/"
     - title: "Golang Bootcamp"
@@ -23,6 +25,4 @@ minima:
       url: "/blog/"
     - title: "About"
       url: "/about/"
-    - title: "DSA CheatSheet"
-      url: "/dsa-cheatsheet"
     
