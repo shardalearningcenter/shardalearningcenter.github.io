@@ -23,4 +23,6 @@ minima:
       url: "/blog/"
     - title: "About"
       url: "/about/"
+    - title: "DSA CheatSheet"
+      url: "/dsa-cheatsheet"
     
