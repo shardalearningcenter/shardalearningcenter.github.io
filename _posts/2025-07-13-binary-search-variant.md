@@ -34,7 +34,8 @@ Else: high = mid - 1
 You need the first element ≥ target (e.g., start of range).
 
 ### 🧠 Java Code
-```int lowerBound(int[] arr, int target) {
+```
+int lowerBound(int[] arr, int target) {
     int low = 0, high = arr.length - 1, ans = arr.length;
     while (low <= high) {
         int mid = low + (high - low) / 2;
