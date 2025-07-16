@@ -2,12 +2,6 @@
 layout: home
 title: Welcome
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Learn AI & Programming | Ex-Walmart, Microsoft & VMware Engineers</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -176,11 +170,7 @@ title: Welcome
         padding: 40px 10px;
       }
     }
-  </style>
-</head>
-<body>
-
-  <!-- TOP CTA -->
+ 
   <div class="top-cta">
     🚀 Ready to Learn AI & Programming from Engineers Who've Built for Millions?
     <a href="https://youtube.com/@YourChannelName" target="_blank">Start Now</a>
@@ -295,10 +285,3 @@ title: Welcome
     </p>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Sharda Learning Center — Built by ex-Walmart, Microsoft & VMware engineers. Empowering future coders with real-world skills.
-  </footer>
-
-</body>
-</html>
