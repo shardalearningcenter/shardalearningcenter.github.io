@@ -4,7 +4,7 @@ title: Welcome
 ---
   <style>
     * { box-sizing: border-box; }
-    body {
+    .body1 {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9f9;
@@ -170,7 +170,8 @@ title: Welcome
         padding: 40px 10px;
       }
     }
- 
+ </style>
+ <div class="body1">
   <div class="top-cta">
     🚀 Ready to Learn AI & Programming from Engineers Who've Built for Millions?
     <a href="https://youtube.com/@YourChannelName" target="_blank">Start Now</a>
@@ -284,4 +285,4 @@ title: Welcome
       <a href="https://chat.whatsapp.com/Kx0hL4UYAB80tVApsLXZSf?mode=r_t">WhatsApp Channel</a>
     </p>
   </section>
-
+</div>
