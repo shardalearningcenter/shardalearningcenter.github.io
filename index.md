@@ -176,7 +176,7 @@ title: Welcome
     <a href="https://youtube.com/@YourChannelName" target="_blank">Start Now</a>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR - ->
   <nav>
     <h2>Sharda Learning Center</h2>
     <ul>
