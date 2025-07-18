@@ -223,7 +223,7 @@ title: Welcome
     <h2>🚀 Explore Our Most-Loved Courses</h2>
     <div class="features">
       <div class="feature">
-        <h3><a href="/learn-python-10-days/">🔥 Master Python in 10 Days</a></h3>
+        <h3><a href="/learn-python-ten-days/">🔥 Master Python in 10 Days</a></h3>
         <p>From zero to expert: Learn Python with hands-on coding challenges and real-world projects.</p>
       </div>
       <div class="feature">

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Python 10 Days Bootcamp
+permalink: /learn-python-ten-days/
+---
 # 🐍 Learn Python in 10 Days – Hands-On Roadmap
 
 > Learn Python by building small, real projects every day. No fluff. No long lectures. Just code and confidence.
