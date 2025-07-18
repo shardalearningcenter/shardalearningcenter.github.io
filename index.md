@@ -195,7 +195,7 @@ title: Welcome
     <h1>Learn Programming & AI from Real Engineers</h1>
     <p>Built by ex-Walmart, Microsoft & VMware employees — our mission is to make coding and AI simple, project-based, and fun for everyone.</p>
     <div class="cta-section">
-      <a href="https://youtube.com/@YourChannelName" target="_blank">🚀 Visit Our YouTube Channel</a>
+      <a href="https://youtube.com/@ShardaLearningCenter" target="_blank">🚀 Visit Our YouTube Channel</a>
     </div>
   </header>
 
@@ -227,7 +227,7 @@ title: Welcome
         <p>From zero to expert: Learn Python with hands-on coding challenges and real-world projects.</p>
       </div>
       <div class="feature">
-        <h3>🤖 Build AI Projects Like a Pro</h3>
+        <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>
       <div class="feature">
@@ -265,14 +265,14 @@ title: Welcome
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <!-- <section id="contact">
     <h2>📬 Contact Us</h2>
     <p style="text-align:center;">For partnerships, business inquiries or support, reach us at
       <a href="mailto:your@email.com">
         your@email.com
       </a>
     </p>
-  </section>
+  </section> -->
 
   <!-- SOCIALS -->
   <section id="socials">
