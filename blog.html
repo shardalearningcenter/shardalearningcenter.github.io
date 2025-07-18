@@ -1,4 +1,3 @@
-<!-- blog.html -->
 ---
 layout: default
 title: Blog
