@@ -235,7 +235,7 @@ title: Welcome
         <p>Master Data Structures & Algorithms with live coding sessions and pattern-based questions.</p>
       </div>
       <div class="feature">
-        <h3><a href="https://shardalearningcenter.github.io/2025/07/09/frontend-developer-roadmap.html">🌐 Full-Stack Web Development</h3></a>
+        <h3><a href="https://shardalearningcenter.github.io/2025/07/09/frontend-developer-roadmap.html">🌐 Full-Stack Web Development</a></h3>
         <p>Build apps using HTML, CSS, JavaScript, React, and Node.js. Learn by launching your own mini-startups.</p>
       </div>
       <div class="feature">
