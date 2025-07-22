@@ -11,6 +11,7 @@
 ## Sliding Window
 ## Monotonic stack
 ## Dynamic Programming
+[DP Link for all Patterns](https://shardalearningcenter.github.io/2025/07/22/dp-patterns.html)
 ### Knapsack
 ### Matrix multiplication
 
