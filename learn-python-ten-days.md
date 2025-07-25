@@ -8,6 +8,9 @@ permalink: /learn-python-ten-days/
 > Learn Python by building small, real projects every day. No fluff. No long lectures. Just code and confidence.
 
 ---
+# Python Sample exercize 
+
+## [Link to list of python beginner level exercize](https://shardalearningcenter.github.io/2025/07/25/python-beginner-exercize.html)
 
 ## 📅 Day 1: Hello Python & Setup
 
