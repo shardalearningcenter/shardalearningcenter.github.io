@@ -229,12 +229,12 @@ print(colors)  # Only unique values
 #### Add item to  set
 ```python
 # Set
-colors = {"red", "blue", "yellow"}
+colors = {"red", "blue", "red"}
 print(colors)  # Only unique values
 colors.add("orange")
 
 output
-{"red", "blue", "yellow","orange"}
+{"red", "blue", "orange"}
 
 ```
 
