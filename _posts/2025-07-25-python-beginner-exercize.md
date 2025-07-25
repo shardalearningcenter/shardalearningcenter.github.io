@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dynamic Programming patterns every software engineer should know"
+title: "Python Beginner Exercises – Focus: Collections, If, While, For,List,Set,Dictionary"
 date: 2025-07-25
 ---
 # 🐍 Python Beginner Exercises – Focus: Collections, If, While, For
