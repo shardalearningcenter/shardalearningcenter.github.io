@@ -174,7 +174,7 @@ print(person)
 
 ```python
 
- person = {"name": "Bob", "age": 25}
+person = {"name": "Bob", "age": 25}
 del person["name"]
 
 print(person)
@@ -188,11 +188,11 @@ person = {"age": 25}
 ### Loop Map
 ```python
 
- person = {"name": "Bob", "age": 25}
-for key,val in fruits:
+person = {"name": "Bob", "age": 25}
+for key,val in person:
   print(key)
-    print(" val ")
-       print(val)
+  print(" val ")
+  print(val)
   
 ```
 
@@ -210,17 +210,65 @@ for key,val in fruits:
 - Sets (unique unordered items)
 - Type conversions
 
+### Tuple
 ### 🛠️ Let's Do It
 ```python
 # Tuple
 point = (10, 20)
 print(point[0])
 
+```
+### Set
+
+#### Initialize set
+```python
 # Set
 colors = {"red", "blue", "red"}
 print(colors)  # Only unique values
+```
+#### Add item to  set
+```python
+# Set
+colors = {"red", "blue", "yellow"}
+print(colors)  # Only unique values
+colors.add("orange")
 
-# Type casting
+output
+{"red", "blue", "yellow","orange"}
+
+```
+
+#### Add item to  set
+```python
+# Set
+colors = {"red", "blue", "yellow"}
+print(colors)  # Only unique values
+colors.remove("red")
+
+output
+{"blue", "yellow","orange"}
+
+```
+
+#### Loop items to  set
+```python
+# Set
+colors = {"red", "blue", "yellow"}
+print(colors)  # Only unique values
+
+for color in colors:
+    print(color)
+
+output
+red
+blue
+yellow
+
+```
+## Type Casting
+- Convert the data type
+```python
+### Type casting
 num = "5"
 print(int(num) + 1)
 ```
