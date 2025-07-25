@@ -109,10 +109,25 @@ print(msg[0:5])  # 'Learn'
 - `append()`, `pop()`, slicing
 
 ### 🛠️ Let's Do It
+### Add
 ```python
 fruits = ["apple", "banana", "cherry"]
 fruits.append("kiwi")
 print(fruits)
+```
+### Remove 
+```python
+fruits = ["apple", "banana", "cherry"]
+fruits.remove("apple")
+print(fruits)
+```
+### Loop list
+```python
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+  print(fruit)
+
 ```
 
 ### 🎯 Task
@@ -130,8 +145,57 @@ print(fruits)
 ### 🛠️ Let's Do It
 ```python
 person = {"name": "Bob", "age": 25}
+
 print(person["name"])
+
 ```
+### Add to python dictionary
+```python
+
+person = {"name": "Bob", "age": 25}
+
+## Added key profession and value engineer
+
+person["profession"]="engineer"
+print(person)
+
+```
+### Remove 
+```python
+
+person = {"name": "Bob", "age": 25}
+# this will remove any key randomly and value.
+person.popitem()
+
+print(person)
+
+```
+#### The del keyword removes the item with the specified key name
+
+```python
+
+ person = {"name": "Bob", "age": 25}
+del person["name"]
+
+print(person)
+
+
+output
+
+person = {"age": 25}
+
+```
+### Loop Map
+```python
+
+ person = {"name": "Bob", "age": 25}
+for key,val in fruits:
+  print(key)
+    print(" val ")
+       print(val)
+  
+```
+
 
 ### 🎯 Task
 - Create a phonebook: name → number
