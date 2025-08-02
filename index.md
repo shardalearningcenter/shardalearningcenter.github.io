@@ -18,6 +18,7 @@ title: Welcome
       background: #f9f9f9;
       color: #333;
       scroll-behavior: smooth;
+      width: 100%;
     }
 
     /* TOP CTA */
