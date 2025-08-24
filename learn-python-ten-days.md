@@ -276,7 +276,7 @@ output
 
 ```
 
-#### Add item to  set
+#### remove item from  set
 ```python
 # Set
 colors = {"red", "blue", "yellow"}
