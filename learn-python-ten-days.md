@@ -115,6 +115,15 @@ fruits = ["apple", "banana", "cherry"]
 fruits.append("kiwi")
 print(fruits)
 ```
+
+### Insert at specified index
+```python
+fruits = ["apple", "banana", "cherry"]
+#this insert kiwi in the begining
+fruits.insert("kiwi",0)
+print(fruits)
+
+```
 ### Remove 
 ```python
 fruits = ["apple", "banana", "cherry"]
