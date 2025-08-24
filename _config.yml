@@ -4,7 +4,7 @@ description: >-
   Learn to code by building real projects. Fast. Practical. No fluff.
 baseurl: "" 
 url: "shaardalearningcenter.github.io" 
-theme: jekyll-theme-hacker
+theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
   - jekyll-sitemap
