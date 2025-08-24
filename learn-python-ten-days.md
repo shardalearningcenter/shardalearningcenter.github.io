@@ -179,6 +179,35 @@ person.popitem()
 print(person)
 
 ```
+### Update value of key
+#### Frequency Map in Python
+
+A **frequency map** (or frequency dictionary) is a way to count how many times each element appears in a collection (like a string, list, etc.).  
+It uses a dictionary (`dict`) where:
+- **Key** = element (e.g., character)
+- **Value** = count (frequency)
+
+## Example: Count frequency of characters in a string
+
+```python
+# Input string
+text = "apple"
+
+# Create empty frequency map
+freq_map = {}
+
+# Count frequency
+for ch in text:
+    freq_map[ch] = freq_map.get(ch, 0) + 1
+
+print(freq_map)
+```
+- output
+  ```
+  {'a': 1, 'p': 2, 'l': 1, 'e': 1}
+
+  ```
+
 #### The del keyword removes the item with the specified key name
 
 ```python
