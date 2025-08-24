@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "DP patterns Matrix Multiplication"
-date: 2025-07-03
-tags: [LeetCode, Dynamic Programming, Coin Change, Algorithms, Interview Prep]
+date: 2025-08-24
+tags: [LeetCode, Dynamic Programming, Algorithms, Interview Prep]
 ---
 # 312. Burst Balloons
 
