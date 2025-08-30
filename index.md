@@ -236,6 +236,10 @@ title: Welcome
         <p>From zero to expert: Learn Python with hands-on coding challenges and real-world projects.</p>
       </div>
       <div class="feature">
+        <h3><a href="/dsa-cheatsheet/">🔥 Master Java Cheatsheet</a></h3>
+        <p>From zero to java expert: Learn Master Java Cheatsheet to handle day to  day java coding and dsa.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>
