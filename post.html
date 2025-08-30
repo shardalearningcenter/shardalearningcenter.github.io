@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <style>
+    .post-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .post-title {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .post-content {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .post-content h2, .post-content h3 {
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      color: #111;
+    }
+    .post-content p {
+      margin-bottom: 1.2rem;
+    }
+    .post-content a {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+    .post-content blockquote {
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #555;
+      background: #f9f9f9;
+      margin: 1.5rem 0;
+    }
+    .post-content code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .post-content pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  {% include navbar.html %}
+
+  <main class="post-container">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      {{ page.date | date: "%B %d, %Y" }}
+    </div>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
