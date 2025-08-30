@@ -4,12 +4,121 @@ title: Blog
 permalink: /blog/
 ---
 
-<h1>Blog Posts</h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+
+<!-- Inline CSS: mirrors your homepage styling so blog index is full-width -->
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width:100%; height:100%; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f9f9f9; color:#333; }
+
+
+/* Top CTA */
+.top-cta { background:#ff9900; color:#fff; text-align:center; padding:14px 20px; font-size:16px; font-weight:700; }
+.top-cta a { color:#fff; text-decoration:underline; }
+
+
+/* NAV */
+nav { background-color:#0a66c2; display:flex; justify-content:space-between; align-items:center; padding:12px 30px; position:sticky; top:0; z-index:1000; }
+nav h2 { color:#fff; font-size:20px; margin:0; }
+nav ul { list-style:none; display:flex; gap:18px; margin:0; padding:0; }
+nav a { color:#fff; text-decoration:none; font-weight:700; }
+
+
+/* Page wrapper */
+.site-wrap { width:100%; }
+.container { max-width:1100px; margin:0 auto; padding:40px 20px; }
+
+
+/* Hero/title */
+.page-hero { background:#0a66c2; color:#fff; padding:36px 20px; text-align:center; }
+.page-hero h1 { margin:0; font-size:32px; }
+
+
+/* Blog grid */
+.posts-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:24px; margin-top:30px; }
+.post-card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.post-card h3 { margin-top:0; color:#0a66c2; font-size:18px; }
+.post-card p { color:#444; font-size:14px; line-height:1.5; }
+.post-meta { font-size:13px; color:#777; margin-bottom:10px; }
+.read-more { display:inline-block; margin-top:12px; text-decoration:none; font-weight:700; color:#0a66c2; }
+
+
+footer { text-align:center; padding:28px 12px; background:#eee; color:#666; margin-top:40px; }
+
+
+/* Post content width override for single post pages */
+.post-content { max-width:1100px; margin:0 auto; padding:40px 20px; }
+
+
+@media (max-width:768px) {
+nav { flex-direction:column; align-items:flex-start; gap:8px; }
+.page-hero h1 { font-size:24px; }
+.container { padding:24px 12px; }
+}
+</style>
+</head>
+<body>
+<div class="top-cta">🚀 Ready to Learn AI & Programming? <a href="https://youtube.com/@ShardaLearningCenter" target="_blank">Visit our YouTube</a></div>
+
+
+<nav>
+<h2>Sharda Learning Center</h2>
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
-  {% endfor %}
+<li><a href="/">Home</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/learn-python-ten-days/">Courses</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+</nav>
+
+
+<div class="site-wrap">
+
+
+<!-- Page hero / title -->
+<div class="page-hero">
+<div class="container">
+<h1>{{ page.title | default: "From the Blog" }}</h1>
+{% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+</div>
+</div>
+
+
+<div class="container">
+<!-- If this layout is used for the blog index, render posts here -->
+{% if page.url == "/blog/" or page.url == "/blog.html" or page.blog_index %}
+<div class="posts-grid">
+{% for post in site.posts %}
+<article class="post-card">
+<div class="post-meta">{{ post.date | date: "%b %d, %Y" }} • {{ post.categories | array_to_sentence_string }}</div>
+<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+<p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+<a class="read-more" href="{{ post.url }}">Read →</a>
+</article>
+{% endfor %}
+</div>
+{% else %}
+<!-- Otherwise, render individual page/post content full width -->
+<div class="post-content">{{ content }}</div>
+{% endif %}
+</div>
+
+
+</div>
+
+
+<footer>
+© {{ site.time | date: "%Y" }} Sharda Learning Center — Built with ❤️ on GitHub Pages
+</footer>
+
+
+</body>
+</html>
