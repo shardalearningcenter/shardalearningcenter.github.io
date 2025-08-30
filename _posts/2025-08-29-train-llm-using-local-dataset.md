@@ -31,6 +31,7 @@ sentencepiece>=0.2.0
 ```
 ## Take this code snipette to train the llm using the cnn data set
 - create file run_summarization.py
+
 ```python
 from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, AutoTokenizer, AutoModelForSeq2SeqLM, DataCollatorForSeq2Seq
 from datasets import load_dataset
