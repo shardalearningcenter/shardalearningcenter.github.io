@@ -185,9 +185,7 @@ title: Welcome
     🚀 Ready to Learn AI & Programming from Engineers Who've Built for Millions?
     <a href="https://youtube.com/@YourChannelName" target="_blank">Start Now</a>
   </div>
-
-  <!-- NAVBAR - ->
-  <nav>
+<nav>
     <h2>Sharda Learning Center</h2>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -198,6 +196,8 @@ title: Welcome
       <li><a href="#socials">Socials</a></li>
     </ul>
   </nav>
+  <!-- NAVBAR - ->
+  
 
   <!-- HERO SECTION -->
   <header id="home">
