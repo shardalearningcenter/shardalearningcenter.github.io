@@ -1,3 +1,8 @@
+---
+layout: page
+title: DSA 10 Days Bootcamp
+permalink: /dsa-cheatsheet/
+---
 # Snippets which will be useful
 
 ## Custom comparator 
