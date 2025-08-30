@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to train LLM using local dataset"
-date: 2029-08-29
+date: 2025-08-29
 ---
 # How to train LLM using local dataset
 
