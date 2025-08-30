@@ -8,8 +8,27 @@ date: 2029-08-29
 Clone the required repo for training
 - git clone https://github.com/huggingface/transformers
 - cd transformers
+- pip install .
+-    cd /mnt/d/karm/slc-bootcamp/
+-    cd training-exmple/
+-    cd transformers/
+-    pip install .
+-    python run_summarization.py
+-    pip install datasets
+-    python run_summarization.py
+-    cd my-example/
+-    pip install -r requirements.txt
 
+## create requirements.txt
+```python
+transformers>=4.44.0
+datasets>=2.20.0
+evaluate>=0.4.2
+torch>=2.3.0
+accelerate>=0.33.0
+sentencepiece>=0.2.0
 
+```
 ## Take this code snipette to train the llm using the cnn data set
 - create file run_summarization.py
 ```python
