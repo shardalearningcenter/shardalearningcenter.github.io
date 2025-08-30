@@ -12,6 +12,62 @@ So write this oneliner and you can sort the element.
 ```
 string1.compareTo(string2)
 ```
+#### Example 2: Using Comparator
+
+```
+import java.util.*;
+
+
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+}
+
+public class TreeMapComparatorExample {
+    public static void main(String[] args) {
+        // Sort by name instead of age
+        Comparator<Person> nameComparator = Comparator.comparing(p -> p.name);
+
+        TreeMap<Person, String> map = new TreeMap<>(nameComparator);
+
+        /*
+        // Old school Comparator (anonymous class)
+        Comparator<Person> nameComparator = new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.name.compareTo(p2.name);
+            }
+        };
+        */
+
+        map.put(new Person("Alice", 30), "Doctor");
+        map.put(new Person("Bob", 25), "Engineer");
+        map.put(new Person("Charlie", 35), "Teacher");
+
+        for (Map.Entry<Person, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+    }
+}
+```
+
+#### Output (sorted by name):
+
+```
+Alice (30) -> Doctor
+Bob (25) -> Engineer
+Charlie (35) -> Teacher
+```
 ### 📦 Arrays
 ```
 int[] arr = new int[10];
@@ -151,5 +207,6 @@ while (!q.isEmpty()) {
         }
     }
 }
+
 
 ```

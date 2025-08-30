@@ -127,8 +127,18 @@ summary_ids = model.generate(
     length_penalty=2.0,
     early_stopping=True
 )
-
+print("Original")
+print(text)
 print("Summary:", tokenizer.decode(summary_ids[0], skip_special_tokens=True))
 
 
 ```
+# Original
+```
+Prime Minister Narendra Modi on Saturday (August 30, 2025) travelled to Sendai in the Japanese prefecture of Miyagi to visit a semiconductor plant. Narendra Modi on Saturday (August 30, 2025) also met governors of 16 Japanese prefectures in Tokyo and called for strengthening state-prefecture cooperation under the India-Japan Special Strategic and Global Partnership, the Ministry of External Affairs (MEA) said in a statement.
+``` 
+# Summary
+```
+Summary: PM Narendra Modi visits a semiconductor plant in Miyagi . He also meets governors of 16 Japanese prefectures in Tokyo . PM calls for strengthening state-prefecture cooperation under India-Japan Special Strategic
+
+
