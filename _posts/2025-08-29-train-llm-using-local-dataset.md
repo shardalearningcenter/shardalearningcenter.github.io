@@ -32,7 +32,6 @@ sentencepiece>=0.2.0
 ## Take this code snipette to train the llm using the cnn data set
 - create file run_summarization.py
 ```python
-
 from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, AutoTokenizer, AutoModelForSeq2SeqLM, DataCollatorForSeq2Seq
 from datasets import load_dataset
 
@@ -40,7 +39,8 @@ from datasets import load_dataset
 dataset = load_dataset("cnn_dailymail", "3.0.0")
 
 # 2. Load tokenizer and model
-model_name = "google-t5/t5-small"
+# model_name = "google-t5/t5-small"
+model_name="google/flan-t5-base"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
@@ -64,11 +64,13 @@ training_args = Seq2SeqTrainingArguments(
     eval_strategy="epoch",
     # evaluate_during_training=True,  # old name
     learning_rate=2e-5,
+# max_steps=2000,  # overrides num_train_epochs
+
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
     weight_decay=0.01,
     save_total_limit=2,
-    num_train_epochs=1,
+    num_train_epochs=10,
     predict_with_generate=True,
     logging_dir="./logs",
     logging_steps=50,
@@ -96,7 +98,6 @@ tokenizer.save_pretrained("./local_t5_summarization")
 print("✅ Model saved locally at ./local_t5_summarization")
 
 
-
 ```
 
 ## Use this trained model 
@@ -113,9 +114,7 @@ model_name = "./local_t5_summarization/checkpoint-250"  # your trained checkpoin
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
-text = """Artificial Intelligence (AI) is a field of computer science that emphasizes
-the creation of intelligent machines that work and react like humans.
-Some activities include speech recognition, learning, planning, and problem-solving."""
+text = """Prime Minister Narendra Modi on Saturday (August 30, 2025) travelled to Sendai in the Japanese prefecture of Miyagi to visit a semiconductor plant. Narendra Modi on Saturday (August 30, 2025) also met governors of 16 Japanese prefectures in Tokyo and called for strengthening state-prefecture cooperation under the India-Japan Special Strategic and Global Partnership, the Ministry of External Affairs (MEA) said in a statement."""
 
 inputs = tokenizer("summarize: " + text, return_tensors="pt", truncation=True)
 
