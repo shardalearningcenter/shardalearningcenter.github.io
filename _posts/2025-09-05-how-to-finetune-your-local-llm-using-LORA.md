@@ -29,6 +29,8 @@ Think of it as teaching just a few neurons, not rewiring the whole brain.
 
 <details>
 <summary>Click to expand and see dependancy for this project📌</summary>
+
+``` 
 name: lora
 channels:
   - defaults
@@ -310,11 +312,14 @@ dependencies:
       - zstandard==0.24.0
 prefix: /home/sv/anaconda3/envs/lora
 
+```
 </details>
 
 <details>
 <summary>Click to see code for quickly train using LORA</summary>
+
 ```python 
+
 # -*- coding: utf-8 -*-
 # Install the requirements in Google Colab
 # !pip install transformers datasets trl huggingface_hub
