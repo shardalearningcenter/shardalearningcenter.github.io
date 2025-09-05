@@ -315,8 +315,7 @@ prefix: /home/sv/anaconda3/envs/lora
 ```
 </details>
 
-<details>
-<summary>Click to see code for quickly train using LORA</summary>
+##  see code for quickly train model using LORA
 
 ```python 
 
@@ -471,10 +470,8 @@ del trainer
 torch.cuda.empty_cache()
 
 ```
-</details>
 
-<details>
-<summary>How to use this trained model</summary>
+## How to use this trained model
 ```python 
 from transformers import pipeline, AutoTokenizer
 from peft import AutoPeftModelForCausalLM
