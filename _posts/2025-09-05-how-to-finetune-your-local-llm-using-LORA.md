@@ -3,8 +3,29 @@ layout: post
 title: "How to finetune your local llm using LORA"
 date: 2025-09-05
 ---
-# How to finetune your local llm using LORA
 
+# Train in hours not days using LORA 
+## LoRA = Tiny Add-On Brains 🧠
+
+Instead of training all billion parameters, LoRA adds small trainable matrices.
+
+Think of it as teaching just a few neurons, not rewiring the whole brain.
+
+## Magic Settings ⚡
+
+- Rank (r): How many "extra neurons" LoRA adds (small r = more compression).
+
+- Alpha: How strong those neurons influence the model.
+
+- Dropout: Prevents overfitting — like making the neurons forget some details.
+
+## Result = Cheap + Fast Training 💸
+
+- Train a model on your laptop in hours (not days).
+
+- Save GPU memory while keeping accuracy.
+
+- Perfect for fine-tuning chatbots, code assistants, or small domain models.
 
 <details>
 <summary>Click to expand and see dependancy for this project📌</summary>
@@ -443,6 +464,47 @@ merged_model.save_pretrained(
 del model
 del trainer
 torch.cuda.empty_cache()
+
+```
+</details>
+
+<details>
+<summary>How to use this trained model</summary>
+```python 
+from transformers import pipeline, AutoTokenizer
+from peft import AutoPeftModelForCausalLM
+import torch
+
+finetune_name = "./SmolLM2-FT-MyDataset"
+
+# 1. Load tokenizer
+tokenizer = AutoTokenizer.from_pretrained(finetune_name)
+
+# 2. Load PEFT (LoRA) model
+model = AutoPeftModelForCausalLM.from_pretrained(
+    finetune_name,
+    device_map="auto",
+    torch_dtype=torch.float16
+)
+
+# Optional: merge LoRA weights into base
+# model = model.merge_and_unload()
+
+# 3. Create inference pipeline
+pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    torch_dtype=torch.float16,
+    device_map="auto"
+)
+
+# ---- Test inference ----
+prompt = ("What is the difference between a fruit and a "
+          "vegetable? Give examples of each.")
+outputs = pipe(prompt, max_new_tokens=100, do_sample=True, temperature=0.7)
+print(outputs[0]["generated_text"])
+
 
 ```
 </details>
