@@ -96,11 +96,13 @@ p {
 
    
 
-<div class="course-cards">
-# 🧠 LLM Boot Camp Curriculum
+<!-- <div class="course-cards"> -->
+
+<h1># 🧠 LLM Boot Camp Curriculum</h1>
 
 
-## 📘 Module 1: Foundations of Large Language Models
+<h2>## 📘 Module 1: Foundations of Large Language Models</h2>
+<p>
 ### 1. What is a Language Model?
 - Evolution from N-grams to Transformers
 - Why "large" matters in modern AI
@@ -188,5 +190,6 @@ p {
 ---
 
 *Built for developers, students, and tech teams ready to master LLMs in record time.*
+</p>
 </div>
   </div>
