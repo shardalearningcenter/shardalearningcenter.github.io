@@ -90,7 +90,13 @@ p {
 
 </style>
  <div class="page-wrapper">
- 
+     <header class="site-header">
+      <h1>Welcome to Sharda Learning Center</h1>
+    </header>
+
+   
+
+<div class="course-cards">
 # 🧠 LLM Boot Camp Curriculum
 
 
@@ -182,4 +188,5 @@ p {
 ---
 
 *Built for developers, students, and tech teams ready to master LLMs in record time.*
+</div>
   </div>
