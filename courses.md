@@ -42,10 +42,60 @@ section {
       max-width: 1100px;
       margin: 0 auto;
 }
+/* Reset + font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Consistent centered wrapper */
+.page-wrapper {
+  max-width: 900px;   /* keeps layout narrow for readability */
+  margin: 0 auto;     /* centers horizontally */
+  padding: 20px;
+  background: #fff;
+  min-height: 100vh;  /* ensures full screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header, content, footer */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eaeaea;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.content {
+  flex: 1; /* pushes footer to bottom */
+  text-align: center; /* centers text */
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+h2 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
 
 </style>
-<div class="body1">
-<div class="section">
+ <div class="page-wrapper">
+    <header class="site-header">
+      <h1>Welcome to Sharda Learning Center</h1>
+    </header>
+
+   
+
 <div class="course-cards">
   <div class="course-card">
     <div class="course-title"><a href="/python-bootcamp/">Python Bootcamp</a></div>
@@ -60,5 +110,4 @@ section {
     <div class="course-desc">Kickstart your journey into Machine Learning with real-world datasets.</div>
   </div>
 </div>
-</div>
-</div>
+  </div>
