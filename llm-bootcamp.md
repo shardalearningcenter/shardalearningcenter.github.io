@@ -102,79 +102,79 @@ p {
 
 
 <h2>## 📘 Module 1: Foundations of Large Language Models</h2>
-<p>
-### 1. What is a Language Model?
+
+<h3>### 1. What is a Language Model?</h3>
 - Evolution from N-grams to Transformers
 - Why "large" matters in modern AI
 
-### 2. Transformers 101
+<h3>### 2. Transformers 101</h3>
 - Self-attention mechanism
 - Positional encoding & architecture
 - Mini Transformer demo in PyTorch
 
 ---
 
-## 📘 Module 2: Pre-trained LLMs – Under the Hood
-### 3. Tokenization Deep Dive
+<h2>## 📘 Module 2: Pre-trained LLMs – Under the Hood</h2>
+<h3>### 3. Tokenization Deep Dive</h3>
 - BPE, WordPiece, SentencePiece
 - Tokenizer visualization & decoding
 
-### 4. Exploring Popular LLMs
+<h3>### 4. Exploring Popular LLMs</h3>
 - GPT, LLaMA, Falcon, Mistral
 - Model card reading and comparison
 
-### 5. Embeddings & Representations
+<h3>### 5. Embeddings & Representations</h3>
 - Sentence and word embeddings
 - Using OpenAI or Hugging Face APIs
 
 ---
 
-## 📘 Module 3: Prompting & Fine-Tuning
-### 6. Prompt Engineering Basics
+<h2>## 📘 Module 3: Prompting & Fine-Tuning</h2>
+<h3>### 6. Prompt Engineering Basics</h3>
 - Zero, one, few-shot prompting
 - Prompt hacks & real-world examples
 
-### 7. Fine-Tuning vs LoRA
+<h3>### 7. Fine-Tuning vs LoRA</h3>
 - Why and when to fine-tune
 - Fine-tune with PEFT / LoRA on Hugging Face
 
-### 8. RLHF (Reinforcement Learning from Human Feedback)
+<h3>### 8. RLHF (Reinforcement Learning from Human Feedback)</h3>
 - Overview of alignment techniques
 - Human feedback simulation demo
 
 ---
 
-## 📘 Module 4: Building with LLMs
-### 9. LangChain / LlamaIndex 101
+<h2>## 📘 Module 4: Building with LLMs</h2>
+<h3>### 9. LangChain / LlamaIndex 101</h3>
 - Chains, memory, and agents
 - Building Q&A apps with RAG
 
-### 10. LLM APIs in Production
+<h3>### 10. LLM APIs in Production</h3>
 - OpenAI, Cohere, HuggingFace Inference
 - Handling rate limits, logging, observability
 
-### 11. Chatbot + RAG Project
+<h3>### 11. Chatbot + RAG Project</h3>
 - Ingest PDF/text
 - Add memory & tool use
 
 ---
 
-## 📘 Module 5: Advanced Topics & Deployment
-### 12. LLMOps: Serving & Scaling
+<h2>## 📘 Module 5: Advanced Topics & Deployment</h2>
+<h3>### 12. LLMOps: Serving & Scaling</h3>
 - FastAPI, vLLM, Hugging Face Spaces, Modal
 - Deploying local models with Ollama
 
-### 13. Security, Bias & Ethics
+<h3>### 13. Security, Bias & Ethics</h3>
 - Prompt injection attacks
 - Jailbreaks, red-teaming & safe responses
 
-### 14. Build a Mini Language Model
+<h3>### 14. Build a Mini Language Model</h3>
 - Train from scratch on a toy dataset
 - Tokenization → model → sampling loop
 
 ---
 
-## 🎓 Capstone Projects (Pick One)
+<h2>## 🎓 Capstone Projects (Pick One)</h2>
 - ✅ Chatbot for documents (PDF, CSV)
 - ✅ Auto-tagging for customer support
 - ✅ Custom-trained LoRA chatbot
@@ -182,7 +182,7 @@ p {
 
 ---
 
-## 🚀 Bonus Chapter: Becoming an LLM Engineer
+<h2>## 🚀 Bonus Chapter: Becoming an LLM Engineer</h2>
 - Must-have skills & GitHub project ideas
 - Resume and interview tips
 - Building your AI portfolio
