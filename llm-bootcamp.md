@@ -190,6 +190,6 @@ p {
 ---
 
 *Built for developers, students, and tech teams ready to master LLMs in record time.*
-</p>
+
 </div>
   </div>
