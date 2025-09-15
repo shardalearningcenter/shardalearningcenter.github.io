@@ -3,24 +3,121 @@ layout: page
 title: Python 10 Days Bootcamp
 permalink: /learn-python-ten-days/
 ---
+
+<style>
+  .body1 {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+      width: 100%;
+    }
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--bg-card, #fff);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.course-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-heading, #000);
+}
+.course-desc {
+  color: var(--text-body, #555);
+}
+section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+}
+/* Reset + font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Consistent centered wrapper */
+.page-wrapper {
+  max-width: 900px;   /* keeps layout narrow for readability */
+  margin: 0 auto;     /* centers horizontally */
+  padding: 20px;
+  background: #fff;
+  min-height: 100vh;  /* ensures full screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header, content, footer */
+.site-header,
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eaeaea;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.content {
+  flex: 1; /* pushes footer to bottom */
+  text-align: center; /* centers text */
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+h2 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+</style>
+ <div class="page-wrapper">
+     <header class="site-header">
+      <h1>Welcome to Sharda Learning Center</h1>
+    </header>
+
+
 # 🐍 Learn Python in 10 Days – Hands-On Roadmap
 
-> Learn Python by building small, real projects every day. No fluff. No long lectures. Just code and confidence.
+<strong> Learn Python by building small, real projects every day. No fluff. No long lectures. Just code and confidence.</strong>
 
 ---
-# Python Sample exercize 
+<h1> Python Sample exercize </h1>
 
-## [Link to list of python beginner level exercize](https://shardalearningcenter.github.io/2025/07/25/python-beginner-exercize.html)
+<h2><a href="https://shardalearningcenter.github.io/2025/07/25/python-beginner-exercize.html">Link to list of python beginner level exercize</a>
+</h2>
+<h1> 📅 Day 1: Hello Python & Setup</h1>
 
-## 📅 Day 1: Hello Python & Setup
+<h3> 🔍 What You'll Learn </h3>
 
-### 🔍 What You'll Learn
 - Install Python
+
 - Run your first `.py` file
+
 - Print text and numbers
+
 - Variables and data types
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
 print("Hello, Python!")
 name = input("What’s your name? ")
@@ -28,21 +125,28 @@ age = int(input("How old are you? "))
 print(f"{name}, you’ll be {age+1} next year!")
 ```
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Create a file named `hello.py`
+
 - Ask the user’s name and age
+
 - Greet them with a message using `f-string`
 
 ---
 
-## 📅 Day 2: Conditions & Loops
+<h2> 📅 Day 2: Conditions & Loops </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - `if`, `elif`, `else`
+
 - `for`, `while` loops
+
 - `break` and `continue`
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
 num = int(input("Guess a number: "))
 if num == 7:
@@ -57,19 +161,24 @@ for i in range(1, 6):
     print(i)
 ```
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Build a number guessing game (max 3 tries)
+
 - Add a secret number with a hint
 
 ---
 
-## 📅 Day 3: Functions & Reuse
+<h2> 📅 Day 3: Functions & Reuse </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - `def`, parameters, return
+
 - Reusable code blocks
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
 def greet(name):
     return f"Hello, {name}!"
@@ -77,46 +186,57 @@ def greet(name):
 print(greet("Alice"))
 ```
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Write a function that adds 2 numbers
+
 - Write a function that checks if a number is even
 
 ---
 
-## 📅 Day 4: Strings & Input Formatting
+<h2> 📅 Day 4: Strings & Input Formatting </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - String methods: `.lower()`, `.upper()`, `.replace()`
+
 - Slicing and indexing
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
 msg = "Learn Python"
 print(msg.upper())
 print(msg[0:5])  # 'Learn'
 ```
 
-### 🎯 Task
+<h3> 🎯 Task</h3>
+
 - Create a sentence reverser
+
 - Input: "Python is fun" → Output: "fun is Python"
 
 ---
 
-## 📅 Day 5: Lists & Loops
+<h2> 📅 Day 5: Lists & Loops</h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - Creating and accessing lists
+
 - `append()`, `pop()`, slicing
 
-### 🛠️ Let's Do It
-### Add
+<h3> 🛠️ Let's Do It</</h3>
+<h3> Add </h3>
+
 ```python
 fruits = ["apple", "banana", "cherry"]
 fruits.append("kiwi")
 print(fruits)
 ```
 
-### Insert at specified index
+<h3> Insert at specified index </h3>
+
 ```python
 fruits = ["apple", "banana", "cherry"]
 #this insert kiwi in the begining
@@ -124,13 +244,16 @@ fruits.insert("kiwi",0)
 print(fruits)
 
 ```
-### Remove 
+<h3> Remove </h3>
+
 ```python
 fruits = ["apple", "banana", "cherry"]
 fruits.remove("apple")
 print(fruits)
 ```
-### Loop list
+
+<h3> Loop list </h3>
+
 ```python
 
 fruits = ["apple", "banana", "cherry"]
@@ -139,37 +262,44 @@ for fruit in fruits:
 
 ```
 
-### 🎯 Task
+<h3> 🎯 Task</h3>
+
 - Make a to-do list program
+
 - Allow user to add, view, remove tasks
 
 ---
 
-## 📅 Day 6: Dictionaries – Key to Python
+<h2> 📅 Day 6: Dictionaries – Key to Python</h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - Dictionary creation & access
+
 - Loops with dicts
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It</h3>
+
 ```python
 person = {"name": "Bob", "age": 25}
 
 print(person["name"])
 
 ```
-### Add to python dictionary
+<h3> Add to python dictionary</h3>
+
 ```python
 
 person = {"name": "Bob", "age": 25}
 
-## Added key profession and value engineer
+<h2> Added key profession and value engineer</h2>
 
 person["profession"]="engineer"
 print(person)
 
 ```
-### Remove 
+<h3> Remove </h3>
+
 ```python
 
 person = {"name": "Bob", "age": 25}
@@ -179,17 +309,18 @@ person.popitem()
 print(person)
 
 ```
-### Update value of key
-#### Frequency Map in Python
+<h3> Update value of key</h3>
+<h3># Frequency Map in Python</h3>
 
 A **frequency map** (or frequency dictionary) is a way to count how many times each element appears in a collection (like a string, list, etc.).  
 It uses a dictionary (`dict`) where:
 - **Key** = element (e.g., character)
 - **Value** = count (frequency)
 
-## Example: Count frequency of characters in a string
+<h2> Example: Count frequency of characters in a string</h3>
 
 ```python
+
 # Input string
 text = "apple"
 
@@ -202,13 +333,14 @@ for ch in text:
 
 print(freq_map)
 ```
+
 - output
   ```
   {'a': 1, 'p': 2, 'l': 1, 'e': 1}
 
   ```
 
-#### The del keyword removes the item with the specified key name
+<h3># The del keyword removes the item with the specified key name</h3>
 
 ```python
 
@@ -223,7 +355,9 @@ output
 person = {"age": 25}
 
 ```
-### Loop Map
+
+<h3> Loop Map</h3>
+
 ```python
 
 person = {"name": "Bob", "age": 25}
@@ -235,36 +369,45 @@ for key,val in person:
 ```
 
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Create a phonebook: name → number
+
 - Allow user to add and search contacts
 
 ---
 
-## 📅 Day 7: Tuples, Sets, and Data Types
+<h2> 📅 Day 7: Tuples, Sets, and Data Types </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - Tuples (immutable lists)
+
 - Sets (unique unordered items)
+
 - Type conversions
 
-### Tuple
-### 🛠️ Let's Do It
+<h3> Tuple </h3>
+<h3> 🛠️ Let's Do It</h3>
+
 ```python
 # Tuple
 point = (10, 20)
 print(point[0])
 
 ```
-### Set
 
-#### Initialize set
+<h3> Set</h3>
+
+<h3># Initialize set</h3>
+
 ```python
 # Set
 colors = {"red", "blue", "red"}
 print(colors)  # Only unique values
 ```
-#### Add item to  set
+<h3># Add item to  set </h3>
+
 ```python
 # Set
 colors = {"red", "blue", "red"}
@@ -276,7 +419,8 @@ output
 
 ```
 
-#### remove item from  set
+<h3># remove item from  set</h3>
+
 ```python
 # Set
 colors = {"red", "blue", "yellow"}
@@ -288,7 +432,8 @@ output
 
 ```
 
-#### Loop items to  set
+<h3># Loop items to  set </h3>
+
 ```python
 # Set
 colors = {"red", "blue", "yellow"}
@@ -303,27 +448,34 @@ blue
 yellow
 
 ```
-## Type Casting
+<h2> Type Casting </h2>
+
 - Convert the data type
+
 ```python
-### Type casting
+
 num = "5"
 print(int(num) + 1)
+
 ```
 
-### 🎯 Task
+<h3> 🎯 Task</h3>
+
 - Create a set of user-entered numbers (avoid duplicates)
+
 - Try storing multiple (x, y) positions as tuples
 
 ---
 
-## 📅 Day 8: File Handling
+<h2> 📅 Day 8: File Handling </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - Reading and writing files
 - Using `with open(...)` safely
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
 # Write
 with open("notes.txt", "w") as f:
@@ -334,20 +486,26 @@ with open("notes.txt", "r") as f:
     print(f.read())
 ```
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Save a user’s to-do list to a file
+
 - Allow them to read it later
 
 ---
 
-## 📅 Day 9: Error Handling & Debugging
+<h2> 📅 Day 9: Error Handling & Debugging </h2>
 
-### 🔍 What You'll Learn
+<h3> 🔍 What You'll Learn </h3>
+
 - `try`, `except`, `finally`
+
 - Debugging techniques
 
-### 🛠️ Let's Do It
+<h3> 🛠️ Let's Do It </h3>
+
 ```python
+
 try:
     num = int(input("Enter a number: "))
     print(10 / num)
@@ -355,20 +513,25 @@ except ZeroDivisionError:
     print("Can't divide by zero!")
 except ValueError:
     print("Please enter a valid number.")
+
 ```
 
-### 🎯 Task
+<h3> 🎯 Task </h3>
+
 - Create a calculator that handles divide-by-zero and bad input
 
 ---
 
-## 📅 Day 10: Build a Mini Project 🎉
+<h2> 📅 Day 10: Build a Mini Project 🎉 </h2>
 
-### 🧠 Combine Everything You've Learned
+<h3> 🧠 Combine Everything You've Learned </h3>
 
-### Project Idea: Contact Book App
+<h3> Project Idea: Contact Book App </h3>
+
 - Add, search, and save contacts using a dictionary
+
 - Use functions to organize your code
+
 - Save/load from a file
 
 ```python
@@ -380,16 +543,23 @@ def search_contact(name, contacts):
     return contacts.get(name, "Not found")
 ```
 
-🎯 Your Goal:  
+<h2> 🎯 Your Goal:  </h2>
+
 - Make it menu-driven  
+
 - Add error handling  
+
 - Save/load to a file
 
 ---
 
-### 🏁 You're Done!
+<h3> 🏁 You're Done! </h3>
+
 You've built real things. Now keep going:
+
 - Try small apps (calculator, quiz game, chatbot)
+
 - Explore libraries: `random`, `datetime`, `matplotlib`
 
 Happy coding 🚀
+</div>
