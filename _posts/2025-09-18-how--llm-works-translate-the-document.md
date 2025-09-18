@@ -57,13 +57,13 @@ The generate method runs beam search / greedy decoding to predict Hindi tokens o
 
 Example:
 
-Step 1: <s> → predicts "मैं"
+- Step 1: <s> → predicts "मैं"
 
-Step 2: "मैं" → predicts "स्कूल"
+- Step 2: "मैं" → predicts "स्कूल"
 
-Step 3: "स्कूल" → predicts "जा"
+- Step 3: "स्कूल" → predicts "जा"
 
-Step 4: "जा" → predicts "रहा हूँ।"
+- Step 4: "जा" → predicts "रहा हूँ।"
 
 Continues until </s> (end-of-sequence token) is generated.
 
@@ -94,15 +94,17 @@ Tokenizer.decode → Converts tokens back into Hindi text
 ```
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-# Load model + tokenizer
-model_name = "google/flan-t5-base"   # T5-base, instruction-tuned
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+model_name = "Helsinki-NLP/opus-mt-en-hi"
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True)
 
-# Example 1: Summarization
-text = "summarize: The sun rises in the east and sets in the west. It is an important fact in geography."
-inputs = tokenizer(text, return_tensors="pt")
-outputs = model.generate(**inputs, max_length=40)
-print("Summarization:", tokenizer.decode(outputs[0], skip_special_tokens=True))
+text = "I am going to school."
+print("Input")
+print(text)
+inputs = tokenizer(text, return_tensors="pt", padding=True)
+outputs = model.generate(**inputs, max_new_tokens=50)
+print("translated text")
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+
 
 ```
