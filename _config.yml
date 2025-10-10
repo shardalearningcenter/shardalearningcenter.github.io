@@ -3,7 +3,7 @@ email: s.learnkarma@gmail.com
 description: >- 
   Learn to code by building real projects. Fast. Practical. No fluff.
 baseurl: "" 
-url: "https://shaardalearningcenter.github.io" 
+url: "https://shardalearningcenter.github.io" 
 theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
