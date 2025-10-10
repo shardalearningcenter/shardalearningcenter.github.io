@@ -1,0 +1,194 @@
+<h1 id="snippets-which-will-be-useful">Snippets which will be useful</h1>
+
+<h2 id="custom-comparator">Custom comparator</h2>
+<p>Say you have been given task to sort elements based on diffrence between the input element and the number in the list
+So write this oneliner and you can sort the element.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Collections.sort(ls, 
+        (n1, n2) -&gt; Math.abs(n1 - x) - Math.abs(n2 - x));
+</code></pre></div></div>
+<h3 id="there-is-another-method-to-compare-the-strings-it-is-called-compareto">There is another method to compare the strings it is called compareTo()</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string1.compareTo(string2)
+</code></pre></div></div>
+<h4 id="example-2-using-comparator">Example 2: Using Comparator</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import java.util.*;
+
+
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+}
+
+public class TreeMapComparatorExample {
+    public static void main(String[] args) {
+        // Sort by name instead of age
+        Comparator&lt;Person&gt; nameComparator = Comparator.comparing(p -&gt; p.name);
+
+        TreeMap&lt;Person, String&gt; map = new TreeMap&lt;&gt;(nameComparator);
+
+        /*
+        // Old school Comparator (anonymous class)
+        Comparator&lt;Person&gt; nameComparator = new Comparator&lt;Person&gt;() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.name.compareTo(p2.name);
+            }
+        };
+        */
+
+        map.put(new Person("Alice", 30), "Doctor");
+        map.put(new Person("Bob", 25), "Engineer");
+        map.put(new Person("Charlie", 35), "Teacher");
+
+        for (Map.Entry&lt;Person, String&gt; entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " -&gt; " + entry.getValue());
+        }
+    }
+}
+</code></pre></div></div>
+
+<h4 id="output-sorted-by-name">Output (sorted by name):</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alice (30) -&gt; Doctor
+Bob (25) -&gt; Engineer
+Charlie (35) -&gt; Teacher
+</code></pre></div></div>
+<h3 id="-arrays">📦 Arrays</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[] arr = new int[10];
+Arrays.fill(arr, -1);
+int[] copy = Arrays.copyOf(arr, arr.length);
+int[] sub = Arrays.copyOfRange(arr, 2, 5);
+</code></pre></div></div>
+
+<h3 id="-string">📑 String</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String s = "hello";
+s.charAt(i);
+s.substring(0, 3);
+s.length();
+s.equals("test");
+s.toCharArray();
+</code></pre></div></div>
+<h3 id="-hashmap--hashset">🧠 HashMap / HashSet</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+map.put(key, val);
+map.getOrDefault(key, 0);
+map.containsKey(key);
+map.remove(key);
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Set&lt;Integer&gt; set = new HashSet&lt;&gt;();
+set.add(x);
+set.contains(x);
+set.remove(x);
+
+</code></pre></div></div>
+
+<h3 id="-priorityqueue">🧮 PriorityQueue</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;(); // min-heap
+PriorityQueue&lt;Integer&gt; maxpq = new PriorityQueue&lt;&gt;(Collections.reverseOrder()); // max-heap
+pq.offer(x);
+pq.poll();
+pq.peek();
+
+</code></pre></div></div>
+
+<h3 id="-2d-arrays">🔃 2D Arrays</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+int[][] grid = new int[m][n];
+for (int[] row : grid) Arrays.fill(row, -1);
+
+</code></pre></div></div>
+<h3 id="-sorting">🚀 Sorting</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Arrays.sort(arr);
+Collections.sort(list); // for List&lt;Integer&gt;
+
+Arrays.sort(arr, (a, b) -&gt; b - a); // Desc order for Integer[]
+
+</code></pre></div></div>
+<h3 id="-character--ascii">🔣 Character &amp; ASCII</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+char c = 'a';
+int idx = c - 'a';  // 0-based index
+Character.isDigit(c);
+Character.isLetter(c);
+
+</code></pre></div></div>
+
+<h3 id="-quick-math">💡 Quick Math</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Math.max(a, b);
+Math.min(a, b);
+Math.abs(x);
+Math.pow(x, y);
+
+</code></pre></div></div>
+
+<h3 id="-binary-search">🧪 Binary Search</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int idx = Arrays.binarySearch(arr, target);
+
+</code></pre></div></div>
+
+<h3 id="-stack--queue">📚 Stack &amp; Queue</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
+stack.push(x); stack.pop(); stack.peek();
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Queue&lt;Integer&gt; q = new LinkedList&lt;&gt;();
+q.offer(x); q.poll(); q.peek();
+
+</code></pre></div></div>
+
+<h3 id="-dfs--bfs-template">🔁 DFS / BFS Template</h3>
+<h4 id="dfs">DFS</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+void dfs(int u) {
+    visited[u] = true;
+    for (int v : graph.get(u)) {
+        if (!visited[v]) dfs(v);
+    }
+}
+
+</code></pre></div></div>
+
+<h3 id="bfs">BFS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Queue&lt;Integer&gt; q = new LinkedList&lt;&gt;();
+q.offer(start);
+while (!q.isEmpty()) {
+    int cur = q.poll();
+    for (int next : adj.get(cur)) {
+        if (!visited[next]) {
+            visited[next] = true;
+            q.offer(next);
+        }
+    }
+}
+
+
+</code></pre></div></div>
