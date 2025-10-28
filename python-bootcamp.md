@@ -4,7 +4,7 @@ title: Python Bootcamp
 permalink: /python-bootcamp/
 ---
 
-# 🚀 30-Day Python Bootcamp
+# 🚀 7-Day Python Bootcamp
 
 Welcome to the most practical Python Bootcamp on the internet.
 
