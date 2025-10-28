@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shaardalearningcenter.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shaardalearningcenter.github.io/" rel="alternate" type="text/html" /><updated>2025-10-10T20:32:17+05:30</updated><id>https://shaardalearningcenter.github.io/feed.xml</id><title type="html">ShardaLearningCenter</title><subtitle>Learn to code by building real projects. Fast. Practical. No fluff.</subtitle><entry><title type="html">Lottery Analogy for Reservoir Sampling algorithm leetcode problem facebook</title><link href="https://shaardalearningcenter.github.io/2025/09/18/reservior-sampling-algorithm.html" rel="alternate" type="text/html" title="Lottery Analogy for Reservoir Sampling algorithm leetcode problem facebook" /><published>2025-09-18T00:00:00+05:30</published><updated>2025-09-18T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/18/reservior-sampling-algorithm</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/18/reservior-sampling-algorithm.html"><![CDATA[<h1 id="lottery-analogy-for-reservoir-sampling-k--1">Lottery Analogy for Reservoir Sampling (k = 1)</h1>
+
+<p>Imagine you are running a lucky draw at a fair.</p>
+
+<p>People come in one by one.</p>
+
+<p>You must always keep exactly one name in your box.</p>
+
+<p>You don’t know how many people will come.</p>
+
+<h1 id="step-by-step">Step by step:</h1>
+
+<h2 id="first-person-a-comes--you-put-a-in-the-box-no-choice-its-empty">First person (A) comes → you put A in the box (no choice, it’s empty).</h2>
+
+<p>Box: [A]</p>
+
+<h2 id="second-person-b-comes-">Second person (B) comes →</h2>
+<p>You flip a fair coin:</p>
+
+<p>Heads → replace A with B.</p>
+
+<p>Tails → keep A.</p>
+
+<p>Now, <mark>A and B both have equal chance (50%).</mark></p>
+
+<h3 id="third-person-c-comes-">Third person (C) comes →</h3>
+<p>You roll a 3-sided dice (imagine).</p>
+
+<p>If it lands on side 1 → replace box with C.</p>
+
+<p>Otherwise (2 or 3) → keep the old one (A or B).</p>
+
+<p>👉 Now A, B, C each have equal chance (1/3).</p>
+
+<h3 id="fourth-person-d-comes-">Fourth person (D) comes →</h3>
+<p>Roll a 4-sided dice.</p>
+
+<p>If side 1 → replace with D.</p>
+
+<p>Otherwise keep old one.</p>
+
+<p>👉 Each of A, B, C, D has equal chance (1/4).</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Lottery Analogy for Reservoir Sampling (k = 1)]]></summary></entry><entry><title type="html">How to translate to any language engish to hindi using local large language model for free</title><link href="https://shaardalearningcenter.github.io/2025/09/18/how-llm-works-translate-the-document.html" rel="alternate" type="text/html" title="How to translate to any language engish to hindi using local large language model for free" /><published>2025-09-18T00:00:00+05:30</published><updated>2025-09-18T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/18/how--llm-works-translate-the-document</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/18/how-llm-works-translate-the-document.html"><![CDATA[<h1 id="description">Description</h1>
+<h2 id="today-we-learn-how-the-llm-translate-to-any-language-for-free-with-local-large-language-models">Today we learn how the LLM translate to any language for free with local Large language models.</h2>
+<h3 id="1-model-helsinki-nlpopus-mt-en-hi">1. Model: Helsinki-NLP/opus-mt-en-hi</h3>
+
+<p>This is a MarianMT (Marian Machine Translation) model.</p>
+
+<p>It was trained on the OPUS dataset (a large collection of parallel corpora).</p>
+
+<p>This particular checkpoint is English → Hindi.</p>
+
+<p>The architecture is based on Transformer Seq2Seq (encoder–decoder).</p>
+
+<h3 id="2-code-walkthrough">2. Code Walkthrough</h3>
+<h4 id="a-load-tokenizer">a. Load Tokenizer</h4>
+<p>tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)</p>
+
+<p>Tokenizer converts human text (“I am going to school.”) into tokens (numbers) that the model can understand.</p>
+
+<p>Example: “I am going to school.” → [1234, 567, 890, …]</p>
+
+<p>It also handles things like lowercasing, splitting into subwords (Byte Pair Encoding).</p>
+
+<h4 id="b-load-model">b. Load Model</h4>
+<p>model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True)</p>
+
+<p>Loads the encoder-decoder translation model.</p>
+
+<p>Encoder reads English tokens → creates context embeddings.</p>
+
+<p>Decoder takes those embeddings and generates Hindi tokens step by step.</p>
+
+<h4 id="c-prepare-input">c. Prepare Input</h4>
+<p>inputs = tokenizer(text, return_tensors=”pt”, padding=True)</p>
+
+<p>Converts text into PyTorch tensors (input_ids, attention_mask).</p>
+
+<p>Example:</p>
+
+<p>input_ids: [37, 14, 567, 2021, …]</p>
+
+<p>attention_mask: [1, 1, 1, 1, …] (marks real tokens vs padding).</p>
+
+<h4 id="d-generate-translation">d. Generate Translation</h4>
+<p>outputs = model.generate(**inputs, max_new_tokens=50)</p>
+
+<p>The generate method runs beam search / greedy decoding to predict Hindi tokens one by one.</p>
+
+<p>Example:</p>
+
+<ul>
+  <li>
+    <p>Step 1: <s> → predicts "मैं"</s></p>
+  </li>
+  <li>
+    <p>Step 2: “मैं” → predicts “स्कूल”</p>
+  </li>
+  <li>
+    <p>Step 3: “स्कूल” → predicts “जा”</p>
+  </li>
+  <li>
+    <p>Step 4: “जा” → predicts “रहा हूँ।”</p>
+  </li>
+</ul>
+
+<p>Continues until &lt;/s&gt; (end-of-sequence token) is generated.</p>
+
+<h4 id="e-decode-back-to-text">e. Decode Back to Text</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+</code></pre></div></div>
+
+<p>Converts model’s token IDs back into human-readable Hindi text.</p>
+
+<p>Output for “I am going to school.” would be something like:</p>
+
+<p>मैं स्कूल जा रहा हूँ।</p>
+
+<h3 id="3-theory-recap">3. Theory Recap</h3>
+
+<p>Input text → Tokenization → Encoder → Context embeddings</p>
+
+<p>Decoder → Predicts Hindi tokens step by step using context + attention</p>
+
+<p>Beam search / greedy decoding → Generates most likely translation</p>
+
+<p>Tokenizer.decode → Converts tokens back into Hindi text</p>
+<h1 id="here-is-code-to-use-llm-for-language-translation">Here is code to use LLM for language translation</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+model_name = "Helsinki-NLP/opus-mt-en-hi"
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True)
+
+text = "I am going to school."
+print("Input")
+print(text)
+inputs = tokenizer(text, return_tensors="pt", padding=True)
+outputs = model.generate(**inputs, max_new_tokens=50)
+print("translated text")
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Description Today we learn how the LLM translate to any language for free with local Large language models. 1. Model: Helsinki-NLP/opus-mt-en-hi]]></summary></entry><entry><title type="html">How LLM works and summarizes the input</title><link href="https://shaardalearningcenter.github.io/2025/09/13/how-llm-works-summarizes-the-document.html" rel="alternate" type="text/html" title="How LLM works and summarizes the input" /><published>2025-09-13T00:00:00+05:30</published><updated>2025-09-13T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/13/how--llm-works-summarizes-the-document</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/13/how-llm-works-summarizes-the-document.html"><![CDATA[<h1 id="description">Description</h1>
+<h2 id="today-we-learn-how-the-llm-summarize-the-document">Today we learn how the LLM summarize the document.</h2>
+<p>-An encoder–decoder model (also called a sequence-to-sequence model) is a neural network architecture used in natural language processing (NLP) for tasks that transform one sequence into another.</p>
+
+<p>-The <strong>encoder</strong> reads the <strong>input sequence</strong> (e.g., a sentence) and converts it into a rich contextual representation.</p>
+
+<p>-The <strong>decoder</strong> takes this representation and generates the <strong>output sequence</strong> step by step (e.g., a translated sentence or completed text).</p>
+
+<p>-This architecture powers models like T5, FLAN-T5, and BART, making them suitable for tasks such as translation, summarization, question answering, and sentence completion. Unlike GPT (decoder-only) or BERT (encoder-only), encoder–decoder models combine both reading (understanding) and writing (generating).</p>
+<h2 id="tokenizer">Tokenizer</h2>
+<ul>
+  <li>Convert human input to number presentation
+    <h2 id="seq2seq">Seq2Seq</h2>
+  </li>
+  <li>Generate take input sequence generate output sequence
+    <h1 id="here-is-code">Here is code</h1>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+# Load model + tokenizer
+model_name = "google/flan-t5-base"   # T5-base, instruction-tuned
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+# Example 1: Summarization
+text = "summarize: The sun rises in the east and sets in the west. It is an important fact in geography."
+inputs = tokenizer(text, return_tensors="pt")
+outputs = model.generate(**inputs, max_length=40)
+print("Summarization:", tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Description Today we learn how the LLM summarize the document. -An encoder–decoder model (also called a sequence-to-sequence model) is a neural network architecture used in natural language processing (NLP) for tasks that transform one sequence into another.]]></summary></entry><entry><title type="html">How LLM works tokenization and embeddings,guess next word</title><link href="https://shaardalearningcenter.github.io/2025/09/09/how-llm-works-free-bootcamp.html" rel="alternate" type="text/html" title="How LLM works tokenization and embeddings,guess next word" /><published>2025-09-09T00:00:00+05:30</published><updated>2025-09-09T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/09/how-llm-works-free-bootcamp</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/09/how-llm-works-free-bootcamp.html"><![CDATA[<h1 id="description">Description</h1>
+
+<p>-An encoder–decoder model (also called a sequence-to-sequence model) is a neural network architecture used in natural language processing (NLP) for tasks that transform one sequence into another.</p>
+
+<p>-The encoder reads the input sequence (e.g., a sentence) and converts it into a rich contextual representation.</p>
+
+<p>-The decoder takes this representation and generates the output sequence step by step (e.g., a translated sentence or completed text).</p>
+
+<p>-This architecture powers models like T5, FLAN-T5, and BART, making them suitable for tasks such as translation, summarization, question answering, and sentence completion. Unlike GPT (decoder-only) or BERT (encoder-only), encoder–decoder models combine both reading (understanding) and writing (generating).</p>
+
+<h1 id="here-is-code">Here is code</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from transformers import AutoTokenizer
+from transformers import T5Tokenizer, T5ForConditionalGeneration
+
+model_name="google/flan-t5-base"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+text = "Hello, world!"
+tokens = tokenizer.tokenize(text)
+ids = tokenizer.convert_tokens_to_ids(tokens)
+
+print("Text:", text)
+print("Tokens:", tokens)
+print("Token IDs:", ids)
+print("================")
+
+# In T5, we phrase tasks as instructions
+text2 = "complete sentence: The capital of France is"
+tokenizer = T5Tokenizer.from_pretrained(model_name)
+model = T5ForConditionalGeneration.from_pretrained(model_name)
+# Encode input
+input_ids = tokenizer(text2, return_tensors="pt").input_ids
+
+# Generate continuation
+output_ids = model.generate(input_ids, max_length=20,
+ num_beams=4, early_stopping=True)
+#Uses beam search (num_beams=4):
+#At each decoding step, the model keeps 4 best candidate sequences.
+#Expands them in parallel, picks the most likely one at the end.
+#Alternative: do_sample=True, top_k=50, top_p=0.9 for creative/random outputs.
+completed_sentence = tokenizer.decode(output_ids[0], 
+skip_special_tokens=True)
+print("================")
+
+print("Input:", text2)
+print("Completed:", completed_sentence)
+</code></pre></div></div>
+<h2 id="install-dependancy">install dependancy</h2>
+
+<ul>
+  <li>use below file and save as env.yaml</li>
+  <li>conda env create -f env.yaml</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: lora
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - bzip2=1.0.8=h5eee18b_6
+  - ca-certificates=2025.7.15=h06a4308_0
+  - expat=2.7.1=h6a678d5_0
+  - ld_impl_linux-64=2.40=h12ee557_0
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - libuuid=1.41.5=h5eee18b_0
+  - libxcb=1.17.0=h9b100fa_0
+  - ncurses=6.5=h7934f7d_0
+  - openssl=3.0.17=h5eee18b_0
+  - pip=25.2=pyhc872135_0
+  - pthread-stubs=0.3=h0ce48e5_1
+  - python=3.10.18=h1a3bd86_0
+  - readline=8.3=hc2a1206_0
+  - setuptools=78.1.1=py310h06a4308_0
+  - sqlite=3.50.2=hb25bd0a_1
+  - tk=8.6.15=h54e0aa7_0
+  - wheel=0.45.1=py310h06a4308_0
+  - xorg-libx11=1.8.12=h9b100fa_1
+  - xorg-libxau=1.0.12=h9b100fa_0
+  - xorg-libxdmcp=1.1.5=h9b100fa_0
+  - xorg-xorgproto=2024.1=h5eee18b_1
+  - xz=5.6.4=h5eee18b_1
+  - zlib=1.2.13=h5eee18b_1
+  - pip:
+      - accelerate==0.31.0
+      - aiohappyeyeballs==2.6.1
+      - aiohttp==3.12.15
+      - aiosignal==1.4.0
+      - alembic==1.16.5
+      - annotated-types==0.7.0
+      - annoy==1.17.3
+      - anyio==4.10.0
+      - argon2-cffi==25.1.0
+      - argon2-cffi-bindings==25.1.0
+      - arrow==1.3.0
+      - asttokens==3.0.0
+      - async-lru==2.0.5
+      - async-timeout==4.0.3
+      - attrs==25.3.0
+      - babel==2.17.0
+      - banal==1.0.6
+      - beautifulsoup4==4.13.5
+      - bertopic==0.16.3
+      - bitsandbytes==0.43.1
+      - bleach==6.2.0
+      - boto3==1.40.24
+      - botocore==1.40.24
+      - certifi==2025.8.3
+      - cffi==1.17.1
+      - charset-normalizer==3.4.3
+      - click==8.2.1
+      - cohere==5.5.8
+      - colorcet==3.1.0
+      - colorspacious==1.1.2
+      - comm==0.2.3
+      - contourpy==1.3.2
+      - cycler==0.12.1
+      - dataclasses-json==0.6.7
+      - datamapplot==0.3.0
+      - dataset==1.6.2
+      - datasets==2.20.0
+      - datashader==0.18.2
+      - debugpy==1.8.16
+      - decorator==5.2.1
+      - defusedxml==0.7.1
+      - dill==0.3.8
+      - diskcache==5.6.3
+      - distro==1.9.0
+      - docstring-parser==0.17.0
+      - duckduckgo-search==7.1.1
+      - eval-type-backport==0.2.2
+      - evaluate==0.4.2
+      - exceptiongroup==1.3.0
+      - executing==2.2.1
+      - faiss-cpu==1.8.0
+      - fastavro==1.12.0
+      - fastjsonschema==2.21.2
+      - filelock==3.19.1
+      - fonttools==4.59.2
+      - fqdn==1.5.1
+      - frozenlist==1.7.0
+      - fsspec==2024.5.0
+      - gensim==4.3.2
+      - greenlet==3.2.4
+      - h11==0.16.0
+      - hdbscan==0.8.40
+      - hf-xet==1.1.9
+      - httpcore==1.0.9
+      - httpx==0.28.1
+      - httpx-sse==0.4.1
+      - huggingface-hub==0.34.4
+      - idna==3.10
+      - imageio==2.37.0
+      - ipykernel==6.30.1
+      - ipython==8.37.0
+      - ipywidgets==8.1.3
+      - isoduration==20.11.0
+      - jedi==0.19.2
+      - jinja2==3.1.6
+      - jmespath==1.0.1
+      - joblib==1.5.2
+      - json5==0.12.1
+      - jsonpatch==1.33
+      - jsonpointer==3.0.0
+      - jsonschema==4.25.1
+      - jsonschema-specifications==2025.4.1
+      - jupyter-client==8.6.3
+      - jupyter-core==5.8.1
+      - jupyter-events==0.12.0
+      - jupyter-lsp==2.3.0
+      - jupyter-server==2.17.0
+      - jupyter-server-terminals==0.5.3
+      - jupyterlab==4.2.2
+      - jupyterlab-pygments==0.3.0
+      - jupyterlab-server==2.27.3
+      - jupyterlab-widgets==3.0.15
+      - kiwisolver==1.4.9
+      - langchain==0.2.5
+      - langchain-community==0.2.5
+      - langchain-core==0.2.43
+      - langchain-openai==0.1.8
+      - langchain-text-splitters==0.2.4
+      - langsmith==0.1.147
+      - lark==1.2.2
+      - lazy-loader==0.4
+      - llama-cpp-python==0.2.78
+      - llvmlite==0.44.0
+      - lxml==6.0.1
+      - mako==1.3.10
+      - markdown-it-py==4.0.0
+      - markupsafe==3.0.2
+      - marshmallow==3.26.1
+      - matplotlib==3.9.0
+      - matplotlib-inline==0.1.7
+      - mdurl==0.1.2
+      - mistune==3.1.4
+      - mpmath==1.3.0
+      - mteb==1.12.39
+      - multidict==6.6.4
+      - multipledispatch==1.0.0
+      - multiprocess==0.70.16
+      - mypy-extensions==1.1.0
+      - narwhals==2.3.0
+      - nbclient==0.10.2
+      - nbconvert==7.16.6
+      - nbformat==5.10.4
+      - nest-asyncio==1.6.0
+      - networkx==3.4.2
+      - nltk==3.8.1
+      - notebook-shim==0.2.4
+      - numba==0.61.2
+      - numexpr==2.10.0
+      - numpy==1.26.4
+      - nvidia-cublas-cu12==12.1.3.1
+      - nvidia-cuda-cupti-cu12==12.1.105
+      - nvidia-cuda-nvrtc-cu12==12.1.105
+      - nvidia-cuda-runtime-cu12==12.1.105
+      - nvidia-cudnn-cu12==8.9.2.26
+      - nvidia-cufft-cu12==11.0.2.54
+      - nvidia-cufile-cu12==1.13.1.3
+      - nvidia-curand-cu12==10.3.2.106
+      - nvidia-cusolver-cu12==11.4.5.107
+      - nvidia-cusparse-cu12==12.1.0.106
+      - nvidia-cusparselt-cu12==0.7.1
+      - nvidia-nccl-cu12==2.20.5
+      - nvidia-nvjitlink-cu12==12.8.93
+      - nvidia-nvtx-cu12==12.1.105
+      - openai==1.34.0
+      - orjson==3.11.3
+      - overrides==7.7.0
+      - packaging==24.2
+      - pandas==2.2.2
+      - pandocfilters==1.5.1
+      - param==2.2.1
+      - parameterized==0.9.0
+      - parso==0.8.5
+      - peft==0.11.1
+      - pexpect==4.9.0
+      - pillow==11.3.0
+      - platformdirs==4.4.0
+      - plotly==6.3.0
+      - polars==1.33.0
+      - primp==0.15.0
+      - prometheus-client==0.22.1
+      - prompt-toolkit==3.0.52
+      - propcache==0.3.2
+      - psutil==7.0.0
+      - ptyprocess==0.7.0
+      - pure-eval==0.2.3
+      - pyarrow==21.0.0
+      - pyarrow-hotfix==0.7
+      - pycparser==2.22
+      - pyct==0.5.0
+      - pydantic==2.11.7
+      - pydantic-core==2.33.2
+      - pygments==2.19.2
+      - pylabeladjust==0.1.13
+      - pynndescent==0.5.13
+      - pyparsing==3.2.3
+      - pyqtree==1.0.0
+      - python-dateutil==2.9.0.post0
+      - python-json-logger==3.3.0
+      - pytrec-eval-terrier==0.5.8
+      - pytz==2025.2
+      - pyyaml==6.0.2
+      - pyzmq==27.0.2
+      - referencing==0.36.2
+      - regex==2025.9.1
+      - requests==2.32.5
+      - requests-toolbelt==1.0.0
+      - rfc3339-validator==0.1.4
+      - rfc3986-validator==0.1.1
+      - rfc3987-syntax==1.1.0
+      - rich==14.1.0
+      - rpds-py==0.27.1
+      - s3transfer==0.13.1
+      - safetensors==0.6.2
+      - scikit-image==0.25.2
+      - scikit-learn==1.5.0
+      - scipy==1.15.3
+      - send2trash==1.8.3
+      - sentence-transformers==3.0.1
+      - sentencepiece==0.2.0
+      - seqeval==1.2.2
+      - setfit==1.0.3
+      - shtab==1.7.2
+      - six==1.17.0
+      - smart-open==7.3.0.post1
+      - sniffio==1.3.1
+      - soupsieve==2.8
+      - sqlalchemy==1.4.54
+      - stack-data==0.6.3
+      - sympy==1.14.0
+      - tenacity==8.5.0
+      - terminado==0.18.1
+      - threadpoolctl==3.6.0
+      - tifffile==2025.5.10
+      - tiktoken==0.11.0
+      - tinycss2==1.4.0
+      - tokenizers==0.19.1
+      - tomli==2.2.1
+      - toolz==1.0.0
+      - torch==2.3.1
+      - tornado==6.5.2
+      - tqdm==4.67.1
+      - traitlets==5.14.3
+      - transformers==4.41.2
+      - triton==2.3.1
+      - trl==0.9.4
+      - typeguard==4.4.4
+      - types-python-dateutil==2.9.0.20250822
+      - types-requests==2.32.4.20250809
+      - typing-extensions==4.15.0
+      - typing-inspect==0.9.0
+      - typing-inspection==0.4.1
+      - tyro==0.9.31
+      - tzdata==2025.2
+      - umap-learn==0.5.7
+      - uri-template==1.3.0
+      - urllib3==2.5.0
+      - wcwidth==0.2.13
+      - webcolors==24.11.1
+      - webencodings==0.5.1
+      - websocket-client==1.8.0
+      - widgetsnbextension==4.0.14
+      - wrapt==1.17.3
+      - xarray==2025.6.1
+      - xxhash==3.5.0
+      - yarl==1.20.1
+      - zstandard==0.24.0
+prefix: /home/sv/anaconda3/envs/lora
+
+</code></pre></div></div>
+<p>&lt;/details&gt;</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Description]]></summary></entry><entry><title type="html">How to finetune your local llm using LORA</title><link href="https://shaardalearningcenter.github.io/2025/09/05/how-to-finetune-your-local-llm-using-LORA.html" rel="alternate" type="text/html" title="How to finetune your local llm using LORA" /><published>2025-09-05T00:00:00+05:30</published><updated>2025-09-05T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/05/how-to-finetune-your-local-llm-using-LORA</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/05/how-to-finetune-your-local-llm-using-LORA.html"><![CDATA[<h1 id="train-in-hours-not-days-using-lora">Train in hours not days using LORA</h1>
+<h2 id="lora--tiny-add-on-brains-">LoRA = Tiny Add-On Brains 🧠</h2>
+
+<p>Instead of training all billion parameters, LoRA adds small trainable matrices.</p>
+
+<p>Think of it as teaching just a few neurons, not rewiring the whole brain.</p>
+
+<h2 id="magic-settings-">Magic Settings ⚡</h2>
+
+<ul>
+  <li>
+    <p>Rank (r): How many “extra neurons” LoRA adds (small r = more compression).</p>
+  </li>
+  <li>
+    <p>Alpha: How strong those neurons influence the model.</p>
+  </li>
+  <li>
+    <p>Dropout: Prevents overfitting — like making the neurons forget some details.</p>
+  </li>
+</ul>
+
+<h2 id="result--cheap--fast-training-">Result = Cheap + Fast Training 💸</h2>
+
+<ul>
+  <li>
+    <p>Train a model on your laptop in hours (not days).</p>
+  </li>
+  <li>
+    <p>Save GPU memory while keeping accuracy.</p>
+  </li>
+  <li>
+    <p>Perfect for fine-tuning chatbots, code assistants, or small domain models.</p>
+  </li>
+</ul>
+
+<details>
+<summary>Click to expand and see dependancy for this project📌</summary>
+
+``` 
+name: lora
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - bzip2=1.0.8=h5eee18b_6
+  - ca-certificates=2025.7.15=h06a4308_0
+  - expat=2.7.1=h6a678d5_0
+  - ld_impl_linux-64=2.40=h12ee557_0
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - libuuid=1.41.5=h5eee18b_0
+  - libxcb=1.17.0=h9b100fa_0
+  - ncurses=6.5=h7934f7d_0
+  - openssl=3.0.17=h5eee18b_0
+  - pip=25.2=pyhc872135_0
+  - pthread-stubs=0.3=h0ce48e5_1
+  - python=3.10.18=h1a3bd86_0
+  - readline=8.3=hc2a1206_0
+  - setuptools=78.1.1=py310h06a4308_0
+  - sqlite=3.50.2=hb25bd0a_1
+  - tk=8.6.15=h54e0aa7_0
+  - wheel=0.45.1=py310h06a4308_0
+  - xorg-libx11=1.8.12=h9b100fa_1
+  - xorg-libxau=1.0.12=h9b100fa_0
+  - xorg-libxdmcp=1.1.5=h9b100fa_0
+  - xorg-xorgproto=2024.1=h5eee18b_1
+  - xz=5.6.4=h5eee18b_1
+  - zlib=1.2.13=h5eee18b_1
+  - pip:
+      - accelerate==0.31.0
+      - aiohappyeyeballs==2.6.1
+      - aiohttp==3.12.15
+      - aiosignal==1.4.0
+      - alembic==1.16.5
+      - annotated-types==0.7.0
+      - annoy==1.17.3
+      - anyio==4.10.0
+      - argon2-cffi==25.1.0
+      - argon2-cffi-bindings==25.1.0
+      - arrow==1.3.0
+      - asttokens==3.0.0
+      - async-lru==2.0.5
+      - async-timeout==4.0.3
+      - attrs==25.3.0
+      - babel==2.17.0
+      - banal==1.0.6
+      - beautifulsoup4==4.13.5
+      - bertopic==0.16.3
+      - bitsandbytes==0.43.1
+      - bleach==6.2.0
+      - boto3==1.40.24
+      - botocore==1.40.24
+      - certifi==2025.8.3
+      - cffi==1.17.1
+      - charset-normalizer==3.4.3
+      - click==8.2.1
+      - cohere==5.5.8
+      - colorcet==3.1.0
+      - colorspacious==1.1.2
+      - comm==0.2.3
+      - contourpy==1.3.2
+      - cycler==0.12.1
+      - dataclasses-json==0.6.7
+      - datamapplot==0.3.0
+      - dataset==1.6.2
+      - datasets==2.20.0
+      - datashader==0.18.2
+      - debugpy==1.8.16
+      - decorator==5.2.1
+      - defusedxml==0.7.1
+      - dill==0.3.8
+      - diskcache==5.6.3
+      - distro==1.9.0
+      - docstring-parser==0.17.0
+      - duckduckgo-search==7.1.1
+      - eval-type-backport==0.2.2
+      - evaluate==0.4.2
+      - exceptiongroup==1.3.0
+      - executing==2.2.1
+      - faiss-cpu==1.8.0
+      - fastavro==1.12.0
+      - fastjsonschema==2.21.2
+      - filelock==3.19.1
+      - fonttools==4.59.2
+      - fqdn==1.5.1
+      - frozenlist==1.7.0
+      - fsspec==2024.5.0
+      - gensim==4.3.2
+      - greenlet==3.2.4
+      - h11==0.16.0
+      - hdbscan==0.8.40
+      - hf-xet==1.1.9
+      - httpcore==1.0.9
+      - httpx==0.28.1
+      - httpx-sse==0.4.1
+      - huggingface-hub==0.34.4
+      - idna==3.10
+      - imageio==2.37.0
+      - ipykernel==6.30.1
+      - ipython==8.37.0
+      - ipywidgets==8.1.3
+      - isoduration==20.11.0
+      - jedi==0.19.2
+      - jinja2==3.1.6
+      - jmespath==1.0.1
+      - joblib==1.5.2
+      - json5==0.12.1
+      - jsonpatch==1.33
+      - jsonpointer==3.0.0
+      - jsonschema==4.25.1
+      - jsonschema-specifications==2025.4.1
+      - jupyter-client==8.6.3
+      - jupyter-core==5.8.1
+      - jupyter-events==0.12.0
+      - jupyter-lsp==2.3.0
+      - jupyter-server==2.17.0
+      - jupyter-server-terminals==0.5.3
+      - jupyterlab==4.2.2
+      - jupyterlab-pygments==0.3.0
+      - jupyterlab-server==2.27.3
+      - jupyterlab-widgets==3.0.15
+      - kiwisolver==1.4.9
+      - langchain==0.2.5
+      - langchain-community==0.2.5
+      - langchain-core==0.2.43
+      - langchain-openai==0.1.8
+      - langchain-text-splitters==0.2.4
+      - langsmith==0.1.147
+      - lark==1.2.2
+      - lazy-loader==0.4
+      - llama-cpp-python==0.2.78
+      - llvmlite==0.44.0
+      - lxml==6.0.1
+      - mako==1.3.10
+      - markdown-it-py==4.0.0
+      - markupsafe==3.0.2
+      - marshmallow==3.26.1
+      - matplotlib==3.9.0
+      - matplotlib-inline==0.1.7
+      - mdurl==0.1.2
+      - mistune==3.1.4
+      - mpmath==1.3.0
+      - mteb==1.12.39
+      - multidict==6.6.4
+      - multipledispatch==1.0.0
+      - multiprocess==0.70.16
+      - mypy-extensions==1.1.0
+      - narwhals==2.3.0
+      - nbclient==0.10.2
+      - nbconvert==7.16.6
+      - nbformat==5.10.4
+      - nest-asyncio==1.6.0
+      - networkx==3.4.2
+      - nltk==3.8.1
+      - notebook-shim==0.2.4
+      - numba==0.61.2
+      - numexpr==2.10.0
+      - numpy==1.26.4
+      - nvidia-cublas-cu12==12.1.3.1
+      - nvidia-cuda-cupti-cu12==12.1.105
+      - nvidia-cuda-nvrtc-cu12==12.1.105
+      - nvidia-cuda-runtime-cu12==12.1.105
+      - nvidia-cudnn-cu12==8.9.2.26
+      - nvidia-cufft-cu12==11.0.2.54
+      - nvidia-cufile-cu12==1.13.1.3
+      - nvidia-curand-cu12==10.3.2.106
+      - nvidia-cusolver-cu12==11.4.5.107
+      - nvidia-cusparse-cu12==12.1.0.106
+      - nvidia-cusparselt-cu12==0.7.1
+      - nvidia-nccl-cu12==2.20.5
+      - nvidia-nvjitlink-cu12==12.8.93
+      - nvidia-nvtx-cu12==12.1.105
+      - openai==1.34.0
+      - orjson==3.11.3
+      - overrides==7.7.0
+      - packaging==24.2
+      - pandas==2.2.2
+      - pandocfilters==1.5.1
+      - param==2.2.1
+      - parameterized==0.9.0
+      - parso==0.8.5
+      - peft==0.11.1
+      - pexpect==4.9.0
+      - pillow==11.3.0
+      - platformdirs==4.4.0
+      - plotly==6.3.0
+      - polars==1.33.0
+      - primp==0.15.0
+      - prometheus-client==0.22.1
+      - prompt-toolkit==3.0.52
+      - propcache==0.3.2
+      - psutil==7.0.0
+      - ptyprocess==0.7.0
+      - pure-eval==0.2.3
+      - pyarrow==21.0.0
+      - pyarrow-hotfix==0.7
+      - pycparser==2.22
+      - pyct==0.5.0
+      - pydantic==2.11.7
+      - pydantic-core==2.33.2
+      - pygments==2.19.2
+      - pylabeladjust==0.1.13
+      - pynndescent==0.5.13
+      - pyparsing==3.2.3
+      - pyqtree==1.0.0
+      - python-dateutil==2.9.0.post0
+      - python-json-logger==3.3.0
+      - pytrec-eval-terrier==0.5.8
+      - pytz==2025.2
+      - pyyaml==6.0.2
+      - pyzmq==27.0.2
+      - referencing==0.36.2
+      - regex==2025.9.1
+      - requests==2.32.5
+      - requests-toolbelt==1.0.0
+      - rfc3339-validator==0.1.4
+      - rfc3986-validator==0.1.1
+      - rfc3987-syntax==1.1.0
+      - rich==14.1.0
+      - rpds-py==0.27.1
+      - s3transfer==0.13.1
+      - safetensors==0.6.2
+      - scikit-image==0.25.2
+      - scikit-learn==1.5.0
+      - scipy==1.15.3
+      - send2trash==1.8.3
+      - sentence-transformers==3.0.1
+      - sentencepiece==0.2.0
+      - seqeval==1.2.2
+      - setfit==1.0.3
+      - shtab==1.7.2
+      - six==1.17.0
+      - smart-open==7.3.0.post1
+      - sniffio==1.3.1
+      - soupsieve==2.8
+      - sqlalchemy==1.4.54
+      - stack-data==0.6.3
+      - sympy==1.14.0
+      - tenacity==8.5.0
+      - terminado==0.18.1
+      - threadpoolctl==3.6.0
+      - tifffile==2025.5.10
+      - tiktoken==0.11.0
+      - tinycss2==1.4.0
+      - tokenizers==0.19.1
+      - tomli==2.2.1
+      - toolz==1.0.0
+      - torch==2.3.1
+      - tornado==6.5.2
+      - tqdm==4.67.1
+      - traitlets==5.14.3
+      - transformers==4.41.2
+      - triton==2.3.1
+      - trl==0.9.4
+      - typeguard==4.4.4
+      - types-python-dateutil==2.9.0.20250822
+      - types-requests==2.32.4.20250809
+      - typing-extensions==4.15.0
+      - typing-inspect==0.9.0
+      - typing-inspection==0.4.1
+      - tyro==0.9.31
+      - tzdata==2025.2
+      - umap-learn==0.5.7
+      - uri-template==1.3.0
+      - urllib3==2.5.0
+      - wcwidth==0.2.13
+      - webcolors==24.11.1
+      - webencodings==0.5.1
+      - websocket-client==1.8.0
+      - widgetsnbextension==4.0.14
+      - wrapt==1.17.3
+      - xarray==2025.6.1
+      - xxhash==3.5.0
+      - yarl==1.20.1
+      - zstandard==0.24.0
+prefix: /home/sv/anaconda3/envs/lora
+
+```
+</details>
+
+<h2 id="see-code-for-quickly-train-model-using-lora">see code for quickly train model using LORA</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># -*- coding: utf-8 -*-
+# Install the requirements in Google Colab
+# !pip install transformers datasets trl huggingface_hub
+</span>
+<span class="c1"># Authenticate to Hugging Face
+</span>
+<span class="c1"># from huggingface_hub import login
+#
+# login()
+</span>
+<span class="c1"># for convenience you can create an environment variable containing your hub token as HF_TOKEN
+</span>
+<span class="sh">"""</span><span class="s">## 2. Load the dataset</span><span class="sh">"""</span>
+
+<span class="c1"># Load a sample dataset
+</span><span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># TODO: define your dataset and config using the path and name parameters
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="sh">"</span><span class="s">HuggingFaceTB/smoltalk</span><span class="sh">"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">everyday-conversations</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># 2. Show first row
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">data sample</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="sh">'</span><span class="s">test</span><span class="sh">'</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Import necessary libraries
+</span><span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">AutoModelForCausalLM</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+<span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="kn">from</span> <span class="n">trl</span> <span class="kn">import</span> <span class="n">SFTConfig</span><span class="p">,</span> <span class="n">SFTTrainer</span><span class="p">,</span> <span class="n">setup_chat_format</span>
+<span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sh">"</span><span class="s">cuda</span><span class="sh">"</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="p">.</span><span class="n">cuda</span><span class="p">.</span><span class="nf">is_available</span><span class="p">()</span>
+    <span class="k">else</span> <span class="sh">"</span><span class="s">mps</span><span class="sh">"</span> <span class="k">if</span> <span class="n">torch</span><span class="p">.</span><span class="n">backends</span><span class="p">.</span><span class="n">mps</span><span class="p">.</span><span class="nf">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="sh">"</span><span class="s">cpu</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="c1"># Load the model and tokenizer
+</span><span class="n">model_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">HuggingFaceTB/SmolLM2-135M</span><span class="sh">"</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span>
+    <span class="n">pretrained_model_name_or_path</span><span class="o">=</span><span class="n">model_name</span>
+<span class="p">).</span><span class="nf">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">pretrained_model_name_or_path</span><span class="o">=</span><span class="n">model_name</span><span class="p">)</span>
+
+<span class="c1"># Set up the chat format
+</span><span class="n">model</span><span class="p">,</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="nf">setup_chat_format</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">)</span>
+
+<span class="c1"># Set our name for the finetune to be saved &amp;/ uploaded to
+</span><span class="n">finetune_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">SmolLM2-FT-MyDataset</span><span class="sh">"</span>
+<span class="n">finetune_tags</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">smol-course</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">module_1</span><span class="sh">"</span><span class="p">]</span>
+
+
+<span class="kn">from</span> <span class="n">peft</span> <span class="kn">import</span> <span class="n">LoraConfig</span>
+
+<span class="c1"># TODO: Configure LoRA parameters
+# r: rank dimension for LoRA update matrices (smaller = more compression)
+</span><span class="n">rank_dimension</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1"># lora_alpha: scaling factor for LoRA layers (higher = stronger adaptation)
+</span><span class="n">lora_alpha</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="c1"># lora_dropout: dropout probability for LoRA layers (helps prevent overfitting)
+</span><span class="n">lora_dropout</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">peft_config</span> <span class="o">=</span> <span class="nc">LoraConfig</span><span class="p">(</span>
+    <span class="n">r</span><span class="o">=</span><span class="n">rank_dimension</span><span class="p">,</span>  <span class="c1"># Rank dimension - typically between 4-32
+</span>    <span class="n">lora_alpha</span><span class="o">=</span><span class="n">lora_alpha</span><span class="p">,</span>  <span class="c1"># LoRA scaling factor - typically 2x rank
+</span>    <span class="n">lora_dropout</span><span class="o">=</span><span class="n">lora_dropout</span><span class="p">,</span>  <span class="c1"># Dropout probability for LoRA layers
+</span>    <span class="n">bias</span><span class="o">=</span><span class="sh">"</span><span class="s">none</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Bias type for LoRA. the corresponding biases will be updated during training.
+</span>    <span class="n">target_modules</span><span class="o">=</span><span class="sh">"</span><span class="s">all-linear</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Which modules to apply LoRA to
+</span>    <span class="n">task_type</span><span class="o">=</span><span class="sh">"</span><span class="s">CAUSAL_LM</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Task type for model architecture
+</span><span class="p">)</span>
+
+<span class="sh">"""</span><span class="s">Before we can start our training we need to define the hyperparameters (`TrainingArguments`) we want to use.</span><span class="sh">"""</span>
+
+<span class="c1"># Training configuration
+# Hyperparameters based on QLoRA paper recommendations
+</span><span class="n">args</span> <span class="o">=</span> <span class="nc">SFTConfig</span><span class="p">(</span>
+    <span class="c1"># Output settings
+</span>    <span class="n">output_dir</span><span class="o">=</span><span class="n">finetune_name</span><span class="p">,</span>  <span class="c1"># Directory to save model checkpoints
+</span>    <span class="c1"># Training duration
+</span>    <span class="n">num_train_epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># Number of training epochs
+</span>    <span class="c1"># Batch size settings
+</span>    <span class="n">per_device_train_batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Batch size per GPU
+</span>    <span class="n">gradient_accumulation_steps</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># Accumulate gradients for larger effective batch
+</span>    <span class="c1"># Memory optimization
+</span>    <span class="n">gradient_checkpointing</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c1"># Trade compute for memory savings
+</span>    <span class="c1"># Optimizer settings
+</span>    <span class="n">optim</span><span class="o">=</span><span class="sh">"</span><span class="s">adamw_torch_fused</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Use fused AdamW for efficiency
+</span>    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">2e-4</span><span class="p">,</span>  <span class="c1"># Learning rate (QLoRA paper)
+</span>    <span class="n">max_grad_norm</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># Gradient clipping threshold
+</span>    <span class="c1"># Learning rate schedule
+</span>    <span class="n">warmup_ratio</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span>  <span class="c1"># Portion of steps for warmup
+</span>    <span class="n">lr_scheduler_type</span><span class="o">=</span><span class="sh">"</span><span class="s">constant</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Keep learning rate constant after warmup
+</span>    <span class="c1"># Logging and saving
+</span>    <span class="n">logging_steps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="c1"># Log metrics every N steps
+</span>    <span class="n">save_strategy</span><span class="o">=</span><span class="sh">"</span><span class="s">epoch</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Save checkpoint every epoch
+</span>    <span class="c1"># Precision settings
+</span>    <span class="n">bf16</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c1"># Use bfloat16 precision
+</span>    <span class="c1"># Integration settings
+</span>    <span class="n">push_to_hub</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>  <span class="c1"># Don't push to HuggingFace Hub
+</span>    <span class="n">report_to</span><span class="o">=</span><span class="sh">"</span><span class="s">none</span><span class="sh">"</span><span class="p">,</span>  <span class="c1"># Disable external logging
+</span><span class="p">)</span>
+
+
+<span class="n">max_seq_length</span> <span class="o">=</span> <span class="mi">1512</span>  <span class="c1"># max sequence length for model and packing of the dataset
+</span>
+<span class="c1"># Create SFTTrainer with LoRA configuration
+</span><span class="n">trainer</span> <span class="o">=</span> <span class="nc">SFTTrainer</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">[</span><span class="sh">"</span><span class="s">train</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">peft_config</span><span class="o">=</span><span class="n">peft_config</span><span class="p">,</span>  <span class="c1"># LoRA configuration
+</span>    <span class="n">max_seq_length</span><span class="o">=</span><span class="n">max_seq_length</span><span class="p">,</span>  <span class="c1"># Maximum sequence length
+</span>    <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
+    <span class="n">packing</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c1"># Enable input packing for efficiency
+</span>    <span class="n">dataset_kwargs</span><span class="o">=</span><span class="p">{</span>
+        <span class="sh">"</span><span class="s">add_special_tokens</span><span class="sh">"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>  <span class="c1"># Special tokens handled by template
+</span>        <span class="sh">"</span><span class="s">append_concat_token</span><span class="sh">"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>  <span class="c1"># No additional separator needed
+</span>    <span class="p">},</span>
+<span class="p">)</span>
+
+<span class="sh">"""</span><span class="s">Start training our model by calling the `train()` method on our `Trainer` instance. This will start the training loop and train our model for 3 epochs. Since we are using a PEFT method, we will only save the adapted model weights and not the full model.</span><span class="sh">"""</span>
+
+<span class="c1"># start training, the model will be automatically saved to the hub and the output directory
+</span><span class="n">trainer</span><span class="p">.</span><span class="nf">train</span><span class="p">()</span>
+
+<span class="c1"># save model
+</span><span class="n">trainer</span><span class="p">.</span><span class="nf">save_model</span><span class="p">()</span>
+
+
+<span class="kn">from</span> <span class="n">peft</span> <span class="kn">import</span> <span class="n">AutoPeftModelForCausalLM</span>
+
+
+<span class="c1"># Load PEFT model on CPU
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">AutoPeftModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span>
+    <span class="n">pretrained_model_name_or_path</span><span class="o">=</span><span class="n">args</span><span class="p">.</span><span class="n">output_dir</span><span class="p">,</span>
+    <span class="n">torch_dtype</span><span class="o">=</span><span class="n">torch</span><span class="p">.</span><span class="n">float16</span><span class="p">,</span>
+    <span class="n">low_cpu_mem_usage</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Merge LoRA and base model and save
+</span><span class="n">merged_model</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">merge_and_unload</span><span class="p">()</span>
+<span class="n">merged_model</span><span class="p">.</span><span class="nf">save_pretrained</span><span class="p">(</span>
+    <span class="n">args</span><span class="p">.</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">safe_serialization</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_shard_size</span><span class="o">=</span><span class="sh">"</span><span class="s">2GB</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="c1"># free the memory again
+</span><span class="k">del</span> <span class="n">model</span>
+<span class="k">del</span> <span class="n">trainer</span>
+<span class="n">torch</span><span class="p">.</span><span class="n">cuda</span><span class="p">.</span><span class="nf">empty_cache</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="how-to-use-this-trained-model">How to use this trained model</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+<span class="kn">from</span> <span class="n">peft</span> <span class="kn">import</span> <span class="n">AutoPeftModelForCausalLM</span>
+<span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">finetune_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">./SmolLM2-FT-MyDataset</span><span class="sh">"</span>
+
+<span class="c1"># 1. Load tokenizer
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">finetune_name</span><span class="p">)</span>
+
+<span class="c1"># 2. Load PEFT (LoRA) model
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">AutoPeftModelForCausalLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span>
+    <span class="n">finetune_name</span><span class="p">,</span>
+    <span class="n">device_map</span><span class="o">=</span><span class="sh">"</span><span class="s">auto</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">torch_dtype</span><span class="o">=</span><span class="n">torch</span><span class="p">.</span><span class="n">float16</span>
+<span class="p">)</span>
+
+<span class="c1"># Optional: merge LoRA weights into base
+# model = model.merge_and_unload()
+</span>
+<span class="c1"># 3. Create inference pipeline
+</span><span class="n">pipe</span> <span class="o">=</span> <span class="nf">pipeline</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">text-generation</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
+    <span class="n">torch_dtype</span><span class="o">=</span><span class="n">torch</span><span class="p">.</span><span class="n">float16</span><span class="p">,</span>
+    <span class="n">device_map</span><span class="o">=</span><span class="sh">"</span><span class="s">auto</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="c1"># ---- Test inference ----
+</span><span class="n">prompt</span> <span class="o">=</span> <span class="p">(</span><span class="sh">"</span><span class="s">What is the difference between a fruit and a </span><span class="sh">"</span>
+          <span class="sh">"</span><span class="s">vegetable? Give examples of each.</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="nf">pipe</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">do_sample</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="sh">"</span><span class="s">generated_text</span><span class="sh">"</span><span class="p">])</span>
+
+
+</code></pre></div></div>
+<p>&lt;/details&gt;</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Train in hours not days using LORA LoRA = Tiny Add-On Brains 🧠]]></summary></entry><entry><title type="html">How to Build a Local AI Agent With Python (Huggingface, LangChain,text summarization and translation)</title><link href="https://shaardalearningcenter.github.io/2025/09/02/create-local-multi-chain-agent-with-langchain.html" rel="alternate" type="text/html" title="How to Build a Local AI Agent With Python (Huggingface, LangChain,text summarization and translation)" /><published>2025-09-02T00:00:00+05:30</published><updated>2025-09-02T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/09/02/create-local-multi-chain-agent-with-langchain</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/09/02/create-local-multi-chain-agent-with-langchain.html"><![CDATA[<h1 id="how-to-build-a-local-ai-agent-with-python-huggingface-langchaintext-summarization-and-translation">How to Build a Local AI Agent With Python (Huggingface, LangChain,text summarization and translation)</h1>
+
+<p>AI agents don’t always need cloud APIs. With HuggingFace models and LangChain, you can build your own local AI agent that runs on your laptop (even with small GPUs or CPUs). In this tutorial, we’ll walk through building a simple agent in Python that can summarize text, translate text, and answer questions — all using open-source models.</p>
+
+<h2 id="why-build-a-local-ai-agent">Why Build a Local AI Agent?</h2>
+
+<p>Most tutorials use OpenAI or Anthropic APIs, but that comes with cost and dependency. Running locally has benefits:</p>
+
+<p>✅ No API costs</p>
+
+<p>✅ Works offline</p>
+
+<p>✅ Customizable</p>
+
+<p>✅ Privacy-friendly</p>
+
+<p>By combining HuggingFace pipelines with LangChain, you can create your own chain of tasks like text summarization and translation.</p>
+
+<h3 id="step-1-install-dependencies">Step 1: Install Dependencies</h3>
+
+<p>Create a requirements.txt:</p>
+
+<pre><code class="language-langchain">langchain&gt;=0.2.0
+langchain-huggingface
+transformers
+torch
+
+</code></pre>
+
+<ul>
+  <li>Then install:</li>
+</ul>
+
+<p>pip install -r requirements.txt</p>
+
+<h1 id="step-2-load-a-huggingface-model-with-langchain">Step 2: Load a HuggingFace Model With LangChain</h1>
+
+<h2 id="create-summarization-pipeline">Create Summarization pipeline</h2>
+<h2 id="create-translate-pipeline">Create Translate pipeline</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 2. Summarization pipeline
+sum_pipeline = pipeline("summarization", model="google/flan-t5-base", max_new_tokens=128)
+sum_llm = HuggingFacePipeline(pipeline=sum_pipeline)
+
+# 3. Translation pipeline
+trans_pipeline = pipeline("translation", model="Helsinki-NLP/opus-mt-en-fr")
+trans_llm = HuggingFacePipeline(pipeline=trans_pipeline)
+
+</code></pre></div></div>
+<p>We’ll use the google/flan-t5-base model because it’s lightweight and works well for summarization and translation.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">langchain_huggingface</span> <span class="kn">import</span> <span class="n">HuggingFacePipeline</span>
+<span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+<span class="kn">from</span> <span class="n">langchain.prompts</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="n">langchain.chains</span> <span class="kn">import</span> <span class="n">LLMChain</span><span class="p">,</span> <span class="n">SimpleSequentialChain</span>
+
+<span class="c1"># ----------- SETUP PIPELINES -------------
+# 1. QA pipeline
+</span><span class="n">qa_pipeline</span> <span class="o">=</span> <span class="nf">pipeline</span><span class="p">(</span><span class="sh">"</span><span class="s">text-generation</span><span class="sh">"</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="sh">"</span><span class="s">google/flan-t5-base</span><span class="sh">"</span><span class="p">,</span> <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+<span class="n">qa_llm</span> <span class="o">=</span> <span class="nc">HuggingFacePipeline</span><span class="p">(</span><span class="n">pipeline</span><span class="o">=</span><span class="n">qa_pipeline</span><span class="p">)</span>
+
+<span class="c1"># 2. Summarization pipeline
+</span><span class="n">sum_pipeline</span> <span class="o">=</span> <span class="nf">pipeline</span><span class="p">(</span><span class="sh">"</span><span class="s">summarization</span><span class="sh">"</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="sh">"</span><span class="s">google/flan-t5-base</span><span class="sh">"</span><span class="p">,</span> <span class="n">max_new_tokens</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">sum_llm</span> <span class="o">=</span> <span class="nc">HuggingFacePipeline</span><span class="p">(</span><span class="n">pipeline</span><span class="o">=</span><span class="n">sum_pipeline</span><span class="p">)</span>
+
+<span class="c1"># 3. Translation pipeline
+</span><span class="n">trans_pipeline</span> <span class="o">=</span> <span class="nf">pipeline</span><span class="p">(</span><span class="sh">"</span><span class="s">translation</span><span class="sh">"</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="sh">"</span><span class="s">Helsinki-NLP/opus-mt-en-fr</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">trans_llm</span> <span class="o">=</span> <span class="nc">HuggingFacePipeline</span><span class="p">(</span><span class="n">pipeline</span><span class="o">=</span><span class="n">trans_pipeline</span><span class="p">)</span>
+
+<span class="c1"># ----------- PROMPTS ---------------------
+</span><span class="n">qa_prompt</span> <span class="o">=</span> <span class="nc">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">question</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">template</span><span class="o">=</span><span class="sh">"</span><span class="s">Answer this question clearly:</span><span class="se">\n</span><span class="s">{question}</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="n">sum_prompt</span> <span class="o">=</span> <span class="nc">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">template</span><span class="o">=</span><span class="sh">"</span><span class="s">Summarize this text:</span><span class="se">\n</span><span class="s">{text}</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="n">trans_prompt</span> <span class="o">=</span> <span class="nc">PromptTemplate</span><span class="p">(</span>
+    <span class="n">input_variables</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">template</span><span class="o">=</span><span class="sh">"</span><span class="s">Translate this text to French:</span><span class="se">\n</span><span class="s">{text}</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="c1"># ----------- CHAINS ---------------------
+# qa_chain = LLMChain(llm=qa_llm, prompt=qa_prompt)
+</span><span class="n">sum_chain</span> <span class="o">=</span> <span class="nc">LLMChain</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">sum_llm</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="n">sum_prompt</span><span class="p">)</span>
+<span class="n">trans_chain</span> <span class="o">=</span> <span class="nc">LLMChain</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">trans_llm</span><span class="p">,</span> <span class="n">prompt</span><span class="o">=</span><span class="n">trans_prompt</span><span class="p">)</span>
+
+<span class="c1"># ----------- PIPE THEM TOGETHER ----------
+# Example: Ask a question -&gt; Summarize answer -&gt; Translate summary
+</span><span class="n">overall_chain</span> <span class="o">=</span> <span class="nc">SimpleSequentialChain</span><span class="p">(</span>
+    <span class="n">chains</span><span class="o">=</span><span class="p">[</span><span class="n">sum_chain</span><span class="p">,</span> <span class="n">trans_chain</span><span class="p">],</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+
+<span class="c1"># ----------- RUN -------------------------
+</span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">overall_chain</span><span class="p">.</span>
+          <span class="nf">run</span><span class="p">(</span><span class="sh">"</span><span class="s">Goods and Services Tax (GST) is a </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">unified indirect tax levied in UK </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">on the supply of goods and services. </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">Businesses, freelancers, shop owners, a</span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">nd even customers often need to calculate </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">GST quickly for invoices, bills, or estimates. </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">A Free GST Calculator helps you determine the GST amount, </span><span class="sh">"</span>
+                           <span class="sh">"</span><span class="s">net price, or gross price in just a few seconds.</span><span class="sh">"</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="s">Final Output in French:</span><span class="se">\n</span><span class="sh">"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="c1">#Summary output
+#Use a Free GST Calculator to calculate the GST amount,
+# net price, or gross price of goods and services in just a few seconds.
+</span>
+<span class="c1">#Translator
+#Final Output in French:
+# Traduire ce texte en français :
+#Utilisez un calculateur gratuit de la TPS pour calculer le montant de la TPS,
+#le prix net ou le prix brut des produits et services en quelques secondes seulement.
+</span></code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[How to Build a Local AI Agent With Python (Huggingface, LangChain,text summarization and translation)]]></summary></entry><entry><title type="html">How to train LLM using local dataset</title><link href="https://shaardalearningcenter.github.io/2025/08/29/train-llm-using-local-dataset.html" rel="alternate" type="text/html" title="How to train LLM using local dataset" /><published>2025-08-29T00:00:00+05:30</published><updated>2025-08-29T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/08/29/train-llm-using-local-dataset</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/08/29/train-llm-using-local-dataset.html"><![CDATA[<h1 id="how-to-train-llm-using-local-dataset">How to train LLM using local dataset</h1>
+
+<p>Clone the required repo for training</p>
+<ul>
+  <li>git clone https://github.com/huggingface/transformers</li>
+  <li>cd transformers</li>
+  <li>pip install .</li>
+  <li>cd /mnt/d/karm/slc-bootcamp/</li>
+  <li>cd training-exmple/</li>
+  <li>cd transformers/</li>
+  <li>pip install .</li>
+  <li>python run_summarization.py</li>
+  <li>pip install datasets</li>
+  <li>python run_summarization.py</li>
+  <li>cd my-example/</li>
+  <li>pip install -r requirements.txt</li>
+</ul>
+
+<h2 id="create-requirementstxt">create requirements.txt</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">transformers</span><span class="o">&gt;=</span><span class="mf">4.44</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">datasets</span><span class="o">&gt;=</span><span class="mf">2.20</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">evaluate</span><span class="o">&gt;=</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">2</span>
+<span class="n">torch</span><span class="o">&gt;=</span><span class="mf">2.3</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">accelerate</span><span class="o">&gt;=</span><span class="mf">0.33</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">sentencepiece</span><span class="o">&gt;=</span><span class="mf">0.2</span><span class="p">.</span><span class="mi">0</span>
+
+</code></pre></div></div>
+<h2 id="take-this-code-snipette-to-train-the-llm-using-the-cnn-data-set">Take this code snipette to train the llm using the cnn data set</h2>
+<ul>
+  <li>create file run_summarization.py</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">Seq2SeqTrainer</span><span class="p">,</span> <span class="n">Seq2SeqTrainingArguments</span><span class="p">,</span> <span class="n">AutoTokenizer</span><span class="p">,</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="p">,</span> <span class="n">DataCollatorForSeq2Seq</span>
+<span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># 1. Load dataset
+</span><span class="n">dataset</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span><span class="sh">"</span><span class="s">cnn_dailymail</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">3.0.0</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># 2. Load tokenizer and model
+# model_name = "google-t5/t5-small"
+</span><span class="n">model_name</span><span class="o">=</span><span class="sh">"</span><span class="s">google/flan-t5-base</span><span class="sh">"</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+
+<span class="c1"># Preprocess function
+</span><span class="k">def</span> <span class="nf">preprocess_function</span><span class="p">(</span><span class="n">examples</span><span class="p">):</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">summarize: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">doc</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">examples</span><span class="p">[</span><span class="sh">"</span><span class="s">article</span><span class="sh">"</span><span class="p">]]</span>
+    <span class="n">model_inputs</span> <span class="o">=</span> <span class="nf">tokenizer</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">truncation</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="nf">tokenizer</span><span class="p">(</span><span class="n">examples</span><span class="p">[</span><span class="sh">"</span><span class="s">highlights</span><span class="sh">"</span><span class="p">],</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">truncation</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">model_inputs</span><span class="p">[</span><span class="sh">"</span><span class="s">labels</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="sh">"</span><span class="s">input_ids</span><span class="sh">"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">model_inputs</span>
+
+<span class="c1"># Tokenize dataset
+</span><span class="n">tokenized_datasets</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="n">preprocess_function</span><span class="p">,</span> <span class="n">batched</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">remove_columns</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">article</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">highlights</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="c1"># 3. Data collator
+</span><span class="n">data_collator</span> <span class="o">=</span> <span class="nc">DataCollatorForSeq2Seq</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+
+<span class="c1"># 4. Training arguments (LOCAL SAVE ONLY)
+</span><span class="n">training_args</span> <span class="o">=</span> <span class="nc">Seq2SeqTrainingArguments</span><span class="p">(</span>
+    <span class="n">output_dir</span><span class="o">=</span><span class="sh">"</span><span class="s">./local_t5_summarization</span><span class="sh">"</span><span class="p">,</span>   <span class="c1"># local dir
+</span>    <span class="n">eval_strategy</span><span class="o">=</span><span class="sh">"</span><span class="s">epoch</span><span class="sh">"</span><span class="p">,</span>
+    <span class="c1"># evaluate_during_training=True,  # old name
+</span>    <span class="n">learning_rate</span><span class="o">=</span><span class="mf">2e-5</span><span class="p">,</span>
+<span class="c1"># max_steps=2000,  # overrides num_train_epochs
+</span>
+    <span class="n">per_device_train_batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">per_device_eval_batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">weight_decay</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+    <span class="n">save_total_limit</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">num_train_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">predict_with_generate</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">logging_dir</span><span class="o">=</span><span class="sh">"</span><span class="s">./logs</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">logging_steps</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">save_strategy</span><span class="o">=</span><span class="sh">"</span><span class="s">epoch</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">report_to</span><span class="o">=</span><span class="sh">"</span><span class="s">none</span><span class="sh">"</span>  <span class="c1"># disables wandb/hub
+</span><span class="p">)</span>
+
+<span class="c1"># 5. Trainer
+</span><span class="n">trainer</span> <span class="o">=</span> <span class="nc">Seq2SeqTrainer</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">args</span><span class="o">=</span><span class="n">training_args</span><span class="p">,</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">tokenized_datasets</span><span class="p">[</span><span class="sh">"</span><span class="s">train</span><span class="sh">"</span><span class="p">].</span><span class="nf">select</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span>  <span class="c1"># small subset for local test
+</span>    <span class="n">eval_dataset</span><span class="o">=</span><span class="n">tokenized_datasets</span><span class="p">[</span><span class="sh">"</span><span class="s">validation</span><span class="sh">"</span><span class="p">].</span><span class="nf">select</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="mi">200</span><span class="p">)),</span>
+    <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">,</span>
+    <span class="n">data_collator</span><span class="o">=</span><span class="n">data_collator</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># 6. Train
+</span><span class="n">trainer</span><span class="p">.</span><span class="nf">train</span><span class="p">()</span>
+
+<span class="c1"># 7. Save locally
+</span><span class="n">trainer</span><span class="p">.</span><span class="nf">save_model</span><span class="p">(</span><span class="sh">"</span><span class="s">./local_t5_summarization</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">tokenizer</span><span class="p">.</span><span class="nf">save_pretrained</span><span class="p">(</span><span class="sh">"</span><span class="s">./local_t5_summarization</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">✅ Model saved locally at ./local_t5_summarization</span><span class="sh">"</span><span class="p">)</span>
+
+
+</code></pre></div></div>
+
+<h2 id="use-this-trained-model">Use this trained model</h2>
+<p>This model is saved at local_t5_summarization load it</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">AutoTokenizer</span><span class="p">,</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="p">,</span> <span class="n">pipeline</span>
+
+<span class="c1"># Path where your trained model was saved
+# model_path = "./local_t5_summarization/checkpoint-250"
+# from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+</span>
+<span class="n">model_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">./local_t5_summarization/checkpoint-250</span><span class="sh">"</span>  <span class="c1"># your trained checkpoint
+</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSeq2SeqLM</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="sh">"""</span><span class="s">Prime Minister Narendra Modi on Saturday (August 30, 2025) travelled to Sendai in the Japanese prefecture of Miyagi to visit a semiconductor plant. Narendra Modi on Saturday (August 30, 2025) also met governors of 16 Japanese prefectures in Tokyo and called for strengthening state-prefecture cooperation under the India-Japan Special Strategic and Global Partnership, the Ministry of External Affairs (MEA) said in a statement.</span><span class="sh">"""</span>
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="nf">tokenizer</span><span class="p">(</span><span class="sh">"</span><span class="s">summarize: </span><span class="sh">"</span> <span class="o">+</span> <span class="n">text</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="sh">"</span><span class="s">pt</span><span class="sh">"</span><span class="p">,</span> <span class="n">truncation</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">summary_ids</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">generate</span><span class="p">(</span>
+    <span class="n">inputs</span><span class="p">[</span><span class="sh">"</span><span class="s">input_ids</span><span class="sh">"</span><span class="p">],</span>
+    <span class="n">num_beams</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+    <span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">min_length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">length_penalty</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">early_stopping</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Original</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Summary:</span><span class="sh">"</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="n">summary_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">skip_special_tokens</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+
+
+</code></pre></div></div>
+<h1 id="original">Original</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Prime Minister Narendra Modi on Saturday (August 30, 2025) travelled to Sendai in the Japanese prefecture of Miyagi to visit a semiconductor plant. Narendra Modi on Saturday (August 30, 2025) also met governors of 16 Japanese prefectures in Tokyo and called for strengthening state-prefecture cooperation under the India-Japan Special Strategic and Global Partnership, the Ministry of External Affairs (MEA) said in a statement.
+</code></pre></div></div>
+<h1 id="summary">Summary</h1>
+<p>```
+Summary: PM Narendra Modi visits a semiconductor plant in Miyagi . He also meets governors of 16 Japanese prefectures in Tokyo . PM calls for strengthening state-prefecture cooperation under India-Japan Special Strategic</p>]]></content><author><name></name></author><summary type="html"><![CDATA[How to train LLM using local dataset]]></summary></entry><entry><title type="html">DP patterns Matrix Multiplication</title><link href="https://shaardalearningcenter.github.io/2025/08/24/matrix-multiplication.html" rel="alternate" type="text/html" title="DP patterns Matrix Multiplication" /><published>2025-08-24T00:00:00+05:30</published><updated>2025-08-24T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/08/24/matrix-multiplication</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/08/24/matrix-multiplication.html"><![CDATA[<h1 id="312-burst-balloons">312. Burst Balloons</h1>
+
+<p>You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.</p>
+
+<p>If you burst the <mark>ith balloon</mark>, you will get <mark>nums[i - 1] * nums[i] * nums[i + 1] coins<mark>. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.</mark></mark></p>
+
+<p>Return the <mark>maximum coins</mark> you can collect by bursting the balloons wisely.</p>
+
+<ul>
+  <li>Example 1:</li>
+</ul>
+
+<p>Input: nums = [3,1,5,8]
+Output: 167
+Explanation:
+nums = [3,1,5,8] –&gt; [3,5,8] –&gt; [3,8] –&gt; [8] –&gt; []
+coins =  3<em>1</em>5    +   3<em>5</em>8   +  1<em>3</em>8  + 1<em>8</em>1 = 167</p>
+<ul>
+  <li>Example 2:</li>
+</ul>
+
+<p>Input: nums = [1,5]
+Output: 10</p>
+
+<h1 id="intution">intution</h1>
+<details open="">
+<mark>
+Think reverse: last balloon to burst
+Instead of asking which to burst first, ask which balloon will be the last to burst in a subarray.
+</mark>
+
+<mark>
+If i is the last balloon in some range (left, right), then bursting it gives nums[left] * nums[i] * nums[right].
+</mark>
+
+All balloons between left and i and between i and right must already be burst optimally.
+&lt;/mark&gt;
+
+```java
+for (int i = left; i &lt;= right; i++) {
+            // nums[i] is the last burst one
+            int gain = nums[left - 1] * nums[i] * nums[right + 1];
+            int leftP=dp(memo, nums, left, i - 1);
+           
+            int rightP=dp(memo, nums, i + 1, right);
+            //System.out.println("rightP "+rightP);
+
+            // nums[i] is fixed, recursively call left side and right side
+            int remaining =  leftP+ rightP;
+            result = Math.max(result, remaining + gain);
+        }
+```
+</details>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">maxCoins</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">1000000000</span><span class="o">;</span>
+        <span class="c1">// add 1 before and after nums</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="o">.</span><span class="na">length</span> <span class="o">+</span> <span class="mi">2</span><span class="o">;</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">newNums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">arraycopy</span><span class="o">(</span><span class="n">nums</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">newNums</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+        <span class="n">newNums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="n">newNums</span><span class="o">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+
+        <span class="c1">// cache the results of dp</span>
+        <span class="kt">int</span><span class="o">[][]</span> <span class="n">memo</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+
+        <span class="c1">// we can not burst the first one and the last one</span>
+        <span class="c1">// since they are both fake balloons added by ourselves</span>
+        <span class="k">return</span> <span class="nf">dp</span><span class="o">(</span><span class="n">memo</span><span class="o">,</span> <span class="n">newNums</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">dp</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">memo</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">,</span> <span class="kt">int</span> <span class="n">left</span><span class="o">,</span> <span class="kt">int</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// return maximum if we burst all nums[left]...nums[right], inclusive</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// we've already seen this, return from cache</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">memo</span><span class="o">[</span><span class="n">left</span><span class="o">][</span><span class="n">right</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">memo</span><span class="o">[</span><span class="n">left</span><span class="o">][</span><span class="n">right</span><span class="o">];</span>
+        <span class="o">}</span>
+
+        <span class="c1">// find the last burst one in nums[left]...nums[right]</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">left</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="c1">// nums[i] is the last burst one</span>
+            <span class="kt">int</span> <span class="n">gain</span> <span class="o">=</span> <span class="n">nums</span><span class="o">[</span><span class="n">left</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">*</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">*</span> <span class="n">nums</span><span class="o">[</span><span class="n">right</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+            <span class="kt">int</span> <span class="n">leftP</span><span class="o">=</span><span class="n">dp</span><span class="o">(</span><span class="n">memo</span><span class="o">,</span> <span class="n">nums</span><span class="o">,</span> <span class="n">left</span><span class="o">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+           <span class="c1">// System.out.println("i "+1);</span>
+         <span class="c1">//   System.out.println("leftP "+leftP);</span>
+            <span class="kt">int</span> <span class="n">rightP</span><span class="o">=</span><span class="n">dp</span><span class="o">(</span><span class="n">memo</span><span class="o">,</span> <span class="n">nums</span><span class="o">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">,</span> <span class="n">right</span><span class="o">);</span>
+            <span class="c1">//System.out.println("rightP "+rightP);</span>
+
+            <span class="c1">// nums[i] is fixed, recursively call left side and right side</span>
+            <span class="kt">int</span> <span class="n">remaining</span> <span class="o">=</span>  <span class="n">leftP</span><span class="o">+</span> <span class="n">rightP</span><span class="o">;</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">result</span><span class="o">,</span> <span class="n">remaining</span> <span class="o">+</span> <span class="n">gain</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="c1">// add to the cache</span>
+        <span class="n">memo</span><span class="o">[</span><span class="n">left</span><span class="o">][</span><span class="n">right</span><span class="o">]</span> <span class="o">=</span> <span class="n">result</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div></div>]]></content><author><name></name></author><category term="LeetCode" /><category term="Dynamic Programming" /><category term="Algorithms" /><category term="Interview Prep" /><summary type="html"><![CDATA[312. Burst Balloons]]></summary></entry><entry><title type="html">Low Level Design Snake Game</title><link href="https://shaardalearningcenter.github.io/2025/08/07/snake-game.html" rel="alternate" type="text/html" title="Low Level Design Snake Game" /><published>2025-08-07T00:00:00+05:30</published><updated>2025-08-07T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/08/07/snake-game</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/08/07/snake-game.html"><![CDATA[<h1 id="snake-game">Snake Game</h1>
+<p>https://leetcode.com/problems/design-snake-game/description/</p>
+<h2 id="353-design-snake-game">353. Design Snake Game</h2>
+<p>Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.</p>
+
+<p>The snake is initially positioned at the top left corner (0, 0) with a length of 1 unit.</p>
+
+<p>You are given an array food where food[i] = (ri, ci) is the row and column position of a piece of food that the snake can eat. When a snake eats a piece of food, its length and the game’s score both increase by 1.</p>
+
+<p>Each piece of food appears one by one on the screen, meaning the second piece of food will not appear until the snake eats the first piece of food.</p>
+
+<p>When a piece of food appears on the screen, it is guaranteed that it will not appear on a block occupied by the snake.</p>
+
+<p>The game is over if the snake goes out of bounds (hits a wall) or if its head occupies a space that its body occupies after moving (i.e. a snake of length 4 cannot run into itself).</p>
+
+<p>Implement the SnakeGame class:</p>
+
+<p>SnakeGame(int width, int height, int[][] food) Initializes the object with a screen of size height x width and the positions of the food.
+int move(String direction) Returns the score of the game after applying one direction move by the snake. If the game is over, return -1.</p>
+
+<p>Example 1:</p>
+
+<p>Input
+[“SnakeGame”, “move”, “move”, “move”, “move”, “move”, “move”]
+[[3, 2, [[1, 2], [0, 1]]], [“R”], [“D”], [“R”], [“U”], [“L”], [“U”]]
+Output
+[null, 0, 0, 1, 1, 2, -1]</p>
+
+<p>Explanation
+SnakeGame snakeGame = new SnakeGame(3, 2, [[1, 2], [0, 1]]);
+snakeGame.move(“R”); // return 0
+snakeGame.move(“D”); // return 0
+snakeGame.move(“R”); // return 1, snake eats the first piece of food. The second piece of food appears at (0, 1).
+snakeGame.move(“U”); // return 1
+snakeGame.move(“L”); // return 2, snake eats the second food. No more food appears.
+snakeGame.move(“U”); // return -1, game over because snake collides with border</p>
+
+<p>Constraints:</p>
+
+<p>1 &lt;= width, height &lt;= 104
+1 &lt;= food.length &lt;= 50
+food[i].length == 2
+0 &lt;= ri &lt; height
+0 &lt;= ci &lt; width
+direction.length == 1
+direction is ‘U’, ‘D’, ‘L’, or ‘R’.
+At most 104 calls will be made to move.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class SnakeGame {
+int height;
+int width;
+List&lt;int[]&gt; snake;
+int[][] food;
+int foodIndex;
+int score;
+int len=0;
+    public SnakeGame(int width, int height, int[][] food) {
+        this.width=width;
+        this.height=height;
+        this.food=food;
+     
+        this.snake=new ArrayList&lt;&gt;();
+        int[] start={0,0};
+        this.snake.add(start);
+    }
+    
+    public int move(String direction) {
+        int[] l=snake.get(0);
+         int[] last={l[0],l[1]};
+        if(direction.equalsIgnoreCase("U")){
+            last[0]--;
+        }else if(direction.equalsIgnoreCase("D")){
+            last[0]++;
+        }else if(direction.equalsIgnoreCase("L")){
+            last[1]--;
+        }else if(direction.equalsIgnoreCase("R")){
+            last[1]++;
+        }
+// int[] last={l[0],l[1]};
+///within boundary
+        if(last[0]==height||last[1]==width||last[0]&lt;0||last[1]&lt;0){
+           System.out.println("out of bound");
+            return -1;
+        }
+        //eats itself
+        Integer posToNumber=last[0]*width+last[1];
+      
+         if(eatsSelf(last)){
+            return -1;
+        }
+        //move snake
+        snake.add(0,last);
+       
+        //remove tail if no food
+        if(foodIndex&lt;food.length &amp;&amp; (food[foodIndex][0]==last[0]&amp;&amp; food[foodIndex][1]==last[1])){
+            System.out.println("ate food");
+            foodIndex++;
+            score++;
+            len++; //this is snake length
+           
+        }
+        //snake length should not be greater than food eaten +1 since begining length of snake is 1
+          while(snake.size()&gt;len+1){
+            snake.remove(snake.size()-1);}
+            
+        
+        
+    return score;
+    }
+    public boolean eatsSelf(int[] po){
+        //ignore head by starting from 1
+        //for(int i=1;i&lt;snake.size()-1;i++){
+            //start from 0 ignore tail
+        for(int i=0;i&lt;snake.size()-1;i++){
+
+            int[] s=snake.get(i);
+            if(s[0]==po[0] &amp;&amp; s[1]==po[1]){
+                System.out.println("ate self =true s[0] "+s[0]+" s[1] "+s[1]+" PO {0,1} "+po[0]+" "+po[1]);
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+/**
+ * Your SnakeGame object will be instantiated and called as such:
+ * SnakeGame obj = new SnakeGame(width, height, food);
+ * int param_1 = obj.move(direction);
+ */
+</code></pre></div></div>]]></content><author><name></name></author><summary type="html"><![CDATA[Snake Game https://leetcode.com/problems/design-snake-game/description/ 353. Design Snake Game Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.]]></summary></entry><entry><title type="html">Database questions must know for system design interview</title><link href="https://shaardalearningcenter.github.io/2025/07/25/database-system-design-interview-must-know.html" rel="alternate" type="text/html" title="Database questions must know for system design interview" /><published>2025-07-25T00:00:00+05:30</published><updated>2025-07-25T00:00:00+05:30</updated><id>https://shaardalearningcenter.github.io/2025/07/25/database-system-design-interview-must-know</id><content type="html" xml:base="https://shaardalearningcenter.github.io/2025/07/25/database-system-design-interview-must-know.html"><![CDATA[<h1 id="databse-questions-must-know-for-system-design-interview">Databse questions must know for system design interview</h1>
+
+<h2 id="-scenario">🎯 Scenario:</h2>
+
+<p>You’re designing and maintaining a backend for a high-traffic Google service (e.g., YouTube comment system, Google Maps review store, etc.). Millions of reads and writes per day. Your task is to optimize database performance, both read-heavy and write-heavy use cases.</p>
+
+<h2 id="-interviewer-starts-basic-level-questions">🟢 Interviewer starts: Basic Level Questions</h2>
+
+<h3 id="-q1-what-do-you-mean-by-database-fine-tuning">🔹 Q1. What do you mean by database fine-tuning?</h3>
+
+<p>A: Database fine-tuning is the process of improving the performance of a database system by optimizing queries, indexes, schema design, configuration settings, and hardware resources to minimize latency and maximize throughput.</p>
+
+<h3 id="-q2-whats-the-first-thing-youd-do-if-a-query-is-running-slow">🔹 Q2. What’s the first thing you’d do if a query is running slow?</h3>
+
+<p>A: First, I’d analyze the query execution plan using tools like EXPLAIN (MySQL/PostgreSQL) to understand how the database is interpreting the query. This helps identify full table scans, missing indexes, or costly operations like sorts or joins.</p>
+
+<h2 id="-interviewer-follows-up-to-dig-deeper">🟡 Interviewer follows up to dig deeper</h2>
+
+<h3 id="-q3-what-if-the-execution-plan-shows-a-full-table-scan-what-would-you-do">🔹 Q3. What if the execution plan shows a full table scan? What would you do?</h3>
+
+<p>A: I’d check if the columns in the WHERE clause are indexed. If not, adding an appropriate index can help. I’d also consider whether the query could be rewritten to be more efficient, e.g., breaking large JOINs or using materialized views.</p>
+
+<h3 id="-q4-how-do-indexes-improve-performance-and-when-can-they-hurt-it">🔹 Q4. How do indexes improve performance, and when can they hurt it?</h3>
+
+<p>A: Indexes speed up read operations by allowing faster lookups. However, they can hurt write performance since the database must update indexes on every insert, update, or delete. Over-indexing can also increase memory usage.</p>
+
+<h3 id="-q5-in-a-write-heavy-system-how-would-you-optimize">🔹 Q5. In a write-heavy system, how would you optimize?</h3>
+
+<p>A: In write-heavy scenarios, I’d minimize indexes, batch writes, and consider techniques like write-ahead logging or in-memory queues (e.g., Kafka) to decouple writes. I’d also partition data (sharding) to distribute load.</p>
+
+<h3 id="-q6-would-you-denormalize-the-schema-to-improve-performance-when">🔹 Q6. Would you denormalize the schema to improve performance? When?</h3>
+
+<p>A: Yes, especially in read-heavy systems. Denormalization avoids expensive JOINs and reduces query complexity. However, it increases redundancy and risk of data inconsistency, so I’d only do it with strong data update strategies in place.</p>
+
+<h2 id="-interviewer-gets-technical-and-scenario-driven">🔴 Interviewer gets technical and scenario-driven</h2>
+
+<h3 id="-q7-your-service-has-a-99th-percentile-query-latency-of-12s-business-wants-it--500ms-what-are-your-steps">🔹 Q7. Your service has a 99th percentile query latency of 1.2s. Business wants it &lt; 500ms. What are your steps?</h3>
+
+<p>A:</p>
+
+<p>Analyze slow queries via logs or APM tools.</p>
+
+<p>Use EXPLAIN to check for suboptimal plans.</p>
+
+<p>Add/adjust indexes.</p>
+
+<p>Cache expensive queries in Redis/Memcached.</p>
+
+<p>Add pagination for large result sets.</p>
+
+<p>If still slow, consider query restructuring or denormalization.</p>
+
+<h3 id="-q8-you-added-an-index-and-the-query-slowed-down-why-might-that-happen">🔹 Q8. You added an index and the query slowed down. Why might that happen?</h3>
+
+<p>A: Possible reasons:</p>
+
+<p>Query planner misjudged index selectivity.</p>
+
+<p>Index is not covering (doesn’t include all needed columns).</p>
+
+<p>Index maintenance overhead on frequent writes.</p>
+
+<p>Query became CPU-bound due to sorting/index lookup.</p>
+
+<h3 id="-q9-how-would-you-design-indexes-for-a-composite-query-with-where-clauses-on-user_id-status-and-order-by-created_at-desc">🔹 Q9. How would you design indexes for a composite query with WHERE clauses on (user_id, status) and ORDER BY created_at DESC?</h3>
+
+<p>A: I’d use a composite index on (user_id, status, created_at DESC) to match both the filter and sort. Index order matters — filters first, sort last.</p>
+
+<h3 id="-q10-how-do-you-detect-and-prevent-deadlocks-in-a-db-under-load">🔹 Q10. How do you detect and prevent deadlocks in a DB under load?</h3>
+
+<p>A:</p>
+
+<p>Use proper transaction ordering.</p>
+
+<p>Keep transactions short.</p>
+
+<p>Use lower isolation levels if acceptable.</p>
+
+<p>Add monitoring for deadlock events via DB logs.</p>
+
+<p>Detect circular locks via profiling tools.</p>
+
+<h3 id="-q11-how-does-connection-pooling-help-with-performance">🔹 Q11. How does connection pooling help with performance?</h3>
+
+<p>A: It reuses existing DB connections instead of constantly opening/closing new ones, reducing latency and CPU cost. Helps manage concurrent requests efficiently.</p>
+
+<h2 id="-interviewer-shifts-to-scaling--high-availability">🔵 Interviewer shifts to scaling &amp; high availability</h2>
+
+<h3 id="-q12-how-would-you-scale-a-database-handling-10m-requests-per-day">🔹 Q12. How would you scale a database handling 10M+ requests per day?</h3>
+
+<p>A:</p>
+
+<p>Read Replicas for load balancing.</p>
+
+<p>Sharding (horizontal partitioning).</p>
+
+<p>Caching layer (e.g., Redis) for frequently accessed data.</p>
+
+<p>Use of CDNs where applicable.</p>
+
+<p>Load testing to find bottlenecks.</p>
+
+<h3 id="-q13-whats-the-difference-between-vertical-and-horizontal-scaling-in-db-context">🔹 Q13. What’s the difference between vertical and horizontal scaling in DB context?</h3>
+
+<p>A:</p>
+
+<p>Vertical scaling: Upgrading server (CPU, RAM, SSD).</p>
+
+<p>Horizontal scaling: Adding more database nodes (e.g., sharding, replicas).</p>
+
+<p>Horizontal scaling improves fault tolerance and better handles concurrent load.</p>
+
+<h3 id="-q14-when-would-you-choose-a-nosql-database-over-a-relational-db">🔹 Q14. When would you choose a NoSQL database over a relational DB?</h3>
+
+<p>A: When the schema is dynamic, data is hierarchical, consistency is relaxed (eventual OK), or for high-speed writes and scale — e.g., user activity logs, product catalogs.</p>
+
+<h3 id="-q15-how-do-you-ensure-high-availability-and-failover-in-production-dbs">🔹 Q15. How do you ensure high availability and failover in production DBs?</h3>
+
+<p>A:</p>
+
+<p>Use master-slave replication.</p>
+
+<p>Auto failover with tools like Patroni (PostgreSQL), MHA.</p>
+
+<p>Backup strategies (daily, hourly).</p>
+
+<p>Heartbeat &amp; health checks.</p>
+
+<p>Region-level redundancy for disaster recovery.</p>
+
+<h2 id="-bonus-twist-from-interviewer">✅ Bonus Twist from Interviewer:</h2>
+
+<p>“Great. Let’s say your app still faces 5% slow requests despite all these. What now?”</p>
+
+<p>A:</p>
+
+<p>Profile application code for bottlenecks outside DB.</p>
+
+<p>Analyze thread contention or network latency.</p>
+
+<p>Check for N+1 queries or unoptimized ORMs.</p>
+
+<p>Consider async processing for background tasks.</p>
+
+<p>Review hardware limits or OS-level I/O issues.</p>
+
+<h2 id="-tips-for-you">🧠 Tips for You:</h2>
+
+<p>Always measure before optimizing.</p>
+
+<p>Database fine-tuning is both an art and a science — stay data-driven.</p>
+
+<p>Be clear in trade-offs: performance vs. consistency vs. availability.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Databse questions must know for system design interview]]></summary></entry></feed>

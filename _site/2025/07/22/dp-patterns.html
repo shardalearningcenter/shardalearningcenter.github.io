@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dynamic Programming patterns every software engineer should know | ShardaLearningCenter</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Dynamic Programming patterns every software engineer should know" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Dynamic Programming patterns every software engineer should know" />
+<meta property="og:description" content="Dynamic Programming patterns every software engineer should know" />
+<link rel="canonical" href="https://shaardalearningcenter.github.io/2025/07/22/dp-patterns.html" />
+<meta property="og:url" content="https://shaardalearningcenter.github.io/2025/07/22/dp-patterns.html" />
+<meta property="og:site_name" content="ShardaLearningCenter" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-22T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dynamic Programming patterns every software engineer should know" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-22T00:00:00+05:30","datePublished":"2025-07-22T00:00:00+05:30","description":"Dynamic Programming patterns every software engineer should know","headline":"Dynamic Programming patterns every software engineer should know","mainEntityOfPage":{"@type":"WebPage","@id":"https://shaardalearningcenter.github.io/2025/07/22/dp-patterns.html"},"url":"https://shaardalearningcenter.github.io/2025/07/22/dp-patterns.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="https://shaardalearningcenter.github.io/">
+          <h1>ShardaLearningCenter</h1>
+        </a>
+        <h2>Learn to code by building real projects. Fast. Practical. No fluff.</h2>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Programming patterns every software engineer should know | ShardaLearningCenter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    
+    .post-container {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .post-title {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .post-content {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .post-content h2, .post-content h3 {
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      color: #111;
+    }
+    .post-content p {
+      margin-bottom: 1.2rem;
+    }
+    .post-content a {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+    .post-content blockquote {
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #555;
+      background: #f9f9f9;
+      margin: 1.5rem 0;
+    }
+    .post-content code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .post-content pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Sharda Learning Center</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+  </nav>
+  <main class="post-container">
+    <h1 class="post-title">Dynamic Programming patterns every software engineer should know</h1>
+    <div class="post-meta">
+      July 22, 2025
+    </div>
+    <div class="post-content">
+      <h1 id="dynamic-programming-patterns-every-software-engineer-should-know">Dynamic Programming patterns every software engineer should know</h1>
+
+<h5 id="dp-for-beginners-problems--patterns--sample-solutions">DP for Beginners [Problems | Patterns | Sample Solutions]</h5>
+<p>https://leetcode.com/discuss/general-discussion/662866/dp-for-beginners-problems-patterns-sample-solutions</p>
+
+<p>As some folks requested to list down good Dynamic Programming problems to start practice with. So, I am listing down them below and dividing them into different DP problem pattern. Problem listed in group follow a particular pattern and similar approach to solve them. I have tried to list those which till now I have solved, might have missed a few as well. Mostly are LC Medium problems and few LC Hard ones.<br />
+Beginner folks can wish to look at solutions listed below of particular pattern and can try to solve the other problem themselves.</p>
+
+<p>Full problem list: <a href="https://leetcode.com/list/x1k8lxi5">https://leetcode.com/list/x1k8lxi5</a></p>
+
+<h2 id="knapsack-dp">KnapSack Dp</h2>
+<p>[https://leetcode.com/problems/shopping-offers/description/] (https://leetcode.com/problems/shopping-offers/description/)</p>
+
+<p><strong>Longest Increasing Subsequence variants:</strong><br />
+<a href="https://leetcode.com/problems/longest-increasing-subsequence/">https://leetcode.com/problems/longest-increasing-subsequence/</a><br />
+<a href="https://leetcode.com/problems/largest-divisible-subset/">https://leetcode.com/problems/largest-divisible-subset/</a><br />
+<a href="https://leetcode.com/problems/russian-doll-envelopes/">https://leetcode.com/problems/russian-doll-envelopes/</a><br />
+<a href="https://leetcode.com/problems/maximum-length-of-pair-chain/">https://leetcode.com/problems/maximum-length-of-pair-chain/</a><br />
+<a href="https://leetcode.com/problems/number-of-longest-increasing-subsequence/">https://leetcode.com/problems/number-of-longest-increasing-subsequence/</a><br />
+<a href="https://leetcode.com/problems/delete-and-earn/">https://leetcode.com/problems/delete-and-earn/</a><br />
+<a href="https://leetcode.com/problems/longest-string-chain/">https://leetcode.com/problems/longest-string-chain/</a></p>
+
+<p><strong>Partition Subset:</strong><br />
+<a href="https://leetcode.com/problems/partition-equal-subset-sum/">https://leetcode.com/problems/partition-equal-subset-sum/</a><br />
+<a href="https://leetcode.com/problems/last-stone-weight-ii/">https://leetcode.com/problems/last-stone-weight-ii/</a></p>
+
+<p><strong>BitMasking:</strong><br />
+<a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets/">https://leetcode.com/problems/partition-to-k-equal-sum-subsets/</a></p>
+
+<p><strong>Longest Common Subsequence Variant:</strong><br />
+<a href="https://leetcode.com/problems/longest-common-subsequence/">https://leetcode.com/problems/longest-common-subsequence/</a><br />
+<a href="https://leetcode.com/problems/edit-distance/">https://leetcode.com/problems/edit-distance/</a><br />
+<a href="https://leetcode.com/problems/distinct-subsequences/">https://leetcode.com/problems/distinct-subsequences/</a><br />
+<a href="https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/">https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/</a></p>
+
+<p><strong>Palindrome:</strong><br />
+<a href="https://leetcode.com/problems/palindrome-partitioning-ii/">https://leetcode.com/problems/palindrome-partitioning-ii/</a><br />
+<a href="https://leetcode.com/problems/palindromic-substrings/">https://leetcode.com/problems/palindromic-substrings/</a></p>
+
+<p><strong>Coin Change variant:</strong><br />
+<a href="https://leetcode.com/problems/coin-change/">https://leetcode.com/problems/coin-change/</a><br />
+<a href="https://leetcode.com/problems/coin-change-2/">https://leetcode.com/problems/coin-change-2/</a><br />
+<a href="https://leetcode.com/problems/combination-sum-iv/">https://leetcode.com/problems/combination-sum-iv/</a><br />
+<a href="https://leetcode.com/problems/perfect-squares/">https://leetcode.com/problems/perfect-squares/</a><br />
+<a href="https://leetcode.com/problems/minimum-cost-for-tickets/">https://leetcode.com/problems/minimum-cost-for-tickets/</a></p>
+
+<p><strong>Matrix multiplication variant:</strong><br />
+<a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon/">https://leetcode.com/problems/minimum-score-triangulation-of-polygon/</a><br />
+<a href="https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/">https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/</a><br />
+<a href="https://leetcode.com/problems/burst-balloons/">https://leetcode.com/problems/burst-balloons/</a></p>
+
+<p><strong>Matrix/2D Array:</strong><br />
+<a href="https://leetcode.com/problems/matrix-block-sum/">https://leetcode.com/problems/matrix-block-sum/</a><br />
+<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/">https://leetcode.com/problems/range-sum-query-2d-immutable/</a><br />
+<a href="https://leetcode.com/problems/dungeon-game/">https://leetcode.com/problems/dungeon-game/</a><br />
+<a href="https://leetcode.com/problems/triangle/">https://leetcode.com/problems/triangle/</a><br />
+<a href="https://leetcode.com/problems/maximal-square/">https://leetcode.com/problems/maximal-square/</a><br />
+<a href="https://leetcode.com/problems/minimum-falling-path-sum/">https://leetcode.com/problems/minimum-falling-path-sum/</a></p>
+
+<p><strong>Hash + DP:</strong><br />
+<a href="https://leetcode.com/problems/target-sum/">https://leetcode.com/problems/target-sum/</a><br />
+<a href="https://leetcode.com/problems/longest-arithmetic-sequence/">https://leetcode.com/problems/longest-arithmetic-sequence/</a><br />
+<a href="https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/">https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/</a><br />
+<a href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/">https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/</a></p>
+
+<p><strong>State machine:</strong><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/</a></p>
+
+<p><strong>Depth First Search + DP:</strong><br />
+<a href="https://leetcode.com/problems/out-of-boundary-paths/">https://leetcode.com/problems/out-of-boundary-paths/</a><br />
+<a href="https://leetcode.com/problems/knight-probability-in-chessboard/">https://leetcode.com/problems/knight-probability-in-chessboard/</a></p>
+
+<p><strong>Minimax DP:</strong><br />
+<a href="https://leetcode.com/problems/predict-the-winner/">https://leetcode.com/problems/predict-the-winner/</a><br />
+<a href="https://leetcode.com/problems/stone-game/">https://leetcode.com/problems/stone-game/</a></p>
+
+<p><strong>Misc:</strong><br />
+<a href="https://leetcode.com/problems/greatest-sum-divisible-by-three/">https://leetcode.com/problems/greatest-sum-divisible-by-three/</a><br />
+<a href="https://leetcode.com/problems/decode-ways/">https://leetcode.com/problems/decode-ways/</a><br />
+<a href="https://leetcode.com/problems/perfect-squares/">https://leetcode.com/problems/perfect-squares/</a><br />
+<a href="https://leetcode.com/problems/count-numbers-with-unique-digits/">https://leetcode.com/problems/count-numbers-with-unique-digits/</a><br />
+<a href="https://leetcode.com/problems/longest-turbulent-subarray/">https://leetcode.com/problems/longest-turbulent-subarray/</a><br />
+<a href="https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/">https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/</a></p>
+
+<hr />
+
+<h1 id="sample-solutions-for-each-of-above-problem-type">Sample solutions for each of above problem type:</h1>
+
+<hr />
+
+<p><strong>KnapSack dp</strong> https://leetcode.com/list/o02bxeuh
+[https://leetcode.com/problems/shopping-offers/description/] (https://leetcode.com/problems/shopping-offers/description/)
+[https://leetcode.com/problems/house-robber-ii/?envType=list&amp;envId=o02bxeuh]
+[https://leetcode.com/problems/ones-and-zeroes/?envType=list&amp;envId=o02bxeuh]
+[https://leetcode.com/problems/shopping-offers/?envType=list&amp;envId=o02bxeuh]
+[https://leetcode.com/problems/target-sum/?envType=list&amp;envId=o02bxeuh]</p>
+
+<h3 id="shoppong-offers-httpsleetcodecomproblemsshopping-offersdescription-httpsleetcodecomproblemsshopping-offersdescription">Shoppong Offers [https://leetcode.com/problems/shopping-offers/description/] (https://leetcode.com/problems/shopping-offers/description/)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">shoppingOffers</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">price</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">special</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">needs</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="o">,</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="k">return</span> <span class="nf">offers</span><span class="o">(</span><span class="n">price</span><span class="o">,</span><span class="n">special</span><span class="o">,</span><span class="n">needs</span><span class="o">,</span><span class="n">dp</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kt">int</span> <span class="nf">offers</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">price</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">special</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">need</span> <span class="o">,</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="o">,</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">dp</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="n">need</span><span class="o">)){</span>
+            <span class="k">return</span> <span class="n">dp</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">need</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="c1">// not to take any special offer</span>
+        <span class="kt">int</span> <span class="n">nos</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">need</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="n">nos</span> <span class="o">+=(</span><span class="n">need</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)*</span><span class="n">price</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+        <span class="o">}</span>
+
+        <span class="c1">// take any special offer and call recursion function on remaining needs</span>
+        <span class="kt">int</span> <span class="n">min</span><span class="o">=</span><span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">special</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">sp</span> <span class="o">=</span> <span class="n">special</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+            <span class="c1">// check if no item is taken more than need</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">cantake</span><span class="o">(</span><span class="n">sp</span><span class="o">,</span><span class="n">need</span><span class="o">)){</span>
+                <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="n">need</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">k</span><span class="o">++){</span>
+                    <span class="n">need</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">k</span><span class="o">,</span><span class="n">need</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">)-</span><span class="n">sp</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+                <span class="o">}</span>
+                <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">offers</span><span class="o">(</span><span class="n">price</span><span class="o">,</span><span class="n">special</span><span class="o">,</span><span class="n">need</span><span class="o">,</span><span class="n">dp</span><span class="o">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">sp</span><span class="o">.</span><span class="na">size</span><span class="o">()-</span><span class="mi">1</span><span class="o">);</span>
+                <span class="n">min</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">min</span><span class="o">,</span><span class="n">a</span><span class="o">);</span>
+                <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="n">need</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">k</span><span class="o">++){</span>
+                    <span class="n">need</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">k</span><span class="o">,</span><span class="n">need</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">)+</span><span class="n">sp</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+                <span class="o">}</span>
+
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">min</span><span class="o">,</span><span class="n">nos</span><span class="o">);</span>
+        <span class="n">dp</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">need</span><span class="o">,</span><span class="n">ans</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kt">boolean</span> <span class="nf">cantake</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">sp</span> <span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">nd</span><span class="o">){</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">nd</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">nd</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)-</span><span class="n">sp</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)&lt;</span><span class="mi">0</span><span class="o">){</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+
+<span class="err">##</span> <span class="nc">House</span> <span class="nc">Robbers</span> <span class="o">[</span><span class="nl">https:</span><span class="c1">//leetcode.com/problems/house-robber-ii/](https://leetcode.com/problems/house-robber-ii)</span>
+
+<span class="err">```</span><span class="n">java</span>
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">dp</span><span class="o">[][];</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">rob</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">nums</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+        
+        <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">];</span>
+        <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">[]</span> <span class="o">:</span> <span class="n">dp</span><span class="o">)</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">i</span><span class="o">,-</span><span class="mi">1</span><span class="o">);</span>
+        
+        <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">helper</span><span class="o">(</span><span class="n">nums</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">2</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">two</span> <span class="o">=</span> <span class="n">helper</span><span class="o">(</span><span class="n">nums</span><span class="o">,</span><span class="mi">1</span><span class="o">,</span><span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
+        
+        <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">one</span><span class="o">,</span><span class="n">two</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">helper</span><span class="o">(</span><span class="kt">int</span> <span class="n">nums</span><span class="o">[],</span><span class="kt">int</span> <span class="n">start</span><span class="o">,</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span><span class="kt">int</span> <span class="n">idx</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="n">start</span><span class="o">)</span><span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="n">start</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">idx</span><span class="o">]</span> <span class="o">=</span> <span class="n">nums</span><span class="o">[</span><span class="n">start</span><span class="o">];</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">idx</span><span class="o">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">idx</span><span class="o">];</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">idx</span><span class="o">]</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">helper</span><span class="o">(</span><span class="n">nums</span><span class="o">,</span><span class="n">start</span><span class="o">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">idx</span><span class="o">),</span><span class="n">helper</span><span class="o">(</span><span class="n">nums</span><span class="o">,</span><span class="n">start</span><span class="o">,</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">,</span><span class="n">idx</span><span class="o">)</span> <span class="o">+</span> <span class="n">nums</span><span class="o">[</span><span class="n">n</span><span class="o">]);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### Target Sum[https://leetcode.com/problems/target-sum/](https://leetcode.com/problems/target-sum/)
+
+```java
+class Solution {
+    int answer=0;
+    public int findTargetSumWays(int[] nums, int target) {
+        recur(nums,target,0);
+        return answer;
+    }
+    public void recur(int[] nums,int target,int i){
+        if(i&gt;=nums.length &amp;&amp;0==target){
+            answer++;
+             return;
+        }else if(i&gt;=nums.length){return;}
+        
+        recur(nums,target+(nums[i]*(-1)),i+1);
+        recur(nums,target+(nums[i]),i+1);
+
+    }
+}
+</code></pre></div></div>
+<h3 id="longest-increasing-subsequence"><strong>Longest Increasing Subsequence</strong></h3>
+<p><a href="https://leetcode.com/problems/longest-increasing-subsequence/">https://leetcode.com/problems/longest-increasing-subsequence/</a><br />
+<a href="https://leetcode.com/problems/largest-divisible-subset/">https://leetcode.com/problems/largest-divisible-subset/</a><br />
+<a href="https://leetcode.com/problems/russian-doll-envelopes/">https://leetcode.com/problems/russian-doll-envelopes/</a><br />
+<a href="https://leetcode.com/problems/maximum-length-of-pair-chain/">https://leetcode.com/problems/maximum-length-of-pair-chain/</a><br />
+<a href="https://leetcode.com/problems/number-of-longest-increasing-subsequence/">https://leetcode.com/problems/number-of-longest-increasing-subsequence/</a><br />
+<a href="https://leetcode.com/problems/delete-and-earn/">https://leetcode.com/problems/delete-and-earn/</a><br />
+<a href="https://leetcode.com/problems/longest-string-chain/">https://leetcode.com/problems/longest-string-chain/</a></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+<span class="kd">public</span><span class="o">:</span>
+	<span class="kt">int</span> <span class="nf">lengthOfLIS</span><span class="o">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+
+		<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="no">LIS</span><span class="o">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">nums</span><span class="o">[</span><span class="n">j</span><span class="o">])</span>
+					<span class="no">LIS</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">max</span><span class="o">(</span><span class="no">LIS</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="mi">1</span> <span class="o">+</span> <span class="no">LIS</span><span class="o">[</span><span class="n">j</span><span class="o">]);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+		<span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="o">(</span><span class="n">ans</span><span class="o">,</span> <span class="no">LIS</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+		<span class="o">}</span>
+
+		<span class="k">return</span> <span class="n">ans</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="partition-subset-sum"><strong>Partition Subset Sum:</strong></h3>
+<p><a href="https://leetcode.com/problems/partition-equal-subset-sum/">https://leetcode.com/problems/partition-equal-subset-sum/</a><br />
+<a href="https://leetcode.com/problems/last-stone-weight-ii/">https://leetcode.com/problems/last-stone-weight-ii/</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+public:
+	bool canPartition(vector&lt;int&gt;&amp; nums) {
+
+		int n = nums.size();
+
+		int sum = 0;
+		for (int i = 0; i &lt; n; i++)
+			sum += nums[i];
+
+		if (sum % 2 != 0) return false;
+
+		int target = sum/2;
+		vector&lt;bool&gt;dp(target+1, false);
+
+		dp[0] = true;
+		for (int i = 0; i &lt; n; i++) {
+			for (int j = target; j &gt;= nums[i]; j--) {
+				dp[j] = dp[j] | dp[j - nums[i]];
+			}
+		}
+
+		return dp[target];
+	}
+};
+</code></pre></div></div>
+
+<h3 id="bitmasking-in-dp"><strong>BitMasking in DP:</strong></h3>
+<p><a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets/">https://leetcode.com/problems/partition-to-k-equal-sum-subsets/</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+	int dp[(1&lt;&lt;16) + 2];
+public:
+	bool canPartitionKSubsets(vector&lt;int&gt;&amp; nums, int k) {
+
+		int n = nums.size();
+
+		fill(dp, dp+(1&lt;&lt;16)+2, -1);
+
+		int sum = 0;
+		for (int i = 0; i &lt; n; i++)
+			sum += nums[i];
+
+		if (sum % k != 0) return false;
+
+		int target = sum/k;
+
+		dp[0] = 0;
+		for (int mask = 0; mask &lt; (1&lt;&lt;n); mask++) {
+			if (dp[mask] == -1) continue;
+			for (int i = 0; i &lt; n; i++) {
+				if (!(mask &amp; (1 &lt;&lt; i)) &amp;&amp; dp[mask] + nums[i] &lt;= target)
+					dp[mask | (1 &lt;&lt; i)] = (dp[mask] + nums[i]) % target;
+			}
+		}
+
+		return dp[(1&lt;&lt;n)-1] == 0;
+	}
+};
+</code></pre></div></div>
+
+<h3 id="longest-common-subsequence"><strong>Longest Common Subsequence</strong></h3>
+<p><a href="https://leetcode.com/problems/longest-common-subsequence/">https://leetcode.com/problems/longest-common-subsequence/</a><br />
+<a href="https://leetcode.com/problems/edit-distance/">https://leetcode.com/problems/edit-distance/</a><br />
+<a href="https://leetcode.com/problems/distinct-subsequences/">https://leetcode.com/problems/distinct-subsequences/</a><br />
+<a href="https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/">https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/</a></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">dp</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">longestCommonSubsequence</span><span class="o">(</span><span class="nc">String</span> <span class="n">text1</span><span class="o">,</span> <span class="nc">String</span> <span class="n">text2</span><span class="o">)</span> <span class="o">{</span>
+
+<span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">text1</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">][</span><span class="n">text2</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">:</span> <span class="n">dp</span><span class="o">)</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">arr</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+
+<span class="k">return</span> <span class="nf">recur</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="n">text1</span><span class="o">,</span><span class="n">text2</span><span class="o">);</span>
+
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">recur</span><span class="o">(</span><span class="kt">int</span> <span class="n">t1</span><span class="o">,</span><span class="kt">int</span> <span class="n">t2</span><span class="o">,</span><span class="nc">String</span> <span class="n">text1</span><span class="o">,</span><span class="nc">String</span> <span class="n">text2</span><span class="o">){</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">t1</span><span class="o">&gt;=</span><span class="n">text1</span><span class="o">.</span><span class="na">length</span><span class="o">()||</span><span class="n">t2</span><span class="o">&gt;=</span><span class="n">text2</span><span class="o">.</span><span class="na">length</span><span class="o">())</span><span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">t1</span><span class="o">][</span><span class="n">t2</span><span class="o">]!=-</span><span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">t1</span><span class="o">][</span><span class="n">t2</span><span class="o">];</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">text1</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">t1</span><span class="o">)==</span><span class="n">text2</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">t2</span><span class="o">)){</span>
+
+<span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">t1</span><span class="o">][</span><span class="n">t2</span><span class="o">]=</span><span class="mi">1</span><span class="o">+</span><span class="n">recur</span><span class="o">(</span><span class="n">t1</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">t2</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">text1</span><span class="o">,</span><span class="n">text2</span><span class="o">);</span>
+
+<span class="o">}</span>
+
+<span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">t1</span><span class="o">][</span><span class="n">t2</span><span class="o">]=</span><span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">recur</span><span class="o">(</span><span class="n">t1</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">t2</span><span class="o">,</span><span class="n">text1</span><span class="o">,</span><span class="n">text2</span><span class="o">),</span><span class="n">recur</span><span class="o">(</span><span class="n">t1</span><span class="o">,</span><span class="n">t2</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">text1</span><span class="o">,</span><span class="n">text2</span><span class="o">));</span>
+
+<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="nf">longestCommonSubsequenceUtil</span><span class="o">(</span><span class="n">string</span> <span class="n">text1</span><span class="o">,</span> <span class="n">string</span> <span class="n">text2</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+			<span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+
+		<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="no">L</span><span class="o">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span> <span class="mi">0</span><span class="o">));</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">m</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+					<span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+				<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">text1</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="n">text2</span><span class="o">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">])</span>
+					<span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span>
+				<span class="k">else</span>
+					<span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">max</span><span class="o">(</span><span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">],</span> <span class="no">L</span><span class="o">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+		<span class="k">return</span> <span class="no">L</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">m</span><span class="o">];</span>
+	<span class="o">}</span>
+
+<span class="kd">public</span><span class="o">:</span>
+	<span class="kt">int</span> <span class="nf">longestCommonSubsequence</span><span class="o">(</span><span class="n">string</span> <span class="n">text1</span><span class="o">,</span> <span class="n">string</span> <span class="n">text2</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">text1</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+		<span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">text2</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+
+		<span class="k">return</span> <span class="nf">longestCommonSubsequenceUtil</span><span class="o">(</span><span class="n">text1</span><span class="o">,</span> <span class="n">text2</span><span class="o">,</span> <span class="n">n</span><span class="o">,</span> <span class="n">m</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="palindrome"><strong>Palindrome:</strong></h3>
+<p><a href="https://leetcode.com/problems/palindrome-partitioning-ii/">https://leetcode.com/problems/palindrome-partitioning-ii/</a><br />
+<a href="https://leetcode.com/problems/palindromic-substrings/">https://leetcode.com/problems/palindromic-substrings/</a></p>
+<h4 id="palindrome-partition-code">Palindrome partition Code</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">minCut</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+
+	<span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+	<span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">dp</span><span class="o">,-</span><span class="mi">1</span><span class="o">);</span>
+	
+	<span class="k">if</span><span class="o">(</span><span class="n">isPalin</span><span class="o">(</span><span class="n">s</span><span class="o">,</span><span class="mi">0</span><span class="o">,</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">))</span><span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="k">return</span> <span class="nf">recur</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="n">s</span><span class="o">,</span><span class="n">dp</span><span class="o">,</span><span class="n">n</span><span class="o">)-</span><span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">recur</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">,</span><span class="nc">String</span> <span class="n">s</span><span class="o">,</span><span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span><span class="o">,</span><span class="kt">int</span> <span class="n">n</span><span class="o">){</span>
+
+	<span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="n">n</span><span class="o">)</span><span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+
+	<span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]!=-</span><span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+
+	<span class="kt">int</span> <span class="n">minC</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+
+	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">=</span><span class="n">i</span><span class="o">;</span><span class="n">k</span><span class="o">&lt;</span><span class="n">n</span><span class="o">;</span><span class="n">k</span><span class="o">++){</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">isPalin</span><span class="o">(</span><span class="n">s</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">k</span><span class="o">)){</span>
+
+			<span class="n">c</span><span class="o">=</span><span class="mi">1</span><span class="o">+</span><span class="n">recur</span><span class="o">(</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="o">,</span><span class="n">s</span><span class="o">,</span><span class="n">dp</span><span class="o">,</span><span class="n">n</span><span class="o">);</span>
+<span class="c1">// System.out.println(" k "+k+" c "+c);</span>
+			<span class="n">minC</span><span class="o">=</span><span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">minC</span><span class="o">,</span><span class="n">c</span><span class="o">);</span>
+
+		<span class="o">}</span>
+
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">minC</span><span class="o">;</span>
+
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isPalin</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">,</span><span class="kt">int</span> <span class="n">i</span><span class="o">,</span><span class="kt">int</span> <span class="n">j</span><span class="o">){</span>
+
+	<span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">&gt;</span><span class="n">j</span><span class="o">)</span><span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="k">while</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">j</span><span class="o">){</span>
+
+			<span class="k">if</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)!=</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">j</span><span class="o">))</span>
+
+			<span class="o">{</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+
+			<span class="o">}</span>
+
+			<span class="n">i</span><span class="o">++;</span>
+
+			<span class="n">j</span><span class="o">--;</span>
+
+		<span class="o">}</span>
+	 <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="second-approach-simple-intuitive-but-tle">Second approach simple intuitive but TLE</h4>
+
+<p>```java class Solution {
+    int min=Integer.MAX_VALUE;
+    int[] dp=null;
+    public int minCut(String s) {
+        dp=new int[s.length()];
+        Arrays.fill(dp,Integer.MAX_VALUE);
+        recur(0,0,s,0);
+        Arrays.stream(dp).forEach(x-&gt;System.out.print(“ “+x));
+        return dp[dp.length-1];
+    }
+    public void recur(int i,int j,String s,int count){
+        if(i&gt;s.length()||j&gt;s.length()){
+            min=Math.min(min,count);
+           // System.out.println(count);
+        return;
+        }
+        String current=s.substring(i,j);
+        if(current.equals(new StringBuilder(current).reverse().toString()))
+        {
+            dp[i]=Math.min(dp[i],count);
+            System.out.println(“ i “+i+” j “+j+” C “+current+” dp[i] “+dp[i]);
+            recur(j,j+1,s,count+1);
+            recur(i,j+1,s,count);
+        }
+        //start from count 0 because charecter dont match
+                               recur(i,j+1,s,0);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>} }
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#### Third approach tabulation
+```java class Solution{
+
+public int minCut(String s) {
+    int n,min;
+    n = s.length();
+    
+    //cut[i] represents minimum number of cuts from String 0 to i
+    int[] cut = new int[n];
+    
+    //p[i][j] represents String i to j is a palindrome or not
+    boolean[][] p = new boolean[n][n];
+    
+    for(int i=0;i&lt;n;i++)
+    {
+        min = i;  // Max number of cuts is i for string length i+1
+        for(int j=0;j&lt;=i;j++)
+        {
+            // Why i - j &lt; 3  ?
+            // 1. String of length 1 is always palindrome so no need to check in boolean table
+            // 2. String of length 2 is palindrome if Ci == Cj which is already checked in first part so no need to check again
+            // 3. String of length 3 is palindrome if Ci == Cj which is already checked in first part and Ci+1 and Cj-1 is same character which is always a palindrome
+            
+            // If String length &gt;=4
+            // then check if Ci == Cj and if they are equal check if String[j+1 .. i-1] is a palindrome from the boolean table
+            if(s.charAt(j) == s.charAt(i) &amp;&amp; (i-j &lt; 3 || p[j+1][i-1]))
+            {
+                // Its a palindrome as Ci == Cj and String[j+1...i-1] is a palindrome
+                p[j][i] = true; 
+                // j == 0 because String from j to i is a palindrome and it starts from first character so means no cuts needed
+                // Else I need a cut at jth location and it will be cuts encountered till j-1 + 1
+                min = j == 0 ? 0 : Math.min(min, cut[j-1] + 1);
+            }
+        }
+        cut[i]=min;
+    }
+    return cut[n-1];
+}
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+<span class="kd">public</span><span class="o">:</span>
+	<span class="kt">int</span> <span class="nf">minCut</span><span class="o">(</span><span class="n">string</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+
+		<span class="kt">int</span> <span class="n">res</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
+		<span class="n">bool</span> <span class="no">P</span><span class="o">[</span><span class="n">n</span><span class="o">][</span><span class="n">n</span><span class="o">];</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span>
+			<span class="no">P</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="no">L</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="no">L</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="no">L</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="no">L</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="no">L</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+
+				<span class="k">if</span> <span class="o">(</span><span class="no">L</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+					<span class="no">P</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">s</span><span class="o">[</span><span class="n">j</span><span class="o">]);</span>
+				<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+					<span class="no">P</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="n">s</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">==</span> <span class="n">s</span><span class="o">[</span><span class="n">j</span><span class="o">])</span> <span class="o">&amp;&amp;</span> <span class="no">P</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="no">P</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="n">i</span><span class="o">])</span>
+				<span class="n">res</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+			<span class="k">else</span> <span class="o">{</span>
+				<span class="n">res</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="no">INT_MAX</span><span class="o">;</span>
+				<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+					<span class="k">if</span> <span class="o">(</span><span class="no">P</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="n">res</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">res</span><span class="o">[</span><span class="n">j</span><span class="o">])</span>
+						<span class="n">res</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">res</span><span class="o">[</span><span class="n">j</span><span class="o">];</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+
+		<span class="k">return</span> <span class="n">res</span><span class="o">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">==</span> <span class="no">INT_MAX</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="n">res</span><span class="o">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">];</span>
+	<span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+**Coin Change:**  
+[https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)  
+[https://leetcode.com/problems/coin-change-2/](https://leetcode.com/problems/coin-change-2/)  
+[https://leetcode.com/problems/combination-sum-iv/](https://leetcode.com/problems/combination-sum-iv/)  
+[https://leetcode.com/problems/perfect-squares/](https://leetcode.com/problems/perfect-squares/)  
+[https://leetcode.com/problems/minimum-cost-for-tickets/](https://leetcode.com/problems/minimum-cost-for-tickets/)
+
+</code></pre></div></div>
+<h4 id="my-solution-coin-change">My Solution Coin Change</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">coinChange</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">,</span> <span class="kt">int</span> <span class="n">amount</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">dp</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">amount</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">dp</span><span class="o">,-</span><span class="mi">1</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">result</span><span class="o">=</span> <span class="n">r</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">result</span><span class="o">==</span><span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">){</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">r</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">,</span><span class="kt">int</span> <span class="n">amount</span><span class="o">){</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">amount</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span>
+        <span class="o">{</span> <span class="c1">//System.out.println(" amt "+amount);</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">amount</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">){</span>
+           <span class="c1">// System.out.println(" amt "+amount);</span>
+            <span class="k">return</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span> <span class="c1">//because we want to increase so that it wont be added in the result</span>
+        <span class="o">}</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">amount</span><span class="o">]!=-</span><span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">amount</span><span class="o">];</span>
+         <span class="kt">int</span> <span class="n">minCoins</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">;</span>
+
+      <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">coins</span><span class="o">.</span><span class="na">length</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+            <span class="c1">//if(coins[i]&gt;amount)continue;</span>
+  
+         
+            <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">r</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">-</span><span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">ans</span><span class="o">!=</span><span class="nc">Integer</span><span class="o">.</span><span class="na">MAX_VALUE</span><span class="o">){</span>
+                <span class="n">minCoins</span><span class="o">=</span><span class="nc">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">minCoins</span><span class="o">,</span><span class="n">ans</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span><span class="c1">//due to this min() the value Integer.MAX returned by &lt;0 will be ommitted</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">amount</span><span class="o">]=</span><span class="n">minCoins</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">// public void r(int [] coins,int amount,int coin,int start){</span>
+    <span class="c1">//     if(amount==0){</span>
+    <span class="c1">//         mxCoins=Math.min(mxCoins,coin);</span>
+    <span class="c1">//         return;</span>
+    <span class="c1">//     }</span>
+
+    <span class="c1">//     if(amount&lt;0)return;</span>
+    <span class="c1">//       if(dp[start]!=Integer.MAX_VALUE)return;</span>
+    <span class="c1">//     for(int i=start;i&lt;coins.length;i++){</span>
+    <span class="c1">//         if(coins[i]&gt;amount)continue;</span>
+  
+    <span class="c1">//         dp[i]=Math.min(dp[i],amount-coins[i]);</span>
+    <span class="c1">//         r(coins,amount-coins[i],coin+1,0);</span>
+    <span class="c1">//     }</span>
+    <span class="c1">// }</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```c++ class Solution {
+public:
+	int coinChange(vector&lt;int&gt;&amp; coins, int amount) {
+
+		int n = coins.size();
+		if (n == 0) return 0;
+
+		vector&lt;int&gt;res(amount+1, INT_MAX);
+
+		res[0] = 0;
+
+		for (int i = 0; i &lt; n; i++) {
+			for (int j =  coins[i]; j &lt;= amount; j++) {
+				if (res[j-coins[i]] != INT_MAX)
+					res[j] = min(res[j], 1+res[j-coins[i]]);
+			}
+		}
+
+		return res[amount] != INT_MAX ? res[amount] : -1;
+	}
+};
+</code></pre></div></div>
+
+<h3 id="matrix-multiplication"><strong>Matrix multiplication:</strong></h3>
+<p><a href="https://leetcode.com/problems/minimum-score-triangulation-of-polygon/">https://leetcode.com/problems/minimum-score-triangulation-of-polygon/</a><br />
+<a href="https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/">https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/</a><br />
+<a href="https://leetcode.com/problems/burst-balloons/">https://leetcode.com/problems/burst-balloons/</a> 
+https://leetcode.com/problems/burst-balloons/solutions/892552/for-those-who-are-not-able-to-understand-any-solution-with-diagram/
+ ***Minimum cost tree from leaf values 
+ <a href="https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/">1130. Minimum Cost Tree From Leaf Values</a></p>
+
+<h3 id="minimum-cost-tree-from-leaf-values--1130minimum-cost-tree-from-leaf-values">Minimum cost tree from leaf values  <a href="https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/">1130. Minimum Cost Tree From Leaf Values</a></h3>
+
+<p>```java class Solution {</p>
+
+<p>int[] dp=null;</p>
+
+<p>public int mctFromLeafValues(int[] arr) {</p>
+
+<p>int dp[][] = new int[arr.length+1][arr.length+1];</p>
+
+<p>for(int i=0;i&lt;=arr.length;++i)</p>
+
+<p>{</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for(int j = 0; j&lt;=arr.length;++j)
+
+{
+
+	dp[i][j] = -1;
+
+}
+</code></pre></div></div>
+
+<p>}</p>
+
+<p>return recur(arr,0,arr.length-1,dp);</p>
+
+<p>}</p>
+
+<p>public int mxNum(int[] arr,int l,int r){</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int min=arr[l];
+//preincrement because we always want minimum to start from 1
+for(int i=l;i&lt;=r;++i){
+
+	min=Math.max(arr[i],min);
+
+}
+
+return min;
+</code></pre></div></div>
+
+<p>}</p>
+
+<p>public int recur(int[] arr,int i,int j,int[][] dp){
+		if(i&gt;=j)return 0;
+		int ans=Integer.MAX_VALUE;
+		if(dp[i][j]!=-1)return dp[i][j];</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	//preincrement ++k because we always want minimum to start from 1
+	for(int k=i;k&lt;j;++k){
+		ans=Math.min(mxNum(arr,i,k)*mxNum(arr,k+1,j)
+			+
+			recur(arr,i,k,dp)
+			+
+			recur(arr,k+1,j,dp), ans);
+
+	}
+	return dp[i][j]=ans; } }
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+<p>class Solution {
+public:
+	int minScoreTriangulation(vector<int>&amp; A) {</int></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	int n = A.size();        
+	vector&lt;vector&lt;int&gt;&gt;dp(n, vector&lt;int&gt;(n, 0));
+
+	for (int L = 2; L &lt;= n; L++) {
+		for (int i = 0; i+L &lt; n; i++) {
+			int j = i+L;
+			dp[i][j] = INT_MAX;
+			for (int k = i+1; k &lt; j; k++) {
+				dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j] + A[i]*A[k]*A[j]);
+			}
+		}
+	}
+
+	return dp[0][n-1];
+} }; ```
+</code></pre></div></div>
+
+<h3 id="matrix2d-array"><strong>Matrix/2D Array:</strong></h3>
+<p><a href="https://leetcode.com/problems/matrix-block-sum/">https://leetcode.com/problems/matrix-block-sum/</a><br />
+<a href="https://leetcode.com/problems/range-sum-query-2d-immutable/">https://leetcode.com/problems/range-sum-query-2d-immutable/</a><br />
+<a href="https://leetcode.com/problems/dungeon-game/">https://leetcode.com/problems/dungeon-game/</a><br />
+<a href="https://leetcode.com/problems/triangle/">https://leetcode.com/problems/triangle/</a><br />
+<a href="https://leetcode.com/problems/maximal-square/">https://leetcode.com/problems/maximal-square/</a><br />
+<a href="https://leetcode.com/problems/minimum-falling-path-sum/">https://leetcode.com/problems/minimum-falling-path-sum/</a></p>
+
+<h4 id="httpsleetcodecomproblemsmatrix-block-sum"><a href="https://leetcode.com/problems/matrix-block-sum/">https://leetcode.com/problems/matrix-block-sum/</a></h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+public:
+	vector&lt;vector&lt;int&gt;&gt; matrixBlockSum(vector&lt;vector&lt;int&gt;&gt;&amp; mat, int K) {
+
+
+		int m = mat.size();
+		int n = mat[0].size();
+
+		vector&lt;vector&lt;int&gt;&gt;sum(m+1, vector&lt;int&gt;(n+1, 0));
+		for (int i = 1; i &lt;= m; i++) {
+			for (int j = 1; j &lt;= n; j++) {
+				sum[i][j] = sum[i-1][j] + sum[i][j-1] - sum[i-1][j-1] + mat[i-1][j-1];
+			}
+		}
+
+		vector&lt;vector&lt;int&gt;&gt;res(m, vector&lt;int&gt;(n, 0));
+		for (int i = 0; i &lt; m; i++) {
+			for (int j = 0; j &lt; n; j++) {
+				int r1 = max(0, i-K); int c1 = max(0, j-K);
+				int r2 = min(m-1, i+K); int c2 = min(n-1, j+K);
+				r1++; r2++;
+				c1++; c2++;
+				res[i][j] = sum[r2][c2] - (sum[r2][c1-1] + sum[r1-1][c2]- sum[r1-1][c1-1]);
+			}
+		}
+
+		return res;
+	}
+};
+</code></pre></div></div>
+
+<h3 id="hash--dp"><strong>Hash + DP:</strong></h3>
+<p><a href="https://leetcode.com/problems/target-sum/">https://leetcode.com/problems/target-sum/</a><br />
+<a href="https://leetcode.com/problems/longest-arithmetic-sequence/">https://leetcode.com/problems/longest-arithmetic-sequence/</a><br />
+<a href="https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/">https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/</a><br />
+<a href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/">https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/</a></p>
+
+<h4 id="httpsleetcodecomproblemstarget-sum"><a href="https://leetcode.com/problems/target-sum/">https://leetcode.com/problems/target-sum/</a></h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+public:
+	int findTargetSumWays(vector&lt;int&gt;&amp; nums, int S) {
+		int n = nums.size();
+		unordered_map&lt;int, int&gt;hm;
+
+		hm[0] = 1;
+		for (int i = 0; i &lt; n; i++) {
+			auto mp = hm;
+			hm.clear();
+
+			for (auto it = mp.begin(); it != mp.end(); it++) {
+				hm[it-&gt;first + nums[i]] += it-&gt;second;
+				hm[it-&gt;first - nums[i]] += it-&gt;second;
+
+			}
+		}
+
+		return hm[S];
+	}
+};
+</code></pre></div></div>
+
+<h3 id="state-machine"><strong>State machine:</strong></h3>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/</a><br />
+<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+public:
+	int maxProfit(vector&lt;int&gt;&amp; prices, int fee) {
+
+		int n = prices.size();
+		vector&lt;int&gt;buy(n, 0);
+		vector&lt;int&gt;sell(n, 0);
+
+		buy[0] = -prices[0], sell[0] = 0;
+		for (int i = 1; i &lt; n; i++) {
+			buy[i] = max(buy[i-1], sell[i-1]-prices[i]);
+			sell[i] = max(sell[i-1], buy[i-1]+prices[i]-fee);
+		}
+
+		return sell[n-1];
+	}
+};
+</code></pre></div></div>
+
+<h3 id="depth-first-search-dp">Depth First Search +DP:</h3>
+<p><a href="https://leetcode.com/problems/out-of-boundary-paths/">https://leetcode.com/problems/out-of-boundary-paths/</a><br />
+<a href="https://leetcode.com/problems/knight-probability-in-chessboard/">https://leetcode.com/problems/knight-probability-in-chessboard/</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Solution {
+	int mod = 1000000007;
+	int dfs(int m, int n, int N, int r, int c,  vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;&amp; dp) {
+		if (r &lt; 0 || c &lt; 0 || r &gt;= m || c &gt;= n) return 1;
+		if (N == 0) return 0;
+		if (dp[N][r][c] != -1) return dp[N][r][c]%mod;
+
+		int moves = 0;
+		moves =  (moves + dfs(m, n, N-1, r, c+1, dp))%mod;
+		moves =  (moves + dfs(m, n, N-1, r, c-1, dp))%mod;
+		moves =  (moves + dfs(m, n, N-1, r+1, c, dp))%mod;
+		moves =  (moves + dfs(m, n, N-1, r-1, c, dp))%mod;
+
+		dp[N][r][c] = moves%mod;
+		return dp[N][r][c];
+	}
+public:
+	int findPaths(int m, int n, int N, int i, int j) {
+		vector&lt;vector&lt;vector&lt;int&gt;&gt;&gt;dp(N+1, vector&lt;vector&lt;int&gt;&gt;(m+1, vector&lt;int&gt;(n+1, -1)));
+		return dfs(m, n, N, i, j, dp);
+	}
+};
+</code></pre></div></div>
+
+<h3 id="minimax-dp"><strong>Minimax DP:</strong></h3>
+<p><a href="https://leetcode.com/problems/predict-the-winner/">https://leetcode.com/problems/predict-the-winner/</a><br />
+<a href="https://leetcode.com/problems/stone-game/">https://leetcode.com/problems/stone-game/</a></p>
+
+<h3 id="coin-change-2">Coin Change 2</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+
+<span class="kt">int</span><span class="o">[][]</span> <span class="n">dp</span><span class="o">=</span><span class="kc">null</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">change</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">)</span> <span class="o">{</span>
+
+	<span class="n">dp</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">coins</span><span class="o">.</span><span class="na">length</span><span class="o">][</span><span class="n">amount</span><span class="o">+</span><span class="mi">1</span><span class="o">];</span>
+
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="nl">r:</span><span class="n">dp</span><span class="o">){</span>
+
+			<span class="nc">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">r</span><span class="o">,-</span><span class="mi">1</span><span class="o">);</span>
+
+		<span class="o">}</span>
+
+	<span class="kt">int</span> <span class="n">answer</span><span class="o">=</span><span class="n">recur</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">,</span><span class="mi">0</span><span class="o">);</span>
+
+<span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
+
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">recur</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">,</span><span class="kt">int</span> <span class="n">amount</span><span class="o">,</span><span class="kt">int</span> <span class="n">i</span><span class="o">){</span>
+
+	<span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">)</span> <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+
+	<span class="k">if</span> <span class="o">(</span><span class="n">amount</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">)</span> <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+
+	<span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+
+	<span class="k">if</span> <span class="o">(</span><span class="n">i</span><span class="o">==</span><span class="n">coins</span><span class="o">.</span><span class="na">length</span><span class="o">)</span><span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+ 
+	<span class="k">if</span> <span class="o">(</span><span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">amount</span><span class="o">]!=-</span><span class="mi">1</span><span class="o">)</span><span class="k">return</span> <span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">amount</span><span class="o">];</span>
+
+	<span class="c1">//if coin is bigger simply move forward</span>
+	<span class="k">if</span> <span class="o">(</span> <span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">amount</span> <span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nf">recur</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+	<span class="o">}</span>
+	<span class="c1">//decision whether include coin or not</span>
+	<span class="kt">int</span> <span class="n">ans</span><span class="o">=</span> <span class="n">recur</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">-</span><span class="n">coins</span><span class="o">[</span><span class="n">i</span><span class="o">],</span><span class="n">i</span><span class="o">);</span>
+	<span class="kt">int</span> <span class="n">not</span><span class="o">=</span> <span class="n">recur</span><span class="o">(</span><span class="n">coins</span><span class="o">,</span><span class="n">amount</span><span class="o">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">);</span>
+	<span class="n">w</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">+</span> <span class="n">not</span><span class="o">;</span>
+	<span class="n">dp</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">amount</span><span class="o">]=</span><span class="n">w</span><span class="o">;</span>
+
+	<span class="k">return</span> <span class="n">w</span><span class="o">;</span>
+
+<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<h3 id="predict-winner">Predict winner</h3>
+
+<p>editorial selected answer with comments</p>
+
+<p>```java class Solution {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[][] memo;
+
+private int maxDiff(int[] nums, int left, int right, int n) {
+
+	if (memo[left][right] != -1) {
+		return memo[left][right];
+
+	}
+
+	if (left == right) {
+		return nums[left];
+	}
+
+	System.out.println("L "+left);
+
+	//this negative simulates the alternative player2s turn because -(-) becomes postive and in next -(+) becomes negative this way we simulate another players sum
+
+	int scoreByLeft = nums[left] - maxDiff(nums, left + 1, right, n);
+	int scoreByRight = nums[right] - maxDiff(nums, left, right - 1, n);
+
+	memo[left][right] = Math.max(scoreByLeft, scoreByRight);
+
+	return memo[left][right];
+
+}
+</code></pre></div></div>
+
+<p>public boolean predictTheWinner(int[] nums) {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	int n = nums.length;
+	memo = new int[n][n];
+
+	for (int i = 0; i &lt; n; ++i) {
+		Arrays.fill(memo[i], -1);
+	}	
+	return maxDiff(nums, 0, n - 1, n) &gt;= 0;
+</code></pre></div></div>
+
+<p>}</p>
+
+<p>}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+default answer
+</code></pre></div></div>
+<p>class Solution {
+public:
+	bool PredictTheWinner(vector<int>&amp; nums) {
+		int n = nums.size();</int></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	int res[n][n];
+
+	for (int i = 0; i &lt; n; i++)
+		res[i][i] = nums[i];
+
+	for (int l = 2; l &lt;= n; l++) {
+		for (int i = 0; i+l-1 &lt; n; i++) {
+			int j = i+l-1;
+			int a = (i+1 &lt;= j-1) ? res[i+1][j-1] : 0;
+			int b = (i+2 &lt;= j) ? res[i+2][j] : 0;
+			int c = (i &lt;= j-2) ? res[i][j-2] : 0;
+
+			res[i][j] = max(nums[i] + min(a,b), nums[j] + min(a, c));
+		}
+	}
+
+	int total = 0;
+	for (int i = 0; i &lt; n; i++)
+		total += nums[i];
+
+	return res[0][n-1] &gt;= total - res[0][n-1];
+} }; ```
+</code></pre></div></div>
+
+<p><strong>Miscellaneous:</strong><br />
+<a href="https://leetcode.com/problems/greatest-sum-divisible-by-three/">https://leetcode.com/problems/greatest-sum-divisible-by-three/</a><br />
+<a href="https://leetcode.com/problems/decode-ways/">https://leetcode.com/problems/decode-ways/</a><br />
+<a href="https://leetcode.com/problems/count-numbers-with-unique-digits/">https://leetcode.com/problems/count-numbers-with-unique-digits/</a><br />
+<a href="https://leetcode.com/problems/longest-turbulent-subarray/">https://leetcode.com/problems/longest-turbulent-subarray/</a><br />
+<a href="https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/">https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/</a></p>
+
+<p>Please point out issues in solutions if you find any. There might be better approaches in few.</p>
+
+<p>Link Credit:
+https://leetcode.com/discuss/general-discussion/651719/how-to-solve-dp-string-template-and-4-steps-to-be-followed</p>
+
+<p>I have been doing DP problem on strings for a while and found a pattern / template to solve it, thought of sharing it with you.</p>
+
+<p><strong>Templates for solving it</strong>. It was provided by @aatalyk in one of his great article. You can find it <a href="https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns">here</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. If you have two strings.
+
+/* Pre-processing. Define basic cases. */
+for( int i = 1; i &lt;= m; i++){
+	for( int j = 1; j &lt;= n; j++){
+		if(s1[i - 1] == s2[j - 1]){
+			/* Your code */
+		}
+		else{
+			/* Your code */
+		}
+	}
+}
+
+2. If you are given only one string
+
+/* Pre-processing. Define basic cases. */
+for( int len = 1; len &lt; n; len++){
+	for( int i = 0; i + len &lt; n; i++){
+		int j = i + len;
+		if(s1[i - 1] == s1[j - 1]){
+			/* Your code */
+		}
+		else{
+			/* Your code */
+		}
+	}
+}
+
+</code></pre></div></div>
+
+<p><strong>Problem 1:</strong> <a href="https://leetcode.com/problems/edit-distance/">Edit Distance</a></p>
+
+<p><strong>Step 1:</strong> <em>Read the problem and try to understand it</em> (Hardest Part)<br />
+Let’s take this problem and find out what it says!</p>
+
+<ul>
+  <li>Two strings will be provided to you (Ex. horse and ros).</li>
+  <li>You can make 3 operations (Insert, Delete, Replace).</li>
+  <li>We have to find the <em>minimum no. of operations to convert string1 to string2</em>.</li>
+</ul>
+
+<p>Example: horse and ros<br />
+Answer: 3 (You can find it how in the question.)</p>
+
+<p><strong>Step 2:</strong> Pre Processing (Tabulation &amp; Define Base Cases)</p>
+
+<p>We have to tabulate the answers for subproblems in order to use it again.<br />
+<em>What is a cell in table means?</em> dp[i,j] has the answer for the subproblem string1(:i) and string2(:j)</p>
+
+<p><strong>Define Base Cases.</strong> It varies from problem to problem.<br />
+In this problem the base cases are,</p>
+
+<ul>
+  <li>What if the string1 and string2 are empty?</li>
+  <li>What if the string1 is empty and string2 is not empty and vice versa?</li>
+</ul>
+
+<p>Lets find it out.</p>
+
+<ol>
+  <li><strong>Both String1 and String2 are empty:</strong> Then the answer to the subproblem is 0. Since minimum operations to be performed to make string1 as string2 is 0.</li>
+  <li><strong>String1 is empty and String2 is not empty:</strong> We need insert characters to make it as string2. Minimum operations to be performed will be equal to string2 length.</li>
+  <li><strong>String1 is not empty and String2 is empty:</strong> We have delete characters to make it as string2.</li>
+</ol>
+
+<p><strong>Step 3:</strong><br />
+The main problem definition goes here.</p>
+
+<ul>
+  <li>If both the string have same character we don’t have do any operations, So that min no of operations to be performed is equal to subproblem with state (i - 1, j - 1).</li>
+  <li>If characters are different, we can do three operations (Insert, Delete, Replace) We can find minimum between subproblems with states( dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j] ) + 1.</li>
+</ul>
+
+<p>Why these states?</p>
+
+<ol>
+  <li>dp[i - 1][j - 1] =&gt; If we replace the character.</li>
+  <li>dp[i][j - 1] =&gt; If we delete the character.</li>
+  <li>dp[i - 1][j] =&gt; If we insert the character.</li>
+</ol>
+
+<p>Return dp[string1.length][string2.length]. Since it contains the answer for subproblem between two strings.</p>
+
+<p>Here is my C++ Code. Status: Accepted.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    int minDistance(string word1, string word2) {
+        int m = word1.length();
+        int n = word2.length();
+        
+        vector&lt;vector&lt;int&gt;&gt; dp(n + 1, vector&lt;int&gt; (m + 1, 0));
+        for(int i = 1; i &lt;= n; i++){
+            dp[i][0] = 1 + dp[i - 1][0];
+        }
+        for(int i = 1; i &lt;= m; i++){
+            dp[0][i] = 1 + dp[0][i - 1];
+        }
+        
+        for(int i = 1; i &lt;= n; i++){
+            for(int j = 1; j &lt;= m; j++){
+              
+                if(word2[i - 1] == word1[j - 1]){
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+                else{
+                    dp[i][j] = min({dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]}) + 1;
+                }
+               
+            } 
+        }
+        return dp[n][m];
+    }
+</code></pre></div></div>
+
+<p><strong>Problem 2:</strong> <a href="https://leetcode.com/problems/delete-operation-for-two-strings/">Delete Operations for Two Strings</a><br />
+<strong>STEP 1: Understand the problem.</strong><br />
+Quick explanation: We can delete a character in either string in each move to make both string equal. Return minimum no. of moves.</p>
+
+<p><strong>STEP 2: Base Cases</strong></p>
+
+<ul>
+  <li>Both strings are empty: 0</li>
+  <li>One string is empty. We have to delete all the character in other string to make it empty. So min. no of moves has to be equal to the length of the non-empty string.</li>
+</ul>
+
+<p><strong>STEP 3: Definition of problem.</strong></p>
+
+<ol>
+  <li>If both characters are same. We dont have to delete it, so the moves will be equal to subproblem with state(i -1, j - 1)</li>
+  <li>If both characters are not the same. We can delete character from either string. So the min no of moves has to be minimum between dp[i][j - 1] and dp[i - 1][j].</li>
+</ol>
+
+<p><strong>Code:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> int minDistance(string word1, string word2) {
+        int m = word1.length();
+        int n = word2.length();
+        
+        vector&lt;vector&lt;int&gt;&gt; dp(m + 1, vector&lt;int&gt; (n + 1, 0));
+        for(int i = 1; i &lt;= m; i++){
+            dp[i][0] = 1 + dp[i - 1][0];
+        }
+        for(int i = 1; i &lt;= n; i++){
+            dp[0][i] = 1 + dp[0][i - 1];
+        }
+        
+        for(int i = 1; i &lt;= m; i++){
+            for(int j = 1; j &lt;= n; j++){
+                if(word1[i - 1] == word2[j - 1]){
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+                else{
+                    dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + 1;
+                }
+            }
+        }
+        return dp[m][n];
+</code></pre></div></div>
+
+<p>.</p>
+
+<p><strong>Problem 3:</strong> <a href="https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/">Minimum ASCII Delete Sum for two Strings</a><br />
+Similar to problem 2. <em>One change here we store ASCII values instead of count of moves.</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    int minimumDeleteSum(string s1, string s2) {
+        int m = s1.length();
+        int n = s2.length();
+        vector&lt;vector&lt;int&gt;&gt; dp(m + 1, vector&lt;int&gt; (n + 1, 0));
+        for(int i = 1; i &lt;= m; i++){
+            dp[i][0] = dp[i - 1][0] + s1[i - 1];
+        }
+        for(int j = 1; j &lt;= n; j++){
+            dp[0][j] = dp[0][j - 1] + s2[j - 1];
+        }
+        for(int i = 1; i &lt;= m; i++){
+            for(int j = 1; j &lt;= n; j++){
+                if(s1[i - 1] == s2[j - 1]){
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+                else{
+                    dp[i][j] = min((int) s1[i - 1] + dp[i -1][j], (int)s2[j - 1] + dp[i][j - 1]);
+                }
+            }
+        }
+        return dp[m][n];
+    }
+</code></pre></div></div>
+
+<p>.</p>
+
+<p><strong>Problem 4:</strong> <a href="https://leetcode.com/problems/longest-palindromic-subsequence/">Longest Palindromic Subsequence</a><br />
+<strong>STEP 1: Understand the question.</strong><br />
+Return length of the longest palindrome subsequence.</p>
+
+<p><strong>STEP 2: Base Cases</strong><br />
+Every single character is a palindrome.<br />
+What does a cell in the table or vector means? Maximum length of palindrome that exists between i and j.</p>
+
+<p><strong>STEP 3: Main definition.</strong><br />
+It varies since single string is given. The code looks like interval dp problems.</p>
+
+<ol>
+  <li><em>What if two characters are matching?</em> we have return 2 + dp[i + 1][j - 1].<br />
+ Why? 2 for the two characters &amp; then find for the interval i + 1 and j - 1.</li>
+  <li><em>What if two characters are not matching?</em> We have find maximum between two subproblems (dp[i + 1][j] and dp[i][j - 1] )</li>
+  <li>```java
+class Solution {</li>
+</ol>
+
+<p>int[][]dp=null;</p>
+
+<p>public int longestPalindromeSubseq(String s) {</p>
+
+<p>int result=0;</p>
+
+<p>for(int i=0;i&lt;s.length();i++){</p>
+
+<p>dp=new int[s.length()+1][s.length()+1];</p>
+
+<p>for(int[] d:dp){</p>
+
+<p>Arrays.fill(d,-1);</p>
+
+<p>}</p>
+
+<p>int l=recur(i,i,s);</p>
+
+<p>dp=new int[s.length()+1][s.length()+1];</p>
+
+<p>for(int[] d:dp){</p>
+
+<p>Arrays.fill(d,-1);</p>
+
+<p>}</p>
+
+<p>int r=recur(i,i+1,s);</p>
+
+<p>result=Math.max(result,Math.max(l,r));</p>
+
+<p>}</p>
+
+<p>return result;</p>
+
+<p>}</p>
+
+<p>public int recur(int i,int j,String s){</p>
+
+<p>if(i&lt;0)return 0;</p>
+
+<p>if(j&gt;=s.length())return 0;</p>
+
+<p>if(dp[i][j]!=-1)return dp[i][j];</p>
+
+<p>int in=0;</p>
+
+<p>//for string=bab i=0,j=2</p>
+
+<p>if(s.charAt(i)==s.charAt(j) &amp;&amp; i!=j){</p>
+
+<p>in= 2+recur(i-1,j+1,s);</p>
+
+<p>}</p>
+
+<p>//for string=b i=0,j=0</p>
+
+<p>if(s.charAt(i)==s.charAt(j) &amp;&amp; i==j){</p>
+
+<p>in+= 1+recur(i-1,j+1,s);</p>
+
+<p>}</p>
+
+<p>// System.out.println(“in “+in+” i “+i+” j “+j);</p>
+
+<p>int ex= Math.max(recur(i-1,j,s),recur(i,j+1,s));</p>
+
+<p>return dp[i][j]=Math.max(in,ex);</p>
+
+<p>}</p>
+
+<p>}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+_Code._
+
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int longestPalindromeSubseq(string s) {
+    int n = s.length(); 
+    vector&lt;vector&lt;int&gt;&gt; dp(n, vector&lt;int&gt;(n, 0));
+    for(int i = 0; i &lt; n; i++){
+        dp[i][i] = 1;
+    }
+    int count = 1;
+    for(int len = 1; len &lt; n; len++){
+        for(int i = 0; i + len &lt; n; i++){
+            int j = i + len;
+            if(s[i] == s[j]){
+                dp[i][j] = 2 + dp[i + 1][j - 1];
+            }
+            else{
+                dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]);
+            }
+        }
+    }
+    return dp[0][n - 1]; ```
+</code></pre></div></div>
+
+<p>.<br />
+<strong>Problem 5:</strong> <a href="https://leetcode.com/problems/palindromic-substrings/">Palindromic Substrings</a><br />
+<strong>STEP 1: Understand Question</strong><br />
+Count the number of palindrome substrings within a given string.</p>
+
+<p><strong>STEP 2: Base Cases</strong></p>
+
+<ul>
+  <li><em>Every Single Character is a Palindrome.</em> So start the count as the length of the string.</li>
+  <li><em>Check Adjacent.</em> If the adjacent char is same we can increase the counter.</li>
+</ul>
+
+<p><strong>STEP 3: Main Definition</strong><br />
+<em>Template 2</em>, Since single string is given.<br />
+One case =&gt; Find different i and j combinations. If the character i and j is matching, then we have to find whether i + 1 and j - 1 is matching or not. If matches, we can increase the count and mark it as a palindorme.</p>
+
+<p><strong>Code:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    int countSubstrings(string s) {
+        int n = s.length();
+        if(n &lt; 2){
+            return n;
+        }
+        vector&lt;vector&lt;int&gt;&gt; dp(n + 1, vector&lt;int&gt; (n + 1, 0));
+        for(int i = 1; i &lt;= n; i++){
+            dp[i][i] = 1;
+        }
+        int count = n;
+        for(int i = 0; i &lt; n; i++){
+            if(s[i] == s[i + 1]) {
+                count++;
+                dp[i][i + 1] = 1;
+            }
+        }
+        
+        for(int len = 1; len &lt; n; len++){
+            for(int i = 0; i + len &lt; n; i++){
+                int j = len + i;
+                if(s[i] == s[j] &amp;&amp; dp[i + 1][j - 1]){
+                    count++;
+                    dp[i][j] = 1;
+                }
+            }
+        }
+        return count;
+    }
+</code></pre></div></div>
+
+    </div>
+  </main>
+
+</body>
+</html>
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>

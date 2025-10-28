@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Low Level Design Snake Game | ShardaLearningCenter</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Low Level Design Snake Game" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Snake Game https://leetcode.com/problems/design-snake-game/description/ 353. Design Snake Game Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game." />
+<meta property="og:description" content="Snake Game https://leetcode.com/problems/design-snake-game/description/ 353. Design Snake Game Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game." />
+<link rel="canonical" href="https://shaardalearningcenter.github.io/2025/08/07/snake-game.html" />
+<meta property="og:url" content="https://shaardalearningcenter.github.io/2025/08/07/snake-game.html" />
+<meta property="og:site_name" content="ShardaLearningCenter" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-08-07T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Low Level Design Snake Game" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-08-07T00:00:00+05:30","datePublished":"2025-08-07T00:00:00+05:30","description":"Snake Game https://leetcode.com/problems/design-snake-game/description/ 353. Design Snake Game Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.","headline":"Low Level Design Snake Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://shaardalearningcenter.github.io/2025/08/07/snake-game.html"},"url":"https://shaardalearningcenter.github.io/2025/08/07/snake-game.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="https://shaardalearningcenter.github.io/">
+          <h1>ShardaLearningCenter</h1>
+        </a>
+        <h2>Learn to code by building real projects. Fast. Practical. No fluff.</h2>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Low Level Design Snake Game | ShardaLearningCenter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    
+    .post-container {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .post-title {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .post-content {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    .post-content h2, .post-content h3 {
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 600;
+      color: #111;
+    }
+    .post-content p {
+      margin-bottom: 1.2rem;
+    }
+    .post-content a {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+    .post-content blockquote {
+      border-left: 4px solid #0066cc;
+      padding-left: 1rem;
+      font-style: italic;
+      color: #555;
+      background: #f9f9f9;
+      margin: 1.5rem 0;
+    }
+    .post-content code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .post-content pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Sharda Learning Center</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+  </nav>
+  <main class="post-container">
+    <h1 class="post-title">Low Level Design Snake Game</h1>
+    <div class="post-meta">
+      August 07, 2025
+    </div>
+    <div class="post-content">
+      <h1 id="snake-game">Snake Game</h1>
+<p>https://leetcode.com/problems/design-snake-game/description/</p>
+<h2 id="353-design-snake-game">353. Design Snake Game</h2>
+<p>Design a Snake game that is played on a device with screen size height x width. Play the game online if you are not familiar with the game.</p>
+
+<p>The snake is initially positioned at the top left corner (0, 0) with a length of 1 unit.</p>
+
+<p>You are given an array food where food[i] = (ri, ci) is the row and column position of a piece of food that the snake can eat. When a snake eats a piece of food, its length and the game’s score both increase by 1.</p>
+
+<p>Each piece of food appears one by one on the screen, meaning the second piece of food will not appear until the snake eats the first piece of food.</p>
+
+<p>When a piece of food appears on the screen, it is guaranteed that it will not appear on a block occupied by the snake.</p>
+
+<p>The game is over if the snake goes out of bounds (hits a wall) or if its head occupies a space that its body occupies after moving (i.e. a snake of length 4 cannot run into itself).</p>
+
+<p>Implement the SnakeGame class:</p>
+
+<p>SnakeGame(int width, int height, int[][] food) Initializes the object with a screen of size height x width and the positions of the food.
+int move(String direction) Returns the score of the game after applying one direction move by the snake. If the game is over, return -1.</p>
+
+<p>Example 1:</p>
+
+<p>Input
+[“SnakeGame”, “move”, “move”, “move”, “move”, “move”, “move”]
+[[3, 2, [[1, 2], [0, 1]]], [“R”], [“D”], [“R”], [“U”], [“L”], [“U”]]
+Output
+[null, 0, 0, 1, 1, 2, -1]</p>
+
+<p>Explanation
+SnakeGame snakeGame = new SnakeGame(3, 2, [[1, 2], [0, 1]]);
+snakeGame.move(“R”); // return 0
+snakeGame.move(“D”); // return 0
+snakeGame.move(“R”); // return 1, snake eats the first piece of food. The second piece of food appears at (0, 1).
+snakeGame.move(“U”); // return 1
+snakeGame.move(“L”); // return 2, snake eats the second food. No more food appears.
+snakeGame.move(“U”); // return -1, game over because snake collides with border</p>
+
+<p>Constraints:</p>
+
+<p>1 &lt;= width, height &lt;= 104
+1 &lt;= food.length &lt;= 50
+food[i].length == 2
+0 &lt;= ri &lt; height
+0 &lt;= ci &lt; width
+direction.length == 1
+direction is ‘U’, ‘D’, ‘L’, or ‘R’.
+At most 104 calls will be made to move.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class SnakeGame {
+int height;
+int width;
+List&lt;int[]&gt; snake;
+int[][] food;
+int foodIndex;
+int score;
+int len=0;
+    public SnakeGame(int width, int height, int[][] food) {
+        this.width=width;
+        this.height=height;
+        this.food=food;
+     
+        this.snake=new ArrayList&lt;&gt;();
+        int[] start={0,0};
+        this.snake.add(start);
+    }
+    
+    public int move(String direction) {
+        int[] l=snake.get(0);
+         int[] last={l[0],l[1]};
+        if(direction.equalsIgnoreCase("U")){
+            last[0]--;
+        }else if(direction.equalsIgnoreCase("D")){
+            last[0]++;
+        }else if(direction.equalsIgnoreCase("L")){
+            last[1]--;
+        }else if(direction.equalsIgnoreCase("R")){
+            last[1]++;
+        }
+// int[] last={l[0],l[1]};
+///within boundary
+        if(last[0]==height||last[1]==width||last[0]&lt;0||last[1]&lt;0){
+           System.out.println("out of bound");
+            return -1;
+        }
+        //eats itself
+        Integer posToNumber=last[0]*width+last[1];
+      
+         if(eatsSelf(last)){
+            return -1;
+        }
+        //move snake
+        snake.add(0,last);
+       
+        //remove tail if no food
+        if(foodIndex&lt;food.length &amp;&amp; (food[foodIndex][0]==last[0]&amp;&amp; food[foodIndex][1]==last[1])){
+            System.out.println("ate food");
+            foodIndex++;
+            score++;
+            len++; //this is snake length
+           
+        }
+        //snake length should not be greater than food eaten +1 since begining length of snake is 1
+          while(snake.size()&gt;len+1){
+            snake.remove(snake.size()-1);}
+            
+        
+        
+    return score;
+    }
+    public boolean eatsSelf(int[] po){
+        //ignore head by starting from 1
+        //for(int i=1;i&lt;snake.size()-1;i++){
+            //start from 0 ignore tail
+        for(int i=0;i&lt;snake.size()-1;i++){
+
+            int[] s=snake.get(i);
+            if(s[0]==po[0] &amp;&amp; s[1]==po[1]){
+                System.out.println("ate self =true s[0] "+s[0]+" s[1] "+s[1]+" PO {0,1} "+po[0]+" "+po[1]);
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+/**
+ * Your SnakeGame object will be instantiated and called as such:
+ * SnakeGame obj = new SnakeGame(width, height, food);
+ * int param_1 = obj.move(direction);
+ */
+</code></pre></div></div>
+
+    </div>
+  </main>
+
+</body>
+</html>
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>
