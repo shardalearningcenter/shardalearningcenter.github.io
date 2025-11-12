@@ -88,12 +88,75 @@ p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
+/* Sidebar */
+    #sidebar {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      background-color: #343a40;
+      color: #fff;
+      overflow-y: auto;
+      padding-top: 1rem;
+    }
+    #sidebar h4 {
+      color: #0dcaf0;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #sidebar a {
+      color: #adb5bd;
+      text-decoration: none;
+      display: block;
+      padding: 0.6rem 1rem;
+      border-left: 3px solid transparent;
+    }
+    #sidebar a:hover, #sidebar a.active {
+      background-color: #495057;
+      color: #fff;
+      border-left: 3px solid #0dcaf0;
+    }
+
+    /* Main content */
+    #content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+
+    pre {
+      background-color: #e9ecef;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    .btn-primary {
+      background-color: #198754;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #157347;
+    }
+
 </style>
  <div class="page-wrapper">
      <header class="site-header">
       <h1>Welcome to Sharda Learning Center</h1>
     </header>
-
+ <!-- Sidebar -->
+  <nav id="sidebar">
+    <h4>Python Tutorial</h4>
+    <a href="#home" class="active">Python HOME</a>
+    <a href="#intro">Python Intro</a>
+    <a href="#getstarted">Python Get Started</a>
+    <a href="#syntax">Python Syntax</a>
+    <a href="#variables">Python Variables</a>
+    <a href="#datatypes">Python Data Types</a>
+    <a href="#operators">Python Operators</a>
+    <a href="#loops">Python Loops</a>
+    <a href="#functions">Python Functions</a>
+    <a href="#filehandling">Python File Handling</a>
+  </nav>
 
 # 🐍 Learn Python in 10 Days – Hands-On Roadmap
 
