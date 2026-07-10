@@ -1,11 +1,14 @@
 <div class="site-banner">
-  Documentation-style learning hub —
-  <a href="https://youtube.com/@ShardaLearningCenter" target="_blank" rel="noopener">YouTube channel</a>
+  Documentation hub —
+  <a href="https://youtube.com/@ShardaLearningCenter" target="_blank" rel="noopener">YouTube</a>
 </div>
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand" href="{{ '/' | relative_url }}">Sharda<span>Learning</span>Center</a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    <div class="nav-actions">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="docs-sidenav" id="sidenav-toggle">Docs</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" id="nav-toggle">Menu</button>
+    </div>
     <ul class="nav-links" id="site-nav">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
       <li><a href="{{ '/courses/' | relative_url }}">Documentation</a></li>

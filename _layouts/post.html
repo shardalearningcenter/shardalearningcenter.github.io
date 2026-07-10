@@ -4,17 +4,16 @@ layout: default
 <nav class="docs-breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
   <a href="{{ '/blog/' | relative_url }}">Blog</a><span>/</span>
-  {{ page.title | truncate: 48 }}
+  <span class="docs-breadcrumb-current">{{ page.title | truncate: 40 }}</span>
 </nav>
-<section class="hero hero-compact">
-  <div class="hero-inner">
-    <p class="eyebrow">Blog · {{ page.date | date: "%b %-d, %Y" }}</p>
-    <h1>{{ page.title }}</h1>
-    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
-  </div>
-</section>
-<div class="prose-wrap">
-  <article class="prose">
+
+<article class="docs-article docs-article-solo">
+  <header class="docs-article-header">
+    <p class="docs-eyebrow">Blog · {{ page.date | date: "%b %-d, %Y" }}</p>
+    <h1 class="docs-h1">{{ page.title }}</h1>
+    {% if page.description %}<p class="docs-lead">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="docs-content prose">
     {{ content }}
-  </article>
-</div>
+  </div>
+</article>

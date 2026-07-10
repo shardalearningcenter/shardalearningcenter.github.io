@@ -1,0 +1,35 @@
+<!-- Persistent left nav — Google Cloud docs style -->
+<aside class="docs-sidenav" id="docs-sidenav" aria-label="Documentation">
+  <div class="docs-sidenav-inner">
+    <p class="docs-sidenav-label">Documentation</p>
+    <nav class="docs-sidenav-nav">
+      <a href="{{ '/courses/' | relative_url }}" {% if page.url == '/courses/' %}class="is-active"{% endif %}>Overview</a>
+      <a href="{{ '/courses/languages/' | relative_url }}" {% if page.url contains '/courses/languages' or page.url contains '-days/' or page.url contains 'zig-7' or page.url contains 'bash-7' %}class="is-active"{% endif %}>Languages</a>
+      <a href="{{ '/courses/python-10-days/' | relative_url }}" {% if page.url contains 'python' %}class="is-active"{% endif %}>Python</a>
+      <a href="{{ '/courses/go-10-days/' | relative_url }}" {% if page.url contains 'go-10' or page.url contains 'golang' %}class="is-active"{% endif %}>Go</a>
+      <a href="{{ '/courses/llm-mastery/' | relative_url }}" {% if page.url contains 'llm-mastery' %}class="is-active"{% endif %}>LLM Mastery</a>
+      <a href="{{ '/courses/ml-learning-roadmap/' | relative_url }}" {% if page.url contains 'ml-' %}class="is-active"{% endif %}>ML Roadmap</a>
+      <a href="{{ '/courses/llm-bootcamp/' | relative_url }}" {% if page.url contains 'llm-bootcamp' %}class="is-active"{% endif %}>LLM Bootcamp</a>
+      <a href="{{ '/courses/dsa-cheatsheet/' | relative_url }}" {% if page.url contains 'dsa' %}class="is-active"{% endif %}>DSA</a>
+      <a href="{{ '/courses/low-level-design/' | relative_url }}" {% if page.url contains 'low-level' %}class="is-active"{% endif %}>Low-level design</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' or page.date %}class="is-active"{% endif %}>Blog</a>
+    </nav>
+
+    <p class="docs-sidenav-label">Languages</p>
+    <nav class="docs-sidenav-nav docs-sidenav-nav-compact">
+      <a href="{{ '/courses/typescript-10-days/' | relative_url }}">TypeScript</a>
+      <a href="{{ '/courses/javascript-10-days/' | relative_url }}">JavaScript</a>
+      <a href="{{ '/courses/rust-10-days/' | relative_url }}">Rust</a>
+      <a href="{{ '/courses/java-10-days/' | relative_url }}">Java</a>
+      <a href="{{ '/courses/kotlin-10-days/' | relative_url }}">Kotlin</a>
+      <a href="{{ '/courses/swift-10-days/' | relative_url }}">Swift</a>
+      <a href="{{ '/courses/cpp-10-days/' | relative_url }}">C++</a>
+      <a href="{{ '/courses/csharp-10-days/' | relative_url }}">C#</a>
+      <a href="{{ '/courses/ruby-10-days/' | relative_url }}">Ruby</a>
+      <a href="{{ '/courses/php-10-days/' | relative_url }}">PHP</a>
+      <a href="{{ '/courses/sql-10-days/' | relative_url }}">SQL</a>
+      <a href="{{ '/courses/zig-7-days/' | relative_url }}">Zig</a>
+      <a href="{{ '/courses/bash-7-days/' | relative_url }}">Bash</a>
+    </nav>
+  </div>
+</aside>

@@ -4,18 +4,22 @@ layout: default
 <nav class="docs-breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
   <a href="{{ '/courses/' | relative_url }}">Documentation</a><span>/</span>
-  {{ page.course_track | default: page.title }}
+  <span class="docs-breadcrumb-current">{{ page.course_track | default: page.title }}</span>
 </nav>
-<section class="hero hero-compact">
-  <div class="hero-inner">
-    <p class="eyebrow">{{ page.course_track | default: "Course" }}</p>
-    <h1>{{ page.title }}</h1>
-    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
-  </div>
-</section>
 
-<div class="course-shell">
-  <aside class="course-toc" id="course-toc" aria-label="Table of contents">
+<div class="docs-article-shell">
+  <article class="docs-article" id="course-body">
+    <header class="docs-article-header">
+      <p class="docs-eyebrow">{{ page.course_track | default: "Documentation" }}</p>
+      <h1 class="docs-h1">{{ page.title }}</h1>
+      {% if page.description %}<p class="docs-lead">{{ page.description }}</p>{% endif %}
+    </header>
+    <div class="docs-content prose prose-wide">
+      {{ content }}
+    </div>
+  </article>
+
+  <aside class="docs-pagetoc" id="course-toc" aria-label="On this page">
     <div class="course-toc-head">
       <strong>On this page</strong>
       <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false">Contents</button>
@@ -27,10 +31,5 @@ layout: default
         {% endfor %}
       {% endif %}
     </nav>
-    <p class="course-toc-foot"><a href="{{ '/courses/' | relative_url }}">All documentation</a></p>
   </aside>
-
-  <article class="course-body prose prose-wide" id="course-body">
-    {{ content }}
-  </article>
 </div>
