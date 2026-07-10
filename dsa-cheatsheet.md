@@ -3,6 +3,7 @@ layout: page
 title: DSA 10 Days Bootcamp
 permalink: /dsa-cheatsheet/
 ---
+
 # Snippets which will be useful
 
 ## Custom comparator 
@@ -21,7 +22,6 @@ string1.compareTo(string2)
 
 ```
 import java.util.*;
-
 
 class Person {
     String name;
@@ -212,6 +212,5 @@ while (!q.isEmpty()) {
         }
     }
 }
-
 
 ```

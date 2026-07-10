@@ -4,147 +4,7 @@ title: Python 10 Days Bootcamp
 permalink: /learn-python-ten-days/
 ---
 
-<style>
-  .body1 {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-      width: 100%;
-    }
-.course-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.course-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  background: var(--bg-card, #fff);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-.course-card:hover {
-  transform: translateY(-5px);
-}
-.course-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--text-heading, #000);
-}
-.course-desc {
-  color: var(--text-body, #555);
-}
-section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-}
-/* Reset + font */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-/* Consistent centered wrapper */
-.page-wrapper {
-  max-width: 900px;   /* keeps layout narrow for readability */
-  margin: 0 auto;     /* centers horizontally */
-  padding: 20px;
-  background: #fff;
-  min-height: 100vh;  /* ensures full screen height */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header, content, footer */
-.site-header,
-.site-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eaeaea;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.content {
-  flex: 1; /* pushes footer to bottom */
-  text-align: center; /* centers text */
-}
-
-/* Responsive typography */
-h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
-h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-}
-p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-/* Sidebar */
-    #sidebar {
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 240px;
-      background-color: #343a40;
-      color: #fff;
-      overflow-y: auto;
-      padding-top: 1rem;
-    }
-    #sidebar h4 {
-      color: #0dcaf0;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    #sidebar a {
-      color: #adb5bd;
-      text-decoration: none;
-      display: block;
-      padding: 0.6rem 1rem;
-      border-left: 3px solid transparent;
-    }
-    #sidebar a:hover, #sidebar a.active {
-      background-color: #495057;
-      color: #fff;
-      border-left: 3px solid #0dcaf0;
-    }
-
-    /* Main content */
-    #content {
-      margin-left: 250px;
-      padding: 2rem;
-    }
-
-    pre {
-      background-color: #e9ecef;
-      padding: 1rem;
-      border-radius: 6px;
-    }
-
-    .btn-primary {
-      background-color: #198754;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #157347;
-    }
-
-</style>
- <div class="page-wrapper">
-     <header class="site-header">
-      <h1>Welcome to Sharda Learning Center</h1>
-    </header>
- <!-- Sidebar -->
-  <nav id="sidebar">
+<nav id="sidebar">
     <h4>Python Tutorial</h4>
     <a href="#home" class="active">Python HOME</a>
     <a href="#intro">Python Intro</a>
@@ -163,13 +23,13 @@ p {
 <strong> Learn Python by building small, real projects every day. No fluff. No long lectures. Just code and confidence.</strong>
 
 ---
-<h1> Python Sample exercize </h1>
+#  Python Sample exercize 
 
 <h2><a href="https://shardalearningcenter.github.io/2025/07/25/python-beginner-exercize.html">Link to list of python beginner level exercize</a>
 </h2>
-<h1> 📅 Day 1: Hello Python & Setup</h1>
+#  📅 Day 1: Hello Python & Setup
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - Install Python
 
@@ -179,7 +39,7 @@ p {
 
 - Variables and data types
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 print("Hello, Python!")
@@ -188,7 +48,7 @@ age = int(input("How old are you? "))
 print(f"{name}, you’ll be {age+1} next year!")
 ```
 
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Create a file named `hello.py`
 
@@ -198,9 +58,9 @@ print(f"{name}, you’ll be {age+1} next year!")
 
 ---
 
-<h2> 📅 Day 2: Conditions & Loops </h2>
+##  📅 Day 2: Conditions & Loops 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - `if`, `elif`, `else`
 
@@ -208,7 +68,7 @@ print(f"{name}, you’ll be {age+1} next year!")
 
 - `break` and `continue`
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 num = int(input("Guess a number: "))
@@ -224,7 +84,7 @@ for i in range(1, 6):
     print(i)
 ```
 
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Build a number guessing game (max 3 tries)
 
@@ -232,15 +92,15 @@ for i in range(1, 6):
 
 ---
 
-<h2> 📅 Day 3: Functions & Reuse </h2>
+##  📅 Day 3: Functions & Reuse 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - `def`, parameters, return
 
 - Reusable code blocks
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 def greet(name):
@@ -249,7 +109,7 @@ def greet(name):
 print(greet("Alice"))
 ```
 
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Write a function that adds 2 numbers
 
@@ -257,15 +117,15 @@ print(greet("Alice"))
 
 ---
 
-<h2> 📅 Day 4: Strings & Input Formatting </h2>
+##  📅 Day 4: Strings & Input Formatting 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - String methods: `.lower()`, `.upper()`, `.replace()`
 
 - Slicing and indexing
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 msg = "Learn Python"
@@ -273,7 +133,7 @@ print(msg.upper())
 print(msg[0:5])  # 'Learn'
 ```
 
-<h3> 🎯 Task</h3>
+###  🎯 Task
 
 - Create a sentence reverser
 
@@ -281,16 +141,16 @@ print(msg[0:5])  # 'Learn'
 
 ---
 
-<h2> 📅 Day 5: Lists & Loops</h2>
+##  📅 Day 5: Lists & Loops
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - Creating and accessing lists
 
 - `append()`, `pop()`, slicing
 
-<h3> 🛠️ Let's Do It</</h3>
-<h3> Add </h3>
+###  🛠️ Let's Do It</
+###  Add 
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -298,7 +158,7 @@ fruits.append("kiwi")
 print(fruits)
 ```
 
-<h3> Insert at specified index </h3>
+###  Insert at specified index 
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -307,7 +167,7 @@ fruits.insert("kiwi",0)
 print(fruits)
 
 ```
-<h3> Remove </h3>
+###  Remove 
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -315,7 +175,7 @@ fruits.remove("apple")
 print(fruits)
 ```
 
-<h3> Loop list </h3>
+###  Loop list 
 
 ```python
 
@@ -325,7 +185,7 @@ for fruit in fruits:
 
 ```
 
-<h3> 🎯 Task</h3>
+###  🎯 Task
 
 - Make a to-do list program
 
@@ -333,15 +193,15 @@ for fruit in fruits:
 
 ---
 
-<h2> 📅 Day 6: Dictionaries – Key to Python</h2>
+##  📅 Day 6: Dictionaries – Key to Python
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - Dictionary creation & access
 
 - Loops with dicts
 
-<h3> 🛠️ Let's Do It</h3>
+###  🛠️ Let's Do It
 
 ```python
 person = {"name": "Bob", "age": 25}
@@ -349,19 +209,19 @@ person = {"name": "Bob", "age": 25}
 print(person["name"])
 
 ```
-<h3> Add to python dictionary</h3>
+###  Add to python dictionary
 
 ```python
 
 person = {"name": "Bob", "age": 25}
 
-<h2> Added key profession and value engineer</h2>
+##  Added key profession and value engineer
 
 person["profession"]="engineer"
 print(person)
 
 ```
-<h3> Remove </h3>
+###  Remove 
 
 ```python
 
@@ -372,8 +232,8 @@ person.popitem()
 print(person)
 
 ```
-<h3> Update value of key</h3>
-<h3># Frequency Map in Python</h3>
+###  Update value of key
+### Frequency Map in Python
 
 A **frequency map** (or frequency dictionary) is a way to count how many times each element appears in a collection (like a string, list, etc.).  
 It uses a dictionary (`dict`) where:
@@ -403,7 +263,7 @@ print(freq_map)
 
   ```
 
-<h3># The del keyword removes the item with the specified key name</h3>
+### The del keyword removes the item with the specified key name
 
 ```python
 
@@ -412,14 +272,13 @@ del person["name"]
 
 print(person)
 
-
 output
 
 person = {"age": 25}
 
 ```
 
-<h3> Loop Map</h3>
+###  Loop Map
 
 ```python
 
@@ -431,8 +290,7 @@ for key,val in person:
   
 ```
 
-
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Create a phonebook: name → number
 
@@ -440,9 +298,9 @@ for key,val in person:
 
 ---
 
-<h2> 📅 Day 7: Tuples, Sets, and Data Types </h2>
+##  📅 Day 7: Tuples, Sets, and Data Types 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - Tuples (immutable lists)
 
@@ -450,8 +308,8 @@ for key,val in person:
 
 - Type conversions
 
-<h3> Tuple </h3>
-<h3> 🛠️ Let's Do It</h3>
+###  Tuple 
+###  🛠️ Let's Do It
 
 ```python
 # Tuple
@@ -460,16 +318,16 @@ print(point[0])
 
 ```
 
-<h3> Set</h3>
+###  Set
 
-<h3># Initialize set</h3>
+### Initialize set
 
 ```python
 # Set
 colors = {"red", "blue", "red"}
 print(colors)  # Only unique values
 ```
-<h3># Add item to  set </h3>
+### Add item to  set 
 
 ```python
 # Set
@@ -482,7 +340,7 @@ output
 
 ```
 
-<h3># remove item from  set</h3>
+### remove item from  set
 
 ```python
 # Set
@@ -495,7 +353,7 @@ output
 
 ```
 
-<h3># Loop items to  set </h3>
+### Loop items to  set 
 
 ```python
 # Set
@@ -511,7 +369,7 @@ blue
 yellow
 
 ```
-<h2> Type Casting </h2>
+##  Type Casting 
 
 - Convert the data type
 
@@ -522,7 +380,7 @@ print(int(num) + 1)
 
 ```
 
-<h3> 🎯 Task</h3>
+###  🎯 Task
 
 - Create a set of user-entered numbers (avoid duplicates)
 
@@ -530,14 +388,14 @@ print(int(num) + 1)
 
 ---
 
-<h2> 📅 Day 8: File Handling </h2>
+##  📅 Day 8: File Handling 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - Reading and writing files
 - Using `with open(...)` safely
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 # Write
@@ -549,7 +407,7 @@ with open("notes.txt", "r") as f:
     print(f.read())
 ```
 
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Save a user’s to-do list to a file
 
@@ -557,15 +415,15 @@ with open("notes.txt", "r") as f:
 
 ---
 
-<h2> 📅 Day 9: Error Handling & Debugging </h2>
+##  📅 Day 9: Error Handling & Debugging 
 
-<h3> 🔍 What You'll Learn </h3>
+###  🔍 What You'll Learn 
 
 - `try`, `except`, `finally`
 
 - Debugging techniques
 
-<h3> 🛠️ Let's Do It </h3>
+###  🛠️ Let's Do It 
 
 ```python
 
@@ -579,17 +437,17 @@ except ValueError:
 
 ```
 
-<h3> 🎯 Task </h3>
+###  🎯 Task 
 
 - Create a calculator that handles divide-by-zero and bad input
 
 ---
 
-<h2> 📅 Day 10: Build a Mini Project 🎉 </h2>
+##  📅 Day 10: Build a Mini Project 🎉 
 
-<h3> 🧠 Combine Everything You've Learned </h3>
+###  🧠 Combine Everything You've Learned 
 
-<h3> Project Idea: Contact Book App </h3>
+###  Project Idea: Contact Book App 
 
 - Add, search, and save contacts using a dictionary
 
@@ -606,7 +464,7 @@ def search_contact(name, contacts):
     return contacts.get(name, "Not found")
 ```
 
-<h2> 🎯 Your Goal:  </h2>
+##  🎯 Your Goal:  
 
 - Make it menu-driven  
 
@@ -616,7 +474,7 @@ def search_contact(name, contacts):
 
 ---
 
-<h3> 🏁 You're Done! </h3>
+###  🏁 You're Done! 
 
 You've built real things. Now keep going:
 
@@ -625,4 +483,3 @@ You've built real things. Now keep going:
 - Explore libraries: `random`, `datetime`, `matplotlib`
 
 Happy coding 🚀
-</div>

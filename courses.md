@@ -1,117 +1,55 @@
 ---
-layout: page
+layout: default
 title: Courses
 permalink: /courses/
 ---
 
-<style>
-  .body1 {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-      width: 100%;
-    }
-.course-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.course-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  background: var(--bg-card, #fff);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-.course-card:hover {
-  transform: translateY(-5px);
-}
-.course-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--text-heading, #000);
-}
-.course-desc {
-  color: var(--text-body, #555);
-}
-section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-}
-/* Reset + font */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
+<section class="page-hero reveal">
+  <h1>Courses</h1>
+  <p>Project-based tracks for Python, Go, ML, and LLMs.</p>
+</section>
 
-/* Consistent centered wrapper */
-.page-wrapper {
-  max-width: 900px;   /* keeps layout narrow for readability */
-  margin: 0 auto;     /* centers horizontally */
-  padding: 20px;
-  background: #fff;
-  min-height: 100vh;  /* ensures full screen height */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header, content, footer */
-.site-header,
-.site-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eaeaea;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.content {
-  flex: 1; /* pushes footer to bottom */
-  text-align: center; /* centers text */
-}
-
-/* Responsive typography */
-h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
-h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-}
-p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-</style>
- <div class="page-wrapper">
-    <header class="site-header">
-      <h1>Welcome to Sharda Learning Center</h1>
-    </header>
-
-   
-
-<div class="course-cards">
-  <div class="course-card">
-    <div class="course-title"><a href="/python-bootcamp/">Python Bootcamp</a></div>
-    <div class="course-desc">Learn Python in 30 days by building real apps.</div>
+<section class="section">
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-meta">Beginner</div>
+      <h3><a href="{{ '/python-bootcamp/' | relative_url }}">Python Bootcamp</a></h3>
+      <p>Learn Python by building real apps.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">10 days</div>
+      <h3><a href="{{ '/learn-python-ten-days/' | relative_url }}">Python in 10 days</a></h3>
+      <p>A focused sprint from zero to confident coding.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Backend</div>
+      <h3><a href="{{ '/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
+      <p>Backend-focused Go with practical projects.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">AI / ML</div>
+      <h3><a href="{{ '/ai-ml-bootcamp/' | relative_url }}">AI/ML Bootcamp</a></h3>
+      <p>Kickstart machine learning with real datasets.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">30 tutorials</div>
+      <h3><a href="{{ '/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
+      <p>Hands-on scikit-learn curriculum with exercises.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Advanced</div>
+      <h3><a href="{{ '/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
+      <p>Transformers, fine-tuning, RAG, and LLMOps.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Interview</div>
+      <h3><a href="{{ '/dsa-cheatsheet/' | relative_url }}">DSA Cheatsheet</a></h3>
+      <p>Patterns and structures for coding interviews.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Design</div>
+      <h3><a href="{{ '/low-level-design/' | relative_url }}">Low-level design</a></h3>
+      <p>Object-oriented design for interviews and production.</p>
+    </div>
   </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/golang-bootcamp/">Golang Bootcamp</a></div>
-    <div class="course-desc">Learn Go with backend-focused practical projects.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/ai-ml-bootcamp/">AI/ML Bootcamp</a></div>
-    <div class="course-desc">Kickstart your journey into Machine Learning with real-world datasets.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/ml-learning-roadmap/">ML Learning Roadmap</a></div>
-    <div class="course-desc">30 hands-on scikit-learn tutorials with real datasets and exercises.</div>
-  </div>
-</div>
-  </div>
+</section>

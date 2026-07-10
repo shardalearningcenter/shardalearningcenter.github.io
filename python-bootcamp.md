@@ -89,7 +89,6 @@ Master Python from scratch with hands-on projects and real-world examples.
 
 Happy learning! 🚀
 
-
 👨‍💻 Designed for: Beginners, freelancers, and career switchers  
 🎯 Outcome: Portfolio-ready projects and real-world coding skills
 

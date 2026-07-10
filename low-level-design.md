@@ -1,3 +1,9 @@
+---
+layout: page
+title: Low-Level Design
+permalink: /low-level-design/
+---
+
 # Low Level Design
 
 # Snake Game
