@@ -2,7 +2,7 @@
 layout: default
 title: Courses
 permalink: /courses/
-description: Project-based tracks for Python, Go, ML, and LLMs at Sharda Learning Center.
+description: Project-based tracks for Python, Go, ML, and a 50-article LLM Mastery path at Sharda Learning Center.
 ---
 
 <section class="hero hero-compact">
@@ -11,8 +11,8 @@ description: Project-based tracks for Python, Go, ML, and LLMs at Sharda Learnin
     <h1>Courses</h1>
     <p>All bootcamps live under <code>/courses/</code> — each page has a left table of contents.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">Start ML Roadmap</a>
-      <a class="btn btn-ghost" href="{{ '/courses/python-10-days/' | relative_url }}">Python in 10 days</a>
+      <a class="btn btn-primary" href="{{ '/courses/llm-mastery/' | relative_url }}">Start LLM Mastery (50)</a>
+      <a class="btn btn-ghost" href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Roadmap</a>
     </div>
   </div>
 </section>
@@ -47,6 +47,11 @@ description: Project-based tracks for Python, Go, ML, and LLMs at Sharda Learnin
       <div class="card-meta">30 tutorials</div>
       <h3><a href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
       <p>Hands-on scikit-learn curriculum with exercises.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">50 articles</div>
+      <h3><a href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery</a></h3>
+      <p>Karpathy-style path: tokens → transformers → RAG → train your own tiny LLM.</p>
     </div>
     <div class="card">
       <div class="card-meta">Advanced</div>

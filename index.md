@@ -54,6 +54,11 @@ description: Learn programming and AI by building real projects at Sharda Learni
       <p>Case-study scikit-learn curriculum with exercises.</p>
     </div>
     <div class="card">
+      <div class="card-meta">50 articles</div>
+      <h3><a href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery</a></h3>
+      <p>Beginner to master: tokens, GPT guts, alignment, RAG, capstone.</p>
+    </div>
+    <div class="card">
       <div class="card-meta">Advanced</div>
       <h3><a href="{{ '/courses/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
       <p>Transformers, prompting, fine-tuning, and RAG projects.</p>
