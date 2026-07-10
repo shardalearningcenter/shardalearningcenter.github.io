@@ -41,15 +41,15 @@ toc:
 
 # Hot languages — hands-on tutorials
 
-Pick a language. Type every example. Ship the capstone. No slide decks.
+Fourteen short courses, one per language. Each day is the same shape: why the concept matters, a mental model, code you run yourself, a real error you'll actually hit, and a task with a checkable answer — not a slide deck, not a syntax dump.
 
 ## How to use
 {: #how-to-use }
 
-1. One day ≈ 45–90 minutes.
-2. Do the **task** before peeking at solutions online.
-3. Keep a single repo `language-lab/` with a folder per language.
-4. After the sprint, build something you’d show in an interview.
+1. Pick one language. Don't start two at once — the point is finishing a capstone, not sampling syntax.
+2. One day is roughly 45–90 minutes, including the task. Do the task before checking anyone else's solution.
+3. Keep a single `language-lab/` repo with one folder per language you try — future-you will want to compare notes.
+4. Read the "Common mistake" in each day even if your code already works. That's usually the part that saves you time later, not the code sample itself.
 
 ### TypeScript
 {: #typescript-10-days }
@@ -109,17 +109,17 @@ Pick a language. Type every example. Ship the capstone. No slide decks.
 ### SQL
 {: #sql-10-days }
 
-**[SQL in 10 Days — Hands-On](/courses/sql-10-days/)** — Query fluency with SQLite: joins, windows, and a tiny analytics project.
+**[SQL in 10 Days — Hands-On](/courses/sql-10-days/)** — Joins, aggregates, window functions, and CTEs in SQLite, checked against one seed dataset that grows day by day.
 
 ### Zig
 {: #zig-7-days }
 
-**[Zig in 7 Days — Hands-On](/courses/zig-7-days/)** — A rising systems language: explicit allocators, comptime, and a tiny CLI.
+**[Zig in 7 Days — Hands-On](/courses/zig-7-days/)** — Explicit allocators, error unions, and comptime — a working grep-lite CLI by Day 7.
 
 ### Bash
 {: #bash-7-days }
 
-**[Bash in 7 Days — Hands-On](/courses/bash-7-days/)** — Shell scripting for real work: globs, pipes, scripts, and safe automation.
+**[Bash in 7 Days — Hands-On](/courses/bash-7-days/)** — Globs, quoting, pipelines, and `set -euo pipefail` — learn the footguns on purpose so production never does.
 
 
 

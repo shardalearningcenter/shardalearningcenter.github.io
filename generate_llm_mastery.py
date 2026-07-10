@@ -1707,14 +1707,12 @@ description: "A practical getting-started guide."
 
 
 def main():
-    assert len(ARTICLES) == 50, len(ARTICLES)
-    for a in ARTICLES:
-        toc = toc_for_body(a["body"])
-        write_article(a, toc)
-        print("article", a["num"], a["slug"])
-    write_hub()
-    write_posts()
-    print("DONE", len(ARTICLES), "articles +", len(TECH_POSTS), "posts")
+    raise SystemExit(
+        "REFUSING TO RUN: courses/llm-mastery/*.md and getting-started posts "
+        "were rewritten in depth (see docs/PLAN-docs-rewrite.md). "
+        "Re-running this generator would overwrite them with stubs. "
+        "Edit the markdown files directly; do not regenerate from this script."
+    )
 
 
 if __name__ == "__main__":

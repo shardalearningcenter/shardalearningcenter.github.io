@@ -109,15 +109,15 @@ toc:
 
 # LLM Mastery — 50 articles, first principles
 
-Written in the spirit of **Andrej Karpathy**: build tiny things, understand deeply, distrust vibes, love loss curves.
-
+Each article has a mental model, runnable code, a named failure mode, and a checkable exercise. Read in order. Type the code. Capstone (50) is how you know it stuck.
 
 ## How to use this course
+{: #how-to-use-this-course }
 
-1. Go in order. Later articles assume earlier scars.
+1. Go in order — later articles assume earlier scars.
 2. Type code yourself. Reading is not training.
-3. Keep a notes file of tensor shapes and failure modes.
-4. Capstone (article 50) is mandatory if you want the “master” badge from yourself.
+3. Keep a notes file of tensor shapes and failure modes you hit.
+4. Do article 50. If you skip it, you only rented the knowledge.
 
 ## Curriculum map
 

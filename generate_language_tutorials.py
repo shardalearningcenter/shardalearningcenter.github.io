@@ -833,6 +833,13 @@ Pick a language. Type every example. Ship the capstone. No slide decks.
 
 
 def main() -> None:
+    raise SystemExit(
+        "REFUSING TO RUN: courses/*-days.md and courses/languages.md were "
+        "rewritten in depth (see docs/PLAN-docs-rewrite.md). Re-running this "
+        "generator would overwrite that hand-written content with thin "
+        "template stubs. Edit the markdown files directly; do not regenerate "
+        "from this script."
+    )
     write_hub(LANGS)
     for L in LANGS:
         path = COURSES / f"{L['slug']}.md"
