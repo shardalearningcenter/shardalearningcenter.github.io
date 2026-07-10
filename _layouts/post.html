@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-<section class="page-hero reveal">
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.date | date: "%B %-d, %Y" }}</p>
+<section class="hero hero-compact">
+  <div class="hero-inner reveal">
+    <p class="eyebrow">Blog · {{ page.date | date: "%b %-d, %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+  </div>
 </section>
 <div class="prose-wrap">
   <article class="prose">
-    <div class="post-meta">Sharda Learning Center · Blog</div>
     {{ content }}
   </article>
 </div>

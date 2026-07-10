@@ -4,9 +4,12 @@ title: Blog
 permalink: /blog/
 ---
 
-<section class="page-hero reveal">
-  <h1>Blog</h1>
-  <p>Practical notes on AI, programming, and building in public.</p>
+<section class="hero hero-compact">
+  <div class="hero-inner reveal">
+    <p class="eyebrow">Writing</p>
+    <h1>Blog</h1>
+    <p>Practical notes on AI, programming, and building in public.</p>
+  </div>
 </section>
 
 <section class="section">

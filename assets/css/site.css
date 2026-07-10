@@ -1,4 +1,28 @@
 /* Sharda Learning Center — site design system */
+
+/* Kill leftover Architect / Pages theme chrome if GitHub still injects it */
+#header_wrap,
+#footer_wrap,
+#main_content_wrap,
+.inner > h1:first-child,
+a.button[href*="github.com/"] {
+  display: none !important;
+}
+
+#main_content,
+#main_content_wrap,
+.inner,
+.wrapper {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  float: none !important;
+}
+
 :root {
   --ink: #0c1b2a;
   --ink-soft: #243447;
@@ -292,23 +316,66 @@ h1, h2, h3, h4 {
   color: var(--muted);
 }
 
-.page-hero {
-  background: linear-gradient(135deg, #062a32, #0e6b7a);
+/* Inner pages share the same hero language as the homepage */
+.page-hero,
+.hero.hero-compact {
+  position: relative;
+  overflow: hidden;
   color: #fff;
-  padding: clamp(2rem, 5vw, 3.25rem) 1.25rem;
-  text-align: center;
+  background: linear-gradient(135deg, #062a32 0%, #0e6b7a 48%, #1a4a6e 100%);
+  padding: clamp(2.75rem, 7vw, 4.5rem) 1.25rem;
+  text-align: left;
 }
 
-.page-hero h1 {
-  color: #fff;
-  margin: 0 0 0.4rem;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
+.page-hero::before,
+.hero.hero-compact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(232, 155, 30, 0.28), transparent 42%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 28px,
+      rgba(255, 255, 255, 0.03) 28px,
+      rgba(255, 255, 255, 0.03) 29px
+    );
+  pointer-events: none;
 }
 
-.page-hero p {
+.page-hero-inner,
+.hero.hero-compact .hero-inner {
+  position: relative;
+  max-width: var(--max);
   margin: 0 auto;
+}
+
+.page-hero .eyebrow,
+.hero.hero-compact .eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.page-hero h1,
+.hero.hero-compact h1 {
+  color: #fff;
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.85rem, 4.5vw, 2.75rem);
+  max-width: 18ch;
+}
+
+.page-hero p,
+.hero.hero-compact p {
+  margin: 0;
   max-width: 36rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.08rem;
 }
 
 /* —— Cards (interaction / course lists only) —— */

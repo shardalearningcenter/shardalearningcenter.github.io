@@ -4,12 +4,23 @@ title: Courses
 permalink: /courses/
 ---
 
-<section class="page-hero reveal">
-  <h1>Courses</h1>
-  <p>Project-based tracks for Python, Go, ML, and LLMs.</p>
+<section class="hero hero-compact">
+  <div class="hero-inner reveal">
+    <p class="eyebrow">Learn by building</p>
+    <h1>Courses</h1>
+    <p>Project-based tracks for Python, Go, ML, and LLMs — same style as the rest of the site.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ '/ml-learning-roadmap/' | relative_url }}">Start ML Roadmap</a>
+      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+    </div>
+  </div>
 </section>
 
 <section class="section">
+  <div class="section-head">
+    <h2>Pick a track</h2>
+    <p>Every course uses the same layout, typography, and navigation as the homepage.</p>
+  </div>
   <div class="card-grid">
     <div class="card">
       <div class="card-meta">Beginner</div>
