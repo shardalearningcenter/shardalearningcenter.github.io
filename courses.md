@@ -2,7 +2,7 @@
 layout: default
 title: Courses
 permalink: /courses/
-description: Project-based tracks for Python, Go, ML, and a 50-article LLM Mastery path at Sharda Learning Center.
+description: Project-based tracks for hot languages, Python, Go, ML, and LLM Mastery at Sharda Learning Center.
 ---
 
 <section class="hero hero-compact">
@@ -11,8 +11,8 @@ description: Project-based tracks for Python, Go, ML, and a 50-article LLM Maste
     <h1>Courses</h1>
     <p>All bootcamps live under <code>/courses/</code> — each page has a left table of contents.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{{ '/courses/llm-mastery/' | relative_url }}">Start LLM Mastery (50)</a>
-      <a class="btn btn-ghost" href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Roadmap</a>
+      <a class="btn btn-primary" href="{{ '/courses/languages/' | relative_url }}">Hot languages</a>
+      <a class="btn btn-ghost" href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery (50)</a>
     </div>
   </div>
 </section>
@@ -23,6 +23,11 @@ description: Project-based tracks for Python, Go, ML, and a 50-article LLM Maste
     <p>Consistent layout, left TOC, and mobile-friendly navigation on every course.</p>
   </div>
   <div class="card-grid">
+    <div class="card">
+      <div class="card-meta">14 tracks</div>
+      <h3><a href="{{ '/courses/languages/' | relative_url }}">Hot Languages Hands-On</a></h3>
+      <p>TypeScript, JS, Rust, Go, Java, Kotlin, Swift, C++, C#, Ruby, PHP, SQL, Zig, Bash.</p>
+    </div>
     <div class="card">
       <div class="card-meta">Beginner</div>
       <h3><a href="{{ '/courses/python-bootcamp/' | relative_url }}">Python Bootcamp</a></h3>

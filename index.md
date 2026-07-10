@@ -44,6 +44,11 @@ description: Learn programming and AI by building real projects at Sharda Learni
   </div>
   <div class="card-grid">
     <div class="card">
+      <div class="card-meta">14 tracks</div>
+      <h3><a href="{{ '/courses/languages/' | relative_url }}">Hot Languages Hands-On</a></h3>
+      <p>TypeScript, Rust, Go, Java, Kotlin, Swift, C++, C#, and more — daily drills.</p>
+    </div>
+    <div class="card">
       <div class="card-meta">Beginner</div>
       <h3><a href="{{ '/courses/python-10-days/' | relative_url }}">Python in 10 days</a></h3>
       <p>Hands-on Python with challenges and real projects.</p>
