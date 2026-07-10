@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="hero hero-compact">
+  <div class="hero-inner reveal">
+    <p class="eyebrow"><a href="{{ '/courses/' | relative_url }}" style="color:var(--accent);text-decoration:none;">Courses</a> · {{ page.course_track | default: "Bootcamp" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </div>
+</section>
+
+<div class="course-shell">
+  <aside class="course-toc" id="course-toc" aria-label="Table of contents">
+    <div class="course-toc-head">
+      <strong>On this page</strong>
+      <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false">TOC</button>
+    </div>
+    <nav class="course-toc-nav" id="course-toc-nav">
+      {% if page.toc %}
+        {% for item in page.toc %}
+          <a href="#{{ item.id }}">{{ item.label }}</a>
+        {% endfor %}
+      {% endif %}
+    </nav>
+    <p class="course-toc-foot"><a href="{{ '/courses/' | relative_url }}">← All courses</a></p>
+  </aside>
+
+  <article class="course-body prose prose-wide" id="course-body">
+    {{ content }}
+  </article>
+</div>

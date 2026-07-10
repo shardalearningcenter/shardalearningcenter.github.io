@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Home
+description: Learn programming and AI by building real projects at Sharda Learning Center.
 ---
 
 <section class="hero">
@@ -39,37 +40,37 @@ title: Home
 <section class="section">
   <div class="section-head">
     <h2>Popular courses</h2>
-    <p>Pick a track and start building today.</p>
+    <p>All courses live under /courses/ with a left table of contents.</p>
   </div>
   <div class="card-grid">
     <div class="card">
       <div class="card-meta">Beginner</div>
-      <h3><a href="{{ '/learn-python-ten-days/' | relative_url }}">Python in 10 days</a></h3>
+      <h3><a href="{{ '/courses/python-10-days/' | relative_url }}">Python in 10 days</a></h3>
       <p>Hands-on Python with challenges and real projects.</p>
     </div>
     <div class="card">
       <div class="card-meta">30 tutorials</div>
-      <h3><a href="{{ '/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
+      <h3><a href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
       <p>Case-study scikit-learn curriculum with exercises.</p>
     </div>
     <div class="card">
       <div class="card-meta">Advanced</div>
-      <h3><a href="{{ '/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
+      <h3><a href="{{ '/courses/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
       <p>Transformers, prompting, fine-tuning, and RAG projects.</p>
     </div>
     <div class="card">
       <div class="card-meta">Backend</div>
-      <h3><a href="{{ '/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
+      <h3><a href="{{ '/courses/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
       <p>Practical Go for backend services and APIs.</p>
     </div>
     <div class="card">
       <div class="card-meta">Interview</div>
-      <h3><a href="{{ '/dsa-cheatsheet/' | relative_url }}">DSA cheatsheet</a></h3>
+      <h3><a href="{{ '/courses/dsa-cheatsheet/' | relative_url }}">DSA cheatsheet</a></h3>
       <p>Patterns and must-know structures for tech interviews.</p>
     </div>
     <div class="card">
       <div class="card-meta">Systems</div>
-      <h3><a href="{{ '/low-level-design/' | relative_url }}">Low-level design</a></h3>
+      <h3><a href="{{ '/courses/low-level-design/' | relative_url }}">Low-level design</a></h3>
       <p>Design clean, interview-ready object-oriented systems.</p>
     </div>
   </div>

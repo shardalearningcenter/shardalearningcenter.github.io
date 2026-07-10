@@ -601,3 +601,115 @@ h1, h2, h3, h4 {
     padding-top: 3rem;
   }
 }
+
+/* —— Course layout: left TOC + content —— */
+.course-shell {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3.5rem;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.course-toc {
+  position: sticky;
+  top: 5.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 0.9rem;
+  box-shadow: var(--shadow);
+  max-height: calc(100vh - 6.5rem);
+  overflow: auto;
+}
+
+.course-toc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+.toc-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 0.3rem 0.55rem;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.course-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.course-toc-nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.55rem;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  line-height: 1.35;
+}
+
+.course-toc-nav a:hover,
+.course-toc-nav a.is-active {
+  background: rgba(14, 107, 122, 0.08);
+  color: var(--brand-deep);
+  border-left-color: var(--brand);
+}
+
+.course-toc-foot {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+}
+
+.course-body {
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100%;
+}
+
+.course-body h2,
+.course-body h3 {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 900px) {
+  .course-shell {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+  }
+
+  .course-toc {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+
+  .toc-toggle {
+    display: inline-flex;
+  }
+
+  .course-toc-nav {
+    display: none;
+  }
+
+  .course-toc.is-open .course-toc-nav {
+    display: flex;
+  }
+}
+

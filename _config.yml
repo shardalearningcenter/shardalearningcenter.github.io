@@ -6,6 +6,20 @@ baseurl: ""
 url: "https://shardalearningcenter.github.io"
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: "courses"
+    values:
+      layout: course
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
