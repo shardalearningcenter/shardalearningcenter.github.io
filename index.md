@@ -5,21 +5,22 @@ description: Learn programming and AI by building real projects at Sharda Learni
 ---
 
 <section class="hero">
-  <div class="hero-inner reveal">
-    <p class="hero-brand">Sharda<em>Learning</em>Center</p>
-    <h1>Learn programming &amp; AI by building real projects</h1>
-    <p>Practical courses from engineers who’ve shipped at scale. No fluff — code, ship, and grow.</p>
+  <div class="hero-inner">
+    <p class="eyebrow">Sharda Learning Center</p>
+    <p class="hero-brand">Documentation for builders</p>
+    <h1>Learn programming &amp; AI with hands-on, docs-style tutorials</h1>
+    <p>Practical courses structured like product documentation — clear navigation, code samples, and projects you can ship.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="{{ '/courses/' | relative_url }}">Browse courses</a>
-      <a class="btn btn-ghost" href="https://youtube.com/@ShardaLearningCenter" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn btn-primary" href="{{ '/courses/' | relative_url }}">Browse documentation</a>
+      <a class="btn btn-ghost" href="{{ '/courses/languages/' | relative_url }}">Language tutorials</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="section-head">
-    <h2>Why learn with us</h2>
-    <p>Industry experience, project-first lessons, and a path from beginner to job-ready.</p>
+    <h2>Why this hub</h2>
+    <p>Industry experience, project-first lessons, and a path from beginner to job-ready — presented like engineering docs.</p>
   </div>
   <div class="card-grid">
     <div class="card">
@@ -39,8 +40,8 @@ description: Learn programming and AI by building real projects at Sharda Learni
 
 <section class="section">
   <div class="section-head">
-    <h2>Popular courses</h2>
-    <p>All courses live under /courses/ with a left table of contents.</p>
+    <h2>Popular documentation</h2>
+    <p>Every course uses a left table of contents, breadcrumbs, and scannable sections.</p>
   </div>
   <div class="card-grid">
     <div class="card">
@@ -100,7 +101,7 @@ description: Learn programming and AI by building real projects at Sharda Learni
     </article>
     {% endfor %}
   </div>
-  <p style="text-align:center;margin-top:1.75rem;">
+  <p style="margin-top:1.75rem;">
     <a class="btn btn-secondary" href="{{ '/blog/' | relative_url }}">View all posts</a>
   </p>
 </section>

@@ -1,10 +1,16 @@
 ---
 layout: default
 ---
+<nav class="docs-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
+  <a href="{{ '/blog/' | relative_url }}">Blog</a><span>/</span>
+  {{ page.title | truncate: 48 }}
+</nav>
 <section class="hero hero-compact">
-  <div class="hero-inner reveal">
+  <div class="hero-inner">
     <p class="eyebrow">Blog · {{ page.date | date: "%b %-d, %Y" }}</p>
     <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
   </div>
 </section>
 <div class="prose-wrap">

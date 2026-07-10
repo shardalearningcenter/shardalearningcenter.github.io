@@ -5,8 +5,8 @@ permalink: /blog/
 ---
 
 <section class="hero hero-compact">
-  <div class="hero-inner reveal">
-    <p class="eyebrow">Writing</p>
+  <div class="hero-inner">
+    <p class="eyebrow">Updates</p>
     <h1>Blog</h1>
     <p>Practical notes on AI, programming, and building in public.</p>
   </div>

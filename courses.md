@@ -6,10 +6,10 @@ description: Project-based tracks for hot languages, Python, Go, ML, and LLM Mas
 ---
 
 <section class="hero hero-compact">
-  <div class="hero-inner reveal">
-    <p class="eyebrow">Learn by building</p>
+  <div class="hero-inner">
+    <p class="eyebrow">Documentation</p>
     <h1>Courses</h1>
-    <p>All bootcamps live under <code>/courses/</code> — each page has a left table of contents.</p>
+    <p>All tracks live under <code>/courses/</code> with a left table of contents, breadcrumbs, and code samples.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="{{ '/courses/languages/' | relative_url }}">Hot languages</a>
       <a class="btn btn-ghost" href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery (50)</a>

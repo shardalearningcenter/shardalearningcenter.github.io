@@ -1,9 +1,14 @@
 ---
 layout: default
 ---
+<nav class="docs-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
+  <a href="{{ '/courses/' | relative_url }}">Documentation</a><span>/</span>
+  {{ page.course_track | default: page.title }}
+</nav>
 <section class="hero hero-compact">
-  <div class="hero-inner reveal">
-    <p class="eyebrow"><a href="{{ '/courses/' | relative_url }}" style="color:var(--accent);text-decoration:none;">Courses</a> · {{ page.course_track | default: "Bootcamp" }}</p>
+  <div class="hero-inner">
+    <p class="eyebrow">{{ page.course_track | default: "Course" }}</p>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p>{{ page.description }}</p>{% endif %}
   </div>
@@ -13,7 +18,7 @@ layout: default
   <aside class="course-toc" id="course-toc" aria-label="Table of contents">
     <div class="course-toc-head">
       <strong>On this page</strong>
-      <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false">TOC</button>
+      <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false">Contents</button>
     </div>
     <nav class="course-toc-nav" id="course-toc-nav">
       {% if page.toc %}
@@ -22,7 +27,7 @@ layout: default
         {% endfor %}
       {% endif %}
     </nav>
-    <p class="course-toc-foot"><a href="{{ '/courses/' | relative_url }}">← All courses</a></p>
+    <p class="course-toc-foot"><a href="{{ '/courses/' | relative_url }}">All documentation</a></p>
   </aside>
 
   <article class="course-body prose prose-wide" id="course-body">
