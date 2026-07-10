@@ -109,5 +109,9 @@ p {
     <div class="course-title"><a href="/ai-ml-bootcamp/">AI/ML Bootcamp</a></div>
     <div class="course-desc">Kickstart your journey into Machine Learning with real-world datasets.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/ml-learning-roadmap/">ML Learning Roadmap</a></div>
+    <div class="course-desc">30 hands-on scikit-learn tutorials with real datasets and exercises.</div>
+  </div>
 </div>
   </div>

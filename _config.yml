@@ -17,6 +17,8 @@ minima:
       url: "/"
     - title: "Courses"
       url: "/courses/"
+    - title: "ML Roadmap"
+      url: "/ml-learning-roadmap/"
     - title: "Python Bootcamp"
       url: "/python-bootcamp/"
     - title: "Golang Bootcamp"

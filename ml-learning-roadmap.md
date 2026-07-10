@@ -1,0 +1,79 @@
+---
+layout: page
+title: ML Learning Roadmap
+permalink: /ml-learning-roadmap/
+---
+
+# ML Learning Roadmap — Hands-On with scikit-learn
+
+A **30-tutorial, case-study-driven** curriculum. Every lesson is one self-contained page with runnable Python, a real dataset, and exercises.
+
+## How to use
+
+1. Work through tutorials **in order** — each builds on the previous.
+2. Install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install scikit-learn numpy pandas matplotlib
+```
+
+3. Open a tutorial, copy the code blocks into a `.py` file or Jupyter notebook, and run them.
+4. Complete the **Exercises** at the end of each tutorial before moving on.
+
+## Learning path
+
+| Phase | Tutorials | Duration |
+|-------|-----------|----------|
+| Foundations | 01–05 | 1 week |
+| Preprocessing & Pipelines | 06–12 | 1.5 weeks |
+| Supervised Learning | 13–20 | 2 weeks |
+| Model Selection & Tuning | 21–25 | 1 week |
+| Unsupervised & Ensembles | 26–29 | 1 week |
+| Capstone | 30 | 3–5 days |
+
+**Total: ~7–8 weeks** at 1 tutorial per weekday.
+
+## Tutorials
+
+| # | Tutorial | Level |
+|---|----------|-------|
+| 01 | [Iris Flower Classification](/ml-roadmap/01-iris-flower-classification/) | Beginner |
+| 02 | [Wine Quality EDA](/ml-roadmap/02-wine-quality-eda/) | Beginner |
+| 03 | [Train/Test Baseline](/ml-roadmap/03-train-test-baseline/) | Beginner |
+| 04 | [Cross Validation](/ml-roadmap/04-cross-validation/) | Beginner |
+| 05 | [Feature Scaling](/ml-roadmap/05-feature-scaling/) | Beginner |
+| 06 | [Categorical Encoding](/ml-roadmap/06-categorical-encoding/) | Beginner |
+| 07 | [Missing Value Imputation](/ml-roadmap/07-missing-value-imputation/) | Beginner |
+| 08 | [scikit-learn Pipelines](/ml-roadmap/08-sklearn-pipelines/) | Intermediate |
+| 09 | [Column Transformer](/ml-roadmap/09-column-transformer/) | Intermediate |
+| 10 | [Polynomial Features](/ml-roadmap/10-polynomial-features/) | Intermediate |
+| 11 | [Linear Regression — Housing](/ml-roadmap/11-linear-regression-housing/) | Intermediate |
+| 12 | [Ridge & Lasso Regression](/ml-roadmap/12-ridge-lasso-regression/) | Intermediate |
+| 13 | [Logistic Regression — Breast Cancer](/ml-roadmap/13-logistic-regression-breast-cancer/) | Intermediate |
+| 14 | [KNN Classification](/ml-roadmap/14-knn-classification/) | Intermediate |
+| 15 | [Decision Trees](/ml-roadmap/15-decision-trees/) | Intermediate |
+| 16 | [Random Forest](/ml-roadmap/16-random-forest/) | Intermediate |
+| 17 | [Gradient Boosting](/ml-roadmap/17-gradient-boosting/) | Advanced |
+| 18 | [SVM Classification](/ml-roadmap/18-svm-classification/) | Advanced |
+| 19 | [Naive Bayes Text](/ml-roadmap/19-naive-bayes-text/) | Advanced |
+| 20 | [Classification Metrics](/ml-roadmap/20-classification-metrics/) | Intermediate |
+| 21 | [ROC / AUC Curves](/ml-roadmap/21-roc-auc-curves/) | Intermediate |
+| 22 | [Learning Curves](/ml-roadmap/22-learning-curves/) | Advanced |
+| 23 | [Grid Search CV](/ml-roadmap/23-grid-search-cv/) | Advanced |
+| 24 | [Randomized Search](/ml-roadmap/24-randomized-search/) | Advanced |
+| 25 | [Feature Selection](/ml-roadmap/25-feature-selection/) | Advanced |
+| 26 | [PCA Dimensionality Reduction](/ml-roadmap/26-pca-dimensionality-reduction/) | Intermediate |
+| 27 | [K-Means Clustering](/ml-roadmap/27-kmeans-clustering/) | Intermediate |
+| 28 | [Hierarchical Clustering](/ml-roadmap/28-hierarchical-clustering/) | Intermediate |
+| 29 | [Ensemble Voting & Stacking](/ml-roadmap/29-ensemble-voting-stacking/) | Advanced |
+| 30 | [Capstone — Titanic Survival](/ml-roadmap/30-capstone-titanic-survival/) | Advanced |
+
+## Start here
+
+→ [Tutorial 01: Iris Flower Classification](/ml-roadmap/01-iris-flower-classification/)
+
+---
+
+*Part of [Sharda Learning Center](/) · Also see [AI/ML Bootcamp](/ai-ml-bootcamp/)*
