@@ -125,5 +125,9 @@ p {
     <div class="course-title"><a href="/cpp-stl/">C++ STL for Competitive Programming</a></div>
     <div class="course-desc">Hub + detailed pages: vector, iterators, map, set, heaps, algorithms, cheatsheet.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/c-getting-started/">C Getting Started — Hands On</a></div>
+    <div class="course-desc">Install, Hello World, variables, loops, arrays, pointers, strings, structs + mini projects.</div>
+  </div>
 </div>
   </div>

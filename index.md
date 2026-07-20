@@ -244,6 +244,10 @@ title: Welcome
         <p>vector, map, iterators, set, heaps, algorithms — full hub with detailed sub-pages.</p>
       </div>
       <div class="feature">
+        <h3><a href="/c-getting-started/">🛠️ C Getting Started — Hands On</a></h3>
+        <p>From Hello World to pointers, strings, structs, and mini projects — learn C by coding.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>

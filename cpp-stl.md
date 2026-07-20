@@ -130,6 +130,7 @@ Or the portable set:
 
 ## Related on This Site
 
+- [C Getting Started — Hands On](/c-getting-started/)  
 - [DSA Cheatsheet](/dsa-cheatsheet/)  
 - [Courses](/courses/)  
 - [Blog](/blog/)
