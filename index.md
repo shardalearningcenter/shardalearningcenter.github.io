@@ -240,6 +240,10 @@ title: Welcome
         <p>From zero to java expert: Learn Master Java Cheatsheet to handle day to  day java coding and dsa.</p>
       </div>
       <div class="feature">
+        <h3><a href="/cpp-stl/">⚡ C++ STL for Competitive Programming</a></h3>
+        <p>vector, map, iterators, set, heaps, algorithms — full hub with detailed sub-pages.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>

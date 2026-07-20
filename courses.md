@@ -121,5 +121,9 @@ p {
     <div class="course-title"><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">Advanced: Document Knowledge Assistant</a></div>
     <div class="course-desc">Build a complete RAG product: ingest → retrieve → UI → API → Docker → eval.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/cpp-stl/">C++ STL for Competitive Programming</a></div>
+    <div class="course-desc">Hub + detailed pages: vector, iterators, map, set, heaps, algorithms, cheatsheet.</div>
+  </div>
 </div>
   </div>
