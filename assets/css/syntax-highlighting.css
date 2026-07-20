@@ -1,0 +1,239 @@
+/* Colorful syntax highlighting (Rouge) — GitHub Dark style for Jekyll / GitHub Pages */
+
+.highlight,
+.highlighter-rouge .highlight,
+pre.highlight,
+div.highlight {
+  background: #0d1117 !important;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.highlight pre,
+pre.highlight,
+.highlighter-rouge pre {
+  background: transparent !important;
+  margin: 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  color: #e6edf3;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  tab-size: 4;
+}
+
+/* Do not force one color on tokens */
+.highlight code,
+.highlight pre code,
+.post-content .highlight code,
+.post-content pre code {
+  background: transparent !important;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Inline code (not in pre) */
+:not(pre) > code.highlighter-rouge,
+p code,
+li code,
+td code {
+  background: #eff1f3 !important;
+  color: #cf222e !important;
+  padding: 0.15rem 0.4rem !important;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid #d0d7de;
+}
+
+/* ----- Rouge token colors (GitHub Dark) ----- */
+.highlight .c,   /* Comment */
+.highlight .cd,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #8b949e !important;
+  font-style: italic;
+}
+
+.highlight .cp,  /* Comment.Preproc */
+.highlight .cpf {
+  color: #8b949e !important;
+  font-weight: bold;
+}
+
+.highlight .err {
+  color: #f85149 !important;
+  background-color: transparent !important;
+}
+
+.highlight .k,   /* Keyword */
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .kv,
+.highlight .kc {
+  color: #ff7b72 !important;
+  font-weight: 600;
+}
+
+.highlight .o,   /* Operator */
+.highlight .ow {
+  color: #ff7b72 !important;
+  font-weight: 600;
+}
+
+.highlight .m,   /* Literal.Number */
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx {
+  color: #79c0ff !important;
+}
+
+.highlight .s,   /* Literal.String */
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: #a5d6ff !important;
+}
+
+.highlight .na,  /* Name.Attribute */
+.highlight .nb,
+.highlight .bp {
+  color: #79c0ff !important;
+}
+
+.highlight .nc,  /* Name.Class */
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nf,
+.highlight .fm,
+.highlight .nl,
+.highlight .nn {
+  color: #d2a8ff !important;
+  font-weight: 600;
+}
+
+.highlight .nt,  /* Name.Tag */
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
+  color: #7ee787 !important;
+}
+
+.highlight .p,   /* Punctuation */
+.highlight .pi {
+  color: #e6edf3 !important;
+}
+
+.highlight .gd {
+  color: #ffa198;
+  background-color: rgba(248, 81, 73, 0.15);
+}
+
+.highlight .gi {
+  color: #7ee787;
+  background-color: rgba(46, 160, 67, 0.15);
+}
+
+.highlight .gu,
+.highlight .gh {
+  color: #79c0ff;
+  font-weight: 600;
+}
+
+.highlight .w {
+  color: #e6edf3;
+}
+
+.highlight .ge { font-style: italic; }
+.highlight .gs { font-weight: 600; }
+
+/* Language badge look for fenced blocks */
+.highlighter-rouge {
+  margin: 1.1rem 0;
+}
+
+/* Prism.js fallback (if used) */
+pre[class*="language-"],
+code[class*="language-"] {
+  background: #0d1117 !important;
+  color: #e6edf3;
+  text-shadow: none;
+  font-size: 0.92rem;
+  border-radius: 8px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8b949e;
+}
+
+.token.punctuation {
+  color: #e6edf3;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #79c0ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a5d6ff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #ff7b72;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #ff7b72;
+  font-weight: 600;
+}
+
+.token.function,
+.token.class-name {
+  color: #d2a8ff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #7ee787;
+}

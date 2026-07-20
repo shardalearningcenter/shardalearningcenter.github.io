@@ -8,8 +8,8 @@ layout: default
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  {% include head-custom.html %}
   <style>
-    
     .post-container {
       max-width: 1400px;
       margin: 2rem auto;
@@ -54,19 +54,25 @@ layout: default
       background: #f9f9f9;
       margin: 1.5rem 0;
     }
-    .post-content code {
-      background: #f4f4f4;
+    /* Inline code only — block colors come from syntax-highlighting.css */
+    .post-content :not(pre) > code {
+      background: #eff1f3;
+      color: #cf222e;
       padding: 0.2rem 0.4rem;
       border-radius: 4px;
       font-size: 0.95rem;
     }
     .post-content pre {
-      background: #272822;
-      color: #f8f8f2;
-      padding: 1rem;
+      background: #0d1117;
+      padding: 0;
       border-radius: 8px;
       overflow-x: auto;
       font-size: 0.9rem;
+    }
+    .post-content pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
     }
   </style>
 </head>
@@ -74,12 +80,11 @@ layout: default
   <nav>
     <h2>Sharda Learning Center</h2>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/courses/">Courses</a></li>
       <li><a href="/blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#socials">Socials</a></li>
+      <li><a href="/#socials">Socials</a></li>
     </ul>
   </nav>
   <main class="post-container">

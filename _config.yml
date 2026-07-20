@@ -8,6 +8,19 @@ theme: jekyll-theme-architect
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+# Colorful code syntax highlighting (Rouge on GitHub Pages)
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
 # 👇 Add this to show menu in navbar
 minima:
   skin: auto
