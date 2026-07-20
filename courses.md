@@ -137,5 +137,9 @@ p {
     <div class="course-title"><a href="/css-one-hour-bootcamp/">1-Hour CSS Bootcamp</a></div>
     <div class="course-desc">Minimal CSS expertise in 60 minutes: selectors, box model, flexbox, responsive.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/2026/07/20/openai-agents-sdk-create-agents.html">OpenAI Agents SDK — Create Agents</a></div>
+    <div class="course-desc">Hands-on: Agent, Runner, function tools, handoffs, and a support-desk mini project.</div>
+  </div>
 </div>
   </div>

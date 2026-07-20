@@ -195,6 +195,7 @@ p {
   <li><a href="/2026/07/21/build-your-first-llm-apps-python-rag.html">Part 2 — Build chat, summarize, RAG &amp; agents</a></li>
   <li><a href="/2026/07/22/prompting-to-finetuning-llmops-career.html">Part 3 — Prompting → fine-tuning → LLMOps career path</a></li>
   <li><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">Capstone — Full Document Knowledge Assistant (start → finish)</a></li>
+  <li><a href="/2026/07/20/openai-agents-sdk-create-agents.html">Bonus — OpenAI Agents SDK: create agents with tools &amp; handoffs</a></li>
 </ol>
 
 ---

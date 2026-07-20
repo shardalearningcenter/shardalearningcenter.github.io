@@ -256,6 +256,10 @@ title: Welcome
         <p>Go from zero to useful CSS in 60 minutes — selectors, box model, flexbox, mobile.</p>
       </div>
       <div class="feature">
+        <h3><a href="/2026/07/20/openai-agents-sdk-create-agents.html">🤖 OpenAI Agents SDK Guide</a></h3>
+        <p>Create agents with tools and handoffs using the official openai-agents Python SDK.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>
