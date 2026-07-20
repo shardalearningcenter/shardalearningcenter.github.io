@@ -189,6 +189,15 @@ p {
 
 ---
 
+<h2>## 📰 Free 3-Part Series: Become an AI LLM Developer</h2>
+<ol style="text-align:left; max-width:700px; margin:0 auto;">
+  <li><a href="/2026/07/20/ai-llm-developer-roadmap.html">Part 1 — Complete roadmap from zero to hired</a></li>
+  <li><a href="/2026/07/21/build-your-first-llm-apps-python-rag.html">Part 2 — Build chat, summarize, RAG &amp; agents</a></li>
+  <li><a href="/2026/07/22/prompting-to-finetuning-llmops-career.html">Part 3 — Prompting → fine-tuning → LLMOps career path</a></li>
+</ol>
+
+---
+
 *Built for developers, students, and tech teams ready to master LLMs in record time.*
 
 </div>

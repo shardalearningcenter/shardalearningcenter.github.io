@@ -109,5 +109,13 @@ p {
     <div class="course-title"><a href="/ai-ml-bootcamp/">AI/ML Bootcamp</a></div>
     <div class="course-desc">Kickstart your journey into Machine Learning with real-world datasets.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/llm-bootcamp/">LLM Bootcamp</a></div>
+    <div class="course-desc">Foundations, prompting, RAG, fine-tuning, and LLMOps curriculum.</div>
+  </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/2026/07/20/ai-llm-developer-roadmap.html">AI LLM Developer Roadmap (3-Part Series)</a></div>
+    <div class="course-desc">Complete path from zero to hired: roadmap, build apps, fine-tuning &amp; LLMOps.</div>
+  </div>
 </div>
   </div>

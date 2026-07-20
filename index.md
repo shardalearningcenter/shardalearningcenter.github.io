@@ -267,12 +267,16 @@ title: Welcome
     <h2>📚 From the Blog</h2>
     <div class="features">
       <div class="feature">
-        <h3>🧩 How AI Will Change Jobs in 2025</h3>
-        <p>We break down what AI disruption really means for you and how to future-proof your career.</p>
+        <h3><a href="/2026/07/20/ai-llm-developer-roadmap.html">🧭 AI LLM Developer Roadmap (2026)</a></h3>
+        <p>Complete path from zero to hired — skills map, timeline, portfolio, and interview prep.</p>
       </div>
       <div class="feature">
-        <h3>👨‍🏫 How We Teach Code Differently</h3>
-        <p>Learn why our step-by-step method works better than endless tutorials and theory-heavy courses.</p>
+        <h3><a href="/2026/07/21/build-your-first-llm-apps-python-rag.html">🛠️ Build Your First LLM Apps</a></h3>
+        <p>Hands-on chat, summarizer, RAG notes bot, and a mini tool agent in Python.</p>
+      </div>
+      <div class="feature">
+        <h3><a href="/2026/07/22/prompting-to-finetuning-llmops-career.html">🚀 Prompting → Fine-Tuning → LLMOps</a></h3>
+        <p>Level up to production skills: LoRA, evaluation, security, and how to get hired.</p>
       </div>
     </div>
   </section>
