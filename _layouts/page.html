@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<nav class="docs-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
+  <span class="docs-breadcrumb-current">{{ page.title }}</span>
+</nav>
+
+<article class="docs-article docs-article-solo">
+  <header class="docs-article-header">
+    <p class="docs-eyebrow">Documentation</p>
+    <h1 class="docs-h1">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="docs-lead">{{ page.subtitle }}</p>{% endif %}
+    {% if page.description %}<p class="docs-lead">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="docs-content prose prose-wide">
+    {{ content }}
+  </div>
+</article>

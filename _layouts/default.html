@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="docs-site {% if page.layout == 'home' or page.url == '/' %}is-home{% endif %}">
+  {% include header.html %}
+  <div class="docs-app">
+    {% unless page.layout == 'home' or page.url == '/' %}
+      {% include docs-sidenav.html %}
+    {% endunless %}
+    <div class="docs-main">
+      {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

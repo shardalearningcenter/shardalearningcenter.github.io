@@ -1,15 +1,6 @@
 ---
-layout: page
-title: AI/ML Bootcamp
+layout: redirect
 permalink: /ai-ml-bootcamp/
+redirect_to: /courses/ai-ml-bootcamp/
+sitemap: false
 ---
-
-# AI/ML Bootcamp
-
-Learn the fundamentals of Artificial Intelligence and Machine Learning.
-
-### What you'll learn:
-- Basics of AI and ML
-- Supervised vs Unsupervised learning
-- Real-world data projects
-- Hands-on with Python + Scikit-learn

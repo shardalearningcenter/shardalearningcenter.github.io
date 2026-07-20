@@ -1,329 +1,122 @@
 ---
 layout: home
-title: Welcome
+title: Home
+description: Learn programming and AI by building real projects at Sharda Learning Center.
 ---
-  <style>
 
-
-   
-    html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-    .body1 {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-      width: 100%;
-    }
-
-    /* TOP CTA */
-    .top-cta {
-      background: #ff9900;
-      color: #fff;
-      text-align: center;
-      padding: 14px 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .top-cta a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    /* NAVBAR */
-    nav {
-      background-color: #0a66c2;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav h2 {
-      color: #fff;
-      margin: 0;
-      font-size: 22px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    header {
-      background-color: #0a66c2;
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 20px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .cta-section {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .cta-section a {
-      text-decoration: none;
-      background: #ff9900;
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 18px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      transition: background 0.3s;
-    }
-
-    .cta-section a:hover {
-      background: #e67e00;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-      color: #0a66c2;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .feature {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      flex: 1 1 280px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-5px);
-    }
-
-    .feature h3 {
-      margin-top: 0;
-      color: #0a66c2;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #eee;
-      font-size: 14px;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        padding-left: 0;
-      }
-
-      header h1 {
-        font-size: 30px;
-      }
-
-      section {
-        padding: 40px 10px;
-      }
-    }
- </style>
- <div class="body1">
-  <div class="top-cta">
-    🚀 Ready to Learn AI & Programming from Engineers Who've Built for Millions?
-    <a href="https://youtube.com/@YourChannelName" target="_blank">Start Now</a>
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Sharda Learning Center</p>
+    <p class="hero-brand">Documentation for builders</p>
+    <h1>Learn programming &amp; AI with hands-on, docs-style tutorials</h1>
+    <p>Practical courses structured like product documentation — clear navigation, code samples, and projects you can ship.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ '/courses/' | relative_url }}">Browse documentation</a>
+      <a class="btn btn-ghost" href="{{ '/courses/languages/' | relative_url }}">Language tutorials</a>
+    </div>
   </div>
-<nav>
-    <h2>Sharda Learning Center</h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#socials">Socials</a></li>
-    </ul>
-  </nav>
-  <!-- NAVBAR - ->
-  
+</section>
 
-  <!-- HERO SECTION -->
-  <header id="home">
-    <h1>Learn Programming & AI from Real Engineers</h1>
-    <p>Built by ex-Walmart, Microsoft & VMware employees — our mission is to make coding and AI simple, project-based, and fun for everyone.</p>
-    <div class="cta-section">
-      <a href="https://youtube.com/@ShardaLearningCenter" target="_blank">🚀 Visit Our YouTube Channel</a>
+<section class="section">
+  <div class="section-head">
+    <h2>Why this hub</h2>
+    <p>Industry experience, project-first lessons, and a path from beginner to job-ready — presented like engineering docs.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Real industry experience</h3>
+      <p>Insights from Big Tech so you learn how software is actually built — not only textbook theory.</p>
     </div>
-  </header>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>💼 Why Learn With Us?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>👨‍💻 Real Industry Experience</h3>
-        <p>We bring insights from Big Tech—so you learn how real software is built, not just textbook concepts.</p>
-      </div>
-      <div class="feature">
-        <h3>🧠 AI & Programming Made Easy</h3>
-        <p>From Python to Deep Learning, we simplify complex tech into practical, beginner-friendly lessons.</p>
-      </div>
-      <div class="feature">
-        <h3>🎓 For Students & Professionals</h3>
-        <p>Whether you're just starting or switching careers, we help you go from zero to hired with confidence.</p>
-      </div>
+    <div class="card">
+      <h3>AI &amp; coding made clear</h3>
+      <p>From Python to LLMs, we break complex topics into practical, beginner-friendly steps.</p>
     </div>
-  </section>
-
-  <!-- COURSES -->
-  <section id="courses">
-    <h2>🚀 Explore Our Most-Loved Courses</h2>
-    <div class="features">
-      <div class="feature">
-        <h3><a href="/learn-python-ten-days/">🔥 Master Python in 10 Days</a></h3>
-        <p>From zero to expert: Learn Python with hands-on coding challenges and real-world projects.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/dsa-cheatsheet/">🔥 Master Java Cheatsheet</a></h3>
-        <p>From zero to java expert: Learn Master Java Cheatsheet to handle day to  day java coding and dsa.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/cpp-stl/">⚡ C++ STL for Competitive Programming</a></h3>
-        <p>vector, map, iterators, set, heaps, algorithms — full hub with detailed sub-pages.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/c-getting-started/">🛠️ C Getting Started — Hands On</a></h3>
-        <p>From Hello World to pointers, strings, structs, and mini projects — learn C by coding.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/google-cloud-bootcamp/">☁️ Google Cloud Bootcamp</a></h3>
-        <p>Hands-on GCP: IAM, Compute, Cloud Run, Pub/Sub, BigQuery, and a full capstone deploy.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/css-one-hour-bootcamp/">🎨 1-Hour CSS Bootcamp</a></h3>
-        <p>Go from zero to useful CSS in 60 minutes — selectors, box model, flexbox, mobile.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/2026/07/20/openai-agents-sdk-create-agents.html">🤖 OpenAI Agents SDK Guide</a></h3>
-        <p>Create agents with tools and handoffs using the official openai-agents Python SDK.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
-        <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
-      </div>
-      <div class="feature">
-        <h3>🧠 Crack DSA for Tech Interviews</h3>
-        <p>Master Data Structures & Algorithms with live coding sessions and pattern-based questions.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="https://shardalearningcenter.github.io/2025/07/09/frontend-developer-roadmap.html">🌐 Full-Stack Web Development</a></h3>
-        <p>Build apps using HTML, CSS, JavaScript, React, and Node.js. Learn by launching your own mini-startups.</p>
-      </div>
-      <div class="feature">
-        <h3>🚀 Machine Learning for Beginners</h3>
-        <p>Understand ML step-by-step with Python, scikit-learn, and projects like image classifiers.</p>
-      </div>
-      <div class="feature">
-        <h3>📊 SQL & Data Analytics Bootcamp</h3>
-        <p>Write powerful queries, analyze data, and create dashboards that drive business decisions.</p>
-      </div>
+    <div class="card">
+      <h3>Students &amp; career switchers</h3>
+      <p>Whether you’re starting out or changing careers, build a portfolio that proves you can ship.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- BLOG -->
-  <section id="blog">
-    <h2>📚 From the Blog</h2>
-    <div class="features">
-      <div class="feature">
-        <h3><a href="/2026/07/20/ai-llm-developer-roadmap.html">🧭 AI LLM Developer Roadmap (2026)</a></h3>
-        <p>Complete path from zero to hired — skills map, timeline, portfolio, and interview prep.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/2026/07/21/build-your-first-llm-apps-python-rag.html">🛠️ Build Your First LLM Apps</a></h3>
-        <p>Hands-on chat, summarizer, RAG notes bot, and a mini tool agent in Python.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/2026/07/22/prompting-to-finetuning-llmops-career.html">🚀 Prompting → Fine-Tuning → LLMOps</a></h3>
-        <p>Level up to production skills: LoRA, evaluation, security, and how to get hired.</p>
-      </div>
-      <div class="feature">
-        <h3><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">🏗️ Capstone: Knowledge Assistant Project</a></h3>
-        <p>Hands-on from empty folder to Docker: ingest, RAG, Streamlit UI, FastAPI, and eval.</p>
-      </div>
+<section class="section">
+  <div class="section-head">
+    <h2>Popular documentation</h2>
+    <p>Every course uses a left table of contents, breadcrumbs, and scannable sections.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-meta">14 tracks</div>
+      <h3><a href="{{ '/courses/languages/' | relative_url }}">Hot Languages Hands-On</a></h3>
+      <p>TypeScript, Rust, Go, Java, Kotlin, Swift, C++, C#, and more — daily drills.</p>
     </div>
-  </section>
+    <div class="card">
+      <div class="card-meta">Beginner</div>
+      <h3><a href="{{ '/courses/python-10-days/' | relative_url }}">Python in 10 days</a></h3>
+      <p>Hands-on Python with challenges and real projects.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">30 tutorials</div>
+      <h3><a href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
+      <p>Case-study scikit-learn curriculum with exercises.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">50 articles</div>
+      <h3><a href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery</a></h3>
+      <p>Beginner to master: tokens, GPT guts, alignment, RAG, capstone.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Advanced</div>
+      <h3><a href="{{ '/courses/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
+      <p>Transformers, prompting, fine-tuning, and RAG projects.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Cloud</div>
+      <h3><a href="{{ '/google-cloud-bootcamp/' | relative_url }}">Google Cloud Bootcamp</a></h3>
+      <p>IAM, Compute, Cloud Run, Pub/Sub, BigQuery, and a deployable capstone.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">1 hour</div>
+      <h3><a href="{{ '/css-one-hour-bootcamp/' | relative_url }}">1-Hour CSS Bootcamp</a></h3>
+      <p>Selectors, box model, flexbox, and responsive CSS in 60 minutes.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Agents</div>
+      <h3><a href="{{ '/2026/07/20/openai-agents-sdk-create-agents/' | relative_url }}">OpenAI Agents SDK</a></h3>
+      <p>Build agents with tools and handoffs using the official SDK.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Backend</div>
+      <h3><a href="{{ '/courses/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
+      <p>Practical Go for backend services and APIs.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Interview</div>
+      <h3><a href="{{ '/courses/dsa-cheatsheet/' | relative_url }}">DSA cheatsheet</a></h3>
+      <p>Patterns and must-know structures for tech interviews.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Systems</div>
+      <h3><a href="{{ '/courses/low-level-design/' | relative_url }}">Low-level design</a></h3>
+      <p>Design clean, interview-ready object-oriented systems.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <!-- <section id="contact">
-    <h2>📬 Contact Us</h2>
-    <p style="text-align:center;">For partnerships, business inquiries or support, reach us at
-      <a href="mailto:your@email.com">
-        your@email.com
-      </a>
-    </p>
-  </section> -->
-
-  <!-- SOCIALS -->
-  <section id="socials">
-    <h2>🌐 Follow Us</h2>
-    <p style="text-align:center;">
-      <a href="https://www.youtube.com/@ShardaLearningCenter" target="_blank">YouTube</a> |
-      <a href="https://linkedin.com/company/sharda-learning-center" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com/vcluevion" target="_blank">Twitter</a> |
-      <a href="https://github.com/shardalearningcenter/shardalearningcenter-code" target="_blank">GitHub</a>
-      <a href="https://chat.whatsapp.com/Kx0hL4UYAB80tVApsLXZSf?mode=r_t">WhatsApp Channel</a>
-    </p>
-  </section>
-</div>
+<section class="section">
+  <div class="section-head">
+    <h2>From the blog</h2>
+    <p>Latest notes on AI, coding, and career skills.</p>
+  </div>
+  <div class="card-grid">
+    {% for post in site.posts limit:6 %}
+    <article class="card">
+      <div class="card-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <p style="margin-top:1.75rem;">
+    <a class="btn btn-secondary" href="{{ '/blog/' | relative_url }}">View all posts</a>
+  </p>
+</section>

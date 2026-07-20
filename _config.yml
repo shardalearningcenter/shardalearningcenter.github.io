@@ -1,15 +1,12 @@
-title: ShardaLearningCenter
+title: Sharda Learning Center
 email: s.learnkarma@gmail.com
-description: >- 
+description: >-
   Learn to code by building real projects. Fast. Practical. No fluff.
-baseurl: "" 
-url: "https://shardalearningcenter.github.io" 
-theme: jekyll-theme-architect
+baseurl: ""
+url: "https://shardalearningcenter.github.io"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-# Colorful code syntax highlighting (Rouge on GitHub Pages)
 markdown: kramdown
 kramdown:
   input: GFM
@@ -20,22 +17,19 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: false
-
-# 👇 Add this to show menu in navbar
-minima:
-  skin: auto
-  social_links: []
-  navigation:
-    - title: "Home"
-      url: "/"
-    - title: "Courses"
-      url: "/courses/"
-    - title: "Python Bootcamp"
-      url: "/python-bootcamp/"
-    - title: "Golang Bootcamp"
-      url: "/golang-bootcamp/"
-    - title: "Blog"
-      url: "/blog/"
-    - title: "About"
-      url: "/about/"
-    
+permalink: /:year/:month/:day/:title/
+defaults:
+  - scope:
+      path: "courses"
+    values:
+      layout: course
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

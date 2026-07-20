@@ -1,145 +1,105 @@
 ---
-layout: page
+layout: default
 title: Courses
 permalink: /courses/
+description: Project-based tracks for hot languages, Python, Go, ML, and LLM Mastery at Sharda Learning Center.
 ---
 
-<style>
-  .body1 {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      scroll-behavior: smooth;
-      width: 100%;
-    }
-.course-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.course-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  background: var(--bg-card, #fff);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-.course-card:hover {
-  transform: translateY(-5px);
-}
-.course-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--text-heading, #000);
-}
-.course-desc {
-  color: var(--text-body, #555);
-}
-section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-}
-/* Reset + font */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
+<nav class="docs-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a><span>/</span>
+  <span class="docs-breadcrumb-current">Documentation</span>
+</nav>
 
-/* Consistent centered wrapper */
-.page-wrapper {
-  max-width: 900px;   /* keeps layout narrow for readability */
-  margin: 0 auto;     /* centers horizontally */
-  padding: 20px;
-  background: #fff;
-  min-height: 100vh;  /* ensures full screen height */
-  display: flex;
-  flex-direction: column;
-}
+<article class="docs-article docs-article-solo">
+  <header class="docs-article-header">
+    <p class="docs-eyebrow">Documentation</p>
+    <h1 class="docs-h1">Courses</h1>
+    <p class="docs-lead">All tracks use the same docs layout — left navigation, on-this-page contents, Roboto type, and code samples.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{ '/courses/languages/' | relative_url }}">Hot languages</a>
+      <a class="btn btn-ghost" href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery (50)</a>
+    </div>
+  </header>
 
-/* Header, content, footer */
-.site-header,
-.site-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eaeaea;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.content {
-  flex: 1; /* pushes footer to bottom */
-  text-align: center; /* centers text */
-}
-
-/* Responsive typography */
-h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
-h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-}
-p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-</style>
- <div class="page-wrapper">
-    <header class="site-header">
-      <h1>Welcome to Sharda Learning Center</h1>
-    </header>
-
-   
-
-<div class="course-cards">
-  <div class="course-card">
-    <div class="course-title"><a href="/python-bootcamp/">Python Bootcamp</a></div>
-    <div class="course-desc">Learn Python in 30 days by building real apps.</div>
+  <div class="docs-content">
+    <h2>Pick a track</h2>
+    <p>Consistent layout and mobile-friendly navigation on every course.</p>
+    <div class="card-grid" style="margin-top:16px;">
+      <div class="card">
+        <div class="card-meta">14 tracks</div>
+        <h3><a href="{{ '/courses/languages/' | relative_url }}">Hot Languages Hands-On</a></h3>
+        <p>TypeScript, JS, Rust, Go, Java, Kotlin, Swift, C++, C#, Ruby, PHP, SQL, Zig, Bash.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Beginner</div>
+        <h3><a href="{{ '/courses/python-bootcamp/' | relative_url }}">Python Bootcamp</a></h3>
+        <p>Learn Python by building real apps.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">10 days</div>
+        <h3><a href="{{ '/courses/python-10-days/' | relative_url }}">Python in 10 days</a></h3>
+        <p>A focused sprint from zero to confident coding.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Backend</div>
+        <h3><a href="{{ '/courses/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
+        <p>Backend-focused Go with practical projects.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">AI / ML</div>
+        <h3><a href="{{ '/courses/ai-ml-bootcamp/' | relative_url }}">AI/ML Bootcamp</a></h3>
+        <p>Kickstart machine learning with real datasets.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">30 tutorials</div>
+        <h3><a href="{{ '/courses/ml-learning-roadmap/' | relative_url }}">ML Learning Roadmap</a></h3>
+        <p>Hands-on scikit-learn curriculum with exercises.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">50 articles</div>
+        <h3><a href="{{ '/courses/llm-mastery/' | relative_url }}">LLM Mastery</a></h3>
+        <p>Karpathy-style path: tokens → transformers → RAG → train your own tiny LLM.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Advanced</div>
+        <h3><a href="{{ '/courses/llm-bootcamp/' | relative_url }}">LLM Bootcamp</a></h3>
+        <p>Transformers, fine-tuning, RAG, and LLMOps.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Cloud</div>
+        <h3><a href="{{ '/google-cloud-bootcamp/' | relative_url }}">Google Cloud Bootcamp</a></h3>
+        <p>GCP from free tier to Cloud Run, Pub/Sub, BigQuery, and a capstone.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">1 hour</div>
+        <h3><a href="{{ '/css-one-hour-bootcamp/' | relative_url }}">1-Hour CSS Bootcamp</a></h3>
+        <p>Minimal CSS expertise: selectors, box model, flexbox, responsive.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">C / C++</div>
+        <h3><a href="{{ '/c-getting-started/' | relative_url }}">C Getting Started</a></h3>
+        <p>Hands-on C from Hello World to pointers, strings, and mini projects.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">CP</div>
+        <h3><a href="{{ '/cpp-stl/' | relative_url }}">C++ STL for Competitive Programming</a></h3>
+        <p>vector, map, iterators, set, heaps, algorithms, and a CP cheatsheet.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Agents</div>
+        <h3><a href="{{ '/2026/07/20/openai-agents-sdk-create-agents/' | relative_url }}">OpenAI Agents SDK</a></h3>
+        <p>Create agents with tools and handoffs using the official Python SDK.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Interview</div>
+        <h3><a href="{{ '/courses/dsa-cheatsheet/' | relative_url }}">DSA Cheatsheet</a></h3>
+        <p>Patterns and structures for coding interviews.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Design</div>
+        <h3><a href="{{ '/courses/low-level-design/' | relative_url }}">Low-level design</a></h3>
+        <p>Object-oriented design for interviews and production.</p>
+      </div>
+    </div>
   </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/golang-bootcamp/">Golang Bootcamp</a></div>
-    <div class="course-desc">Learn Go with backend-focused practical projects.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/ai-ml-bootcamp/">AI/ML Bootcamp</a></div>
-    <div class="course-desc">Kickstart your journey into Machine Learning with real-world datasets.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/llm-bootcamp/">LLM Bootcamp</a></div>
-    <div class="course-desc">Foundations, prompting, RAG, fine-tuning, and LLMOps curriculum.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/2026/07/20/ai-llm-developer-roadmap.html">AI LLM Developer Roadmap Series</a></div>
-    <div class="course-desc">Roadmap, first apps, fine-tuning/LLMOps, plus a full start-to-finish RAG capstone.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">Advanced: Document Knowledge Assistant</a></div>
-    <div class="course-desc">Build a complete RAG product: ingest → retrieve → UI → API → Docker → eval.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/cpp-stl/">C++ STL for Competitive Programming</a></div>
-    <div class="course-desc">Hub + detailed pages: vector, iterators, map, set, heaps, algorithms, cheatsheet.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/c-getting-started/">C Getting Started — Hands On</a></div>
-    <div class="course-desc">Install, Hello World, variables, loops, arrays, pointers, strings, structs + mini projects.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/google-cloud-bootcamp/">Google Cloud Bootcamp</a></div>
-    <div class="course-desc">GCP from free tier to Cloud Run, Pub/Sub, BigQuery, IAM, and a deployable capstone.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/css-one-hour-bootcamp/">1-Hour CSS Bootcamp</a></div>
-    <div class="course-desc">Minimal CSS expertise in 60 minutes: selectors, box model, flexbox, responsive.</div>
-  </div>
-  <div class="course-card">
-    <div class="course-title"><a href="/2026/07/20/openai-agents-sdk-create-agents.html">OpenAI Agents SDK — Create Agents</a></div>
-    <div class="course-desc">Hands-on: Agent, Runner, function tools, handoffs, and a support-desk mini project.</div>
-  </div>
-</div>
-  </div>
+</article>
