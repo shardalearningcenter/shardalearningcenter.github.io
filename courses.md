@@ -129,5 +129,9 @@ p {
     <div class="course-title"><a href="/c-getting-started/">C Getting Started — Hands On</a></div>
     <div class="course-desc">Install, Hello World, variables, loops, arrays, pointers, strings, structs + mini projects.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/google-cloud-bootcamp/">Google Cloud Bootcamp</a></div>
+    <div class="course-desc">GCP from free tier to Cloud Run, Pub/Sub, BigQuery, IAM, and a deployable capstone.</div>
+  </div>
 </div>
   </div>

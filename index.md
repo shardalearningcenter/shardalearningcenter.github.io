@@ -248,6 +248,10 @@ title: Welcome
         <p>From Hello World to pointers, strings, structs, and mini projects — learn C by coding.</p>
       </div>
       <div class="feature">
+        <h3><a href="/google-cloud-bootcamp/">☁️ Google Cloud Bootcamp</a></h3>
+        <p>Hands-on GCP: IAM, Compute, Cloud Run, Pub/Sub, BigQuery, and a full capstone deploy.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>
