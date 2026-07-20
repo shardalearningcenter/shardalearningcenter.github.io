@@ -118,4 +118,15 @@ toc:
 
 ---
 
+## Free series & guides
+{: #free-series-guides }
+
+1. [AI LLM Developer Roadmap](/2026/07/20/ai-llm-developer-roadmap/)
+2. [Build Your First LLM Apps](/2026/07/21/build-your-first-llm-apps-python-rag/)
+3. [Prompting → Fine-Tuning → LLMOps](/2026/07/22/prompting-to-finetuning-llmops-career/)
+4. [Capstone: Document Knowledge Assistant](/2026/07/23/advanced-document-knowledge-assistant-rag-project/)
+5. [OpenAI Agents SDK — Create Agents](/2026/07/20/openai-agents-sdk-create-agents/)
+
+---
+
 *Built for developers, students, and tech teams ready to master LLMs in record time.*

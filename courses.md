@@ -66,6 +66,31 @@ description: Project-based tracks for hot languages, Python, Go, ML, and LLM Mas
         <p>Transformers, fine-tuning, RAG, and LLMOps.</p>
       </div>
       <div class="card">
+        <div class="card-meta">Cloud</div>
+        <h3><a href="{{ '/google-cloud-bootcamp/' | relative_url }}">Google Cloud Bootcamp</a></h3>
+        <p>GCP from free tier to Cloud Run, Pub/Sub, BigQuery, and a capstone.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">1 hour</div>
+        <h3><a href="{{ '/css-one-hour-bootcamp/' | relative_url }}">1-Hour CSS Bootcamp</a></h3>
+        <p>Minimal CSS expertise: selectors, box model, flexbox, responsive.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">C / C++</div>
+        <h3><a href="{{ '/c-getting-started/' | relative_url }}">C Getting Started</a></h3>
+        <p>Hands-on C from Hello World to pointers, strings, and mini projects.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">CP</div>
+        <h3><a href="{{ '/cpp-stl/' | relative_url }}">C++ STL for Competitive Programming</a></h3>
+        <p>vector, map, iterators, set, heaps, algorithms, and a CP cheatsheet.</p>
+      </div>
+      <div class="card">
+        <div class="card-meta">Agents</div>
+        <h3><a href="{{ '/2026/07/20/openai-agents-sdk-create-agents/' | relative_url }}">OpenAI Agents SDK</a></h3>
+        <p>Create agents with tools and handoffs using the official Python SDK.</p>
+      </div>
+      <div class="card">
         <div class="card-meta">Interview</div>
         <h3><a href="{{ '/courses/dsa-cheatsheet/' | relative_url }}">DSA Cheatsheet</a></h3>
         <p>Patterns and structures for coding interviews.</p>

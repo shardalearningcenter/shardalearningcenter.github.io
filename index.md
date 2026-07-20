@@ -70,6 +70,21 @@ description: Learn programming and AI by building real projects at Sharda Learni
       <p>Transformers, prompting, fine-tuning, and RAG projects.</p>
     </div>
     <div class="card">
+      <div class="card-meta">Cloud</div>
+      <h3><a href="{{ '/google-cloud-bootcamp/' | relative_url }}">Google Cloud Bootcamp</a></h3>
+      <p>IAM, Compute, Cloud Run, Pub/Sub, BigQuery, and a deployable capstone.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">1 hour</div>
+      <h3><a href="{{ '/css-one-hour-bootcamp/' | relative_url }}">1-Hour CSS Bootcamp</a></h3>
+      <p>Selectors, box model, flexbox, and responsive CSS in 60 minutes.</p>
+    </div>
+    <div class="card">
+      <div class="card-meta">Agents</div>
+      <h3><a href="{{ '/2026/07/20/openai-agents-sdk-create-agents/' | relative_url }}">OpenAI Agents SDK</a></h3>
+      <p>Build agents with tools and handoffs using the official SDK.</p>
+    </div>
+    <div class="card">
       <div class="card-meta">Backend</div>
       <h3><a href="{{ '/courses/golang-bootcamp/' | relative_url }}">Golang Bootcamp</a></h3>
       <p>Practical Go for backend services and APIs.</p>

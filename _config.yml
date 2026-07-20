@@ -6,7 +6,17 @@ baseurl: ""
 url: "https://shardalearningcenter.github.io"
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
 permalink: /:year/:month/:day/:title/
 defaults:
   - scope:
