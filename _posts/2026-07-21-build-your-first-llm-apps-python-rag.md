@@ -9,10 +9,11 @@ tags: [AI, LLM, Python, RAG, LangChain, Projects]
 
 This is the **hands-on** companion to the roadmap. You will build four small but real LLM apps you can put on GitHub.
 
-**Series:** Part 2 of 3  
+**Series:** Part 2 of 4  
 - [Part 1: Complete AI LLM Developer Roadmap](/2026/07/20/ai-llm-developer-roadmap.html)  
 - **Part 2 (this article):** Build chat, summarize, RAG, agents  
-- [Part 3: Prompting → fine-tuning → LLMOps](/2026/07/22/prompting-to-finetuning-llmops-career.html)
+- [Part 3: Prompting → fine-tuning → LLMOps](/2026/07/22/prompting-to-finetuning-llmops-career.html)  
+- [Capstone: Complete Document Knowledge Assistant](/2026/07/23/advanced-document-knowledge-assistant-rag-project.html)
 
 ---
 

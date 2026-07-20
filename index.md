@@ -278,6 +278,10 @@ title: Welcome
         <h3><a href="/2026/07/22/prompting-to-finetuning-llmops-career.html">🚀 Prompting → Fine-Tuning → LLMOps</a></h3>
         <p>Level up to production skills: LoRA, evaluation, security, and how to get hired.</p>
       </div>
+      <div class="feature">
+        <h3><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">🏗️ Capstone: Knowledge Assistant Project</a></h3>
+        <p>Hands-on from empty folder to Docker: ingest, RAG, Streamlit UI, FastAPI, and eval.</p>
+      </div>
     </div>
   </section>
 

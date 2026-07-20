@@ -114,8 +114,12 @@ p {
     <div class="course-desc">Foundations, prompting, RAG, fine-tuning, and LLMOps curriculum.</div>
   </div>
   <div class="course-card">
-    <div class="course-title"><a href="/2026/07/20/ai-llm-developer-roadmap.html">AI LLM Developer Roadmap (3-Part Series)</a></div>
-    <div class="course-desc">Complete path from zero to hired: roadmap, build apps, fine-tuning &amp; LLMOps.</div>
+    <div class="course-title"><a href="/2026/07/20/ai-llm-developer-roadmap.html">AI LLM Developer Roadmap Series</a></div>
+    <div class="course-desc">Roadmap, first apps, fine-tuning/LLMOps, plus a full start-to-finish RAG capstone.</div>
+  </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/2026/07/23/advanced-document-knowledge-assistant-rag-project.html">Advanced: Document Knowledge Assistant</a></div>
+    <div class="course-desc">Build a complete RAG product: ingest → retrieve → UI → API → Docker → eval.</div>
   </div>
 </div>
   </div>

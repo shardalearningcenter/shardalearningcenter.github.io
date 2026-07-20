@@ -9,10 +9,11 @@ tags: [AI, LLM, Fine-Tuning, LLMOps, Career, LoRA]
 
 You have the roadmap (Part 1) and first apps (Part 2). This article is the **senior layer**: how to level up prompting, when to fine-tune, how to evaluate, how to deploy safely, and how to get hired.
 
-**Series:** Part 3 of 3  
+**Series:** Part 3 of 4  
 - [Part 1: Complete AI LLM Developer Roadmap](/2026/07/20/ai-llm-developer-roadmap.html)  
 - [Part 2: Build your first LLM apps](/2026/07/21/build-your-first-llm-apps-python-rag.html)  
-- **Part 3 (this article):** Prompting → fine-tuning → LLMOps → job
+- **Part 3 (this article):** Prompting → fine-tuning → LLMOps → job  
+- [Capstone: Complete Document Knowledge Assistant](/2026/07/23/advanced-document-knowledge-assistant-rag-project.html)
 
 ---
 
@@ -272,6 +273,7 @@ Run this on every change to prompts, chunk size, or model.
 | [1 — Roadmap](/2026/07/20/ai-llm-developer-roadmap.html) | Skills map, timeline, what jobs want |
 | [2 — Build apps](/2026/07/21/build-your-first-llm-apps-python-rag.html) | Chat, summarize, RAG, agents |
 | [3 — Career path](/2026/07/22/prompting-to-finetuning-llmops-career.html) | Fine-tuning, eval, LLMOps, hiring |
+| [Capstone — Full project](/2026/07/23/advanced-document-knowledge-assistant-rag-project.html) | Ingest → RAG → UI → API → Docker → eval |
 
 Continue with the structured curriculum: [LLM Bootcamp](/llm-bootcamp/) · [AI/ML Bootcamp](/ai-ml-bootcamp/)
 

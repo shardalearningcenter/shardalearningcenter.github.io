@@ -9,10 +9,11 @@ tags: [AI, LLM, Career, Roadmap, Python]
 
 A practical, no-fluff guide to becoming an **AI LLM Developer** — the engineer who builds chatbots, RAG systems, agents, and production LLM apps. Follow this roadmap step by step. Skip theory that does not ship.
 
-**Series:** Part 1 of 3  
+**Series:** Part 1 of 4  
 - **Part 1 (this article):** Full career roadmap & skills map  
 - [Part 2: Build your first real LLM apps](/2026/07/21/build-your-first-llm-apps-python-rag.html)  
-- [Part 3: Prompting → fine-tuning → LLMOps career path](/2026/07/22/prompting-to-finetuning-llmops-career.html)
+- [Part 3: Prompting → fine-tuning → LLMOps career path](/2026/07/22/prompting-to-finetuning-llmops-career.html)  
+- [Capstone: Complete Document Knowledge Assistant (start → finish)](/2026/07/23/advanced-document-knowledge-assistant-rag-project.html)
 
 ---
 
