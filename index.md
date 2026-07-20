@@ -252,6 +252,10 @@ title: Welcome
         <p>Hands-on GCP: IAM, Compute, Cloud Run, Pub/Sub, BigQuery, and a full capstone deploy.</p>
       </div>
       <div class="feature">
+        <h3><a href="/css-one-hour-bootcamp/">🎨 1-Hour CSS Bootcamp</a></h3>
+        <p>Go from zero to useful CSS in 60 minutes — selectors, box model, flexbox, mobile.</p>
+      </div>
+      <div class="feature">
         <h3><a href="/llm-bootcamp/">AI, Large language models bootcamp,🤖 Build AI Projects Like a Pro</a></h3>
         <p>Create chatbots, recommendation systems, and machine learning models using real datasets.</p>
       </div>

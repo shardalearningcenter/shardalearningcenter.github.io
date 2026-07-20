@@ -133,5 +133,9 @@ p {
     <div class="course-title"><a href="/google-cloud-bootcamp/">Google Cloud Bootcamp</a></div>
     <div class="course-desc">GCP from free tier to Cloud Run, Pub/Sub, BigQuery, IAM, and a deployable capstone.</div>
   </div>
+  <div class="course-card">
+    <div class="course-title"><a href="/css-one-hour-bootcamp/">1-Hour CSS Bootcamp</a></div>
+    <div class="course-desc">Minimal CSS expertise in 60 minutes: selectors, box model, flexbox, responsive.</div>
+  </div>
 </div>
   </div>
